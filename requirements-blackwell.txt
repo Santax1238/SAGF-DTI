@@ -1,0 +1,8 @@
+# Python 3.11, Linux x86_64; CUDA 12.8 wheels used for the local GPU checks.
+--extra-index-url https://download.pytorch.org/whl/cu128
+--find-links https://data.pyg.org/whl/torch-2.7.0+cu128.html
+--only-binary torch,torch-scatter,torch-sparse
+-r requirements.txt
+torch==2.7.1+cu128
+torch-scatter==2.1.2+pt27cu128
+torch-sparse==0.6.18+pt27cu128

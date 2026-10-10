@@ -1,0 +1,9 @@
+name: sagf-dti
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - -r requirements.txt
+# Select CPU or CUDA torch/extension wheels after creation; see docs/environment.md.

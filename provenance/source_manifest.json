@@ -1,0 +1,94 @@
+{
+  "archive_path": "research_revision/backups/20260912_before_revision/source_snapshot.tar.gz",
+  "archive_sha256": "ac8e4ea6cec6c51a34111b2459d26985cb4e8223ce7dbb8792266765486b8475",
+  "source_description": "2026-09-12 pre-revision snapshot; trainer includes 2026-08-28 FP32 ranking correction. No contemporaneous commit is claimed for the original 45 paper trials.",
+  "members": [
+    {
+      "path": "my_experiments/models/__init__.py",
+      "sha256": "17c658bebdfdb8076f6f41471e5ef5e4845673d03cab8d879fbb825f17a10967",
+      "bytes": 57
+    },
+    {
+      "path": "my_experiments/models/dti_models.py",
+      "sha256": "123491e94f36f15f5b9da08f71a098cbda973d407d4a3a3c5c27fcc234766ead",
+      "bytes": 14378
+    },
+    {
+      "path": "my_experiments/models/drug_encoder.py",
+      "sha256": "b6822b0dcc6492bfc10b25259932dff7df58a00fc92c39e0af734ca17854d872",
+      "bytes": 598
+    },
+    {
+      "path": "my_experiments/models/drug_conditioned_pooling.py",
+      "sha256": "f553a0ba380275834149c6975cfa2be628433e60dbdb046b5886f38b7f147987",
+      "bytes": 3437
+    },
+    {
+      "path": "my_experiments/models/protein_encoders.py",
+      "sha256": "db15242e843a5ac7fb9e614642c4b9cd42f6aaa77f56912c04988efb504d9041",
+      "bytes": 49904
+    },
+    {
+      "path": "my_experiments/models/protein_layers.py",
+      "sha256": "71744c0ad1bef3da9f0d06ba6db6ac5a462255a2b75bcf79bd656d7f1b83e575",
+      "bytes": 3762
+    },
+    {
+      "path": "my_experiments/models/gsdti_dance_wrapper.py",
+      "sha256": "71cf36412cf443526b5629a4c29c7d8aa6aaece1c6cb9b339a74b16036b2c2d4",
+      "bytes": 11929
+    },
+    {
+      "path": "my_experiments/models/protein_sdi_encoder.py",
+      "sha256": "4864a80f750afd006ddb877a22a0e5624e60ffd6fa9b623cec12d8d775bb2ce5",
+      "bytes": 2401
+    },
+    {
+      "path": "my_experiments/models/progressive_injection.py",
+      "sha256": "b3d1af746d9fee53a1af14005b8c33de5d42587719fcf8398ddc840b65ec5c0b",
+      "bytes": 5433
+    },
+    {
+      "path": "my_experiments/datasets/__init__.py",
+      "sha256": "d421abb2f517a7f2b559cf1823e41d9c52f4dd7080fae10a0ff4ed9d6169bdb7",
+      "bytes": 110
+    },
+    {
+      "path": "my_experiments/datasets/dti_dataset.py",
+      "sha256": "2f24eb37d7b66f43507e958b47b90e3dd1e7f91fc20ed2c023b042c117c3ca6e",
+      "bytes": 4245
+    },
+    {
+      "path": "my_experiments/datasets/collate.py",
+      "sha256": "8ff5488bd286ddc53b3865392642ba85af906df46cdaf904cb222a934938bd8e",
+      "bytes": 896
+    },
+    {
+      "path": "my_experiments/phase4_utils/__init__.py",
+      "sha256": "5ea05f37c2241ad1950f0a42afdba41fb8bbc1b0b699d3fb36834316040de3d7",
+      "bytes": 121
+    },
+    {
+      "path": "my_experiments/phase4_utils/metrics.py",
+      "sha256": "7032f9f1d3ac2fe0a4611ea1e1c7c801337679fd421ab2fdadf419753ebc8856",
+      "bytes": 1595
+    },
+    {
+      "path": "my_experiments/phase4_utils/seed.py",
+      "sha256": "3dbec79ee71df48a929608d511745000b8dc360ecbea321a68a39e0040d4d1ee",
+      "bytes": 412
+    },
+    {
+      "path": "my_experiments/loss.py",
+      "sha256": "642e9a74b489b9ed2e1b9dc795f64faf59a92553283752700416f3284a2fab76",
+      "bytes": 1926
+    },
+    {
+      "path": "my_experiments/scripts/train/09_train_experiment.py",
+      "sha256": "d8d66b5d82d0ed074d597ab5e179a52b3c79f9de92490267e17f84137c2d4958",
+      "bytes": 49157
+    }
+  ],
+  "frozen_member_count": 17,
+  "numerical_edits": false
+}

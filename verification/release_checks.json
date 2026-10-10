@@ -1,0 +1,15 @@
+{
+  "checked_utc": "2026-10-10T18:07:38.080842+00:00",
+  "test_command": "python -m pytest -q",
+  "exit_code": 0,
+  "passed": 109,
+  "duration_seconds": 6.18,
+  "frozen_source_members": 17,
+  "source_members_unchanged": true,
+  "regular_wheel_outside_cwd_import": true,
+  "regular_wheel_contains_dataset_source": true,
+  "packaged_paper_configs": 45,
+  "git_ignore_includes_dataset_source": true,
+  "formal_training_completed": false,
+  "github_uploaded": false
+}

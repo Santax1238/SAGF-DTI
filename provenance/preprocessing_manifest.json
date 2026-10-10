@@ -1,0 +1,59 @@
+{
+  "archive_sha256": "ac8e4ea6cec6c51a34111b2459d26985cb4e8223ce7dbb8792266765486b8475",
+  "members": [
+    {
+      "archive_member": "scripts/generate_esmdance_embeddings_fast.py",
+      "release_path": "scripts/preprocessing/esmdance_carrier.py",
+      "sha256": "30c82421a64549fd3cda68eb4d316b9c48506324d5e45ef33e6a41a72c555d26",
+      "size_bytes": 3688
+    },
+    {
+      "archive_member": "my_experiments/generate_esmdance_embeddings_fast.py",
+      "release_path": "scripts/preprocessing/esmdance_dynamic.py",
+      "sha256": "5647b95940e6a9aef0d969afee722a956e912cfe6b5fb93fcecca245aff0b069",
+      "size_bytes": 7749
+    },
+    {
+      "archive_member": "my_experiments/scripts/features/bio_generate_esm2_embeddings.py",
+      "release_path": "scripts/preprocessing/esm2.py",
+      "sha256": "ba152bd804d8ab1f5f8411c9b4a38ce08bd59cd654b5b217efeb3fc2921dee8a",
+      "size_bytes": 5597
+    },
+    {
+      "archive_member": "my_experiments/scripts/features/bio_standardize_kpgt_npz.py",
+      "release_path": "scripts/preprocessing/standardize_kpgt.py",
+      "sha256": "d565d1776374c9d238000c6eba6988ee17844eb316ee606f16c225d1574320fb",
+      "size_bytes": 1937
+    },
+    {
+      "archive_member": "my_experiments/scripts/features/bio_pad_esmdance_embeddings.py",
+      "release_path": "scripts/preprocessing/pad_esmdance.py",
+      "sha256": "786e599d7ad385a5c295ace83ca1c61d6ae6a7ac4933313f4285e4ce6489372e",
+      "size_bytes": 4691
+    },
+    {
+      "archive_member": "my_experiments/scripts/features/bio_build_esmdance_node_graphs.py",
+      "release_path": "scripts/preprocessing/build_dynamic_graphs.py",
+      "sha256": "b69d285a8b19b4d3bb9e44b34afda46aa0c6499f285a1b74b7fadcf9b4e24be7",
+      "size_bytes": 5472
+    },
+    {
+      "archive_member": "my_experiments/scripts/features/67_build_biofusion_conditioned_dyn_graphs.py",
+      "release_path": "scripts/preprocessing/merge_conditioned_graphs.py",
+      "sha256": "61e252d0de103c413b456e1fc6973fc27550dd5f7863ac622bc9261ca877eac1",
+      "size_bytes": 6106
+    },
+    {
+      "archive_member": "my_experiments/scripts/data/62_make_biofusion_contrastive_matrices.py",
+      "release_path": "scripts/preprocessing/build_similarity.py",
+      "sha256": "693ffef3f00327c76f8b56dd871325a81f2b04db7e15431dd92ae39cb71e18f1",
+      "size_bytes": 4656
+    },
+    {
+      "archive_member": "my_experiments/scripts/data/56_make_biofusion_official_split_configs.py",
+      "release_path": "scripts/preprocessing/56_make_biofusion_official_split_configs.py",
+      "sha256": "8628a0eb56375d0d9db0cf0dfca1fc9f0a01b72a77a1d572f49391286c5d2c9d",
+      "size_bytes": 14610
+    }
+  ]
+}

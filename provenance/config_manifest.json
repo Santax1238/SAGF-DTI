@@ -1,0 +1,4462 @@
+{
+  "format_version": 1,
+  "description": "45 archived within-dataset official Gaussian configs; only data prefixes and run_root changed. Configuration hashes identify artifacts, not a historical source commit.",
+  "historical_feature_prefix": "my_experiments/data/Bio/features/",
+  "configs": {
+    "configs/paper/DRH/drug/seed_1234.yaml": {
+      "dataset": "DRH",
+      "setting": "drug",
+      "seed": 1234,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_drh_drug_biofusion1500_front_seed1234_officialsplit/config.yaml",
+      "source_sha256": "26e729e543d97cc383778e7da82ee17f1766ee5e64293913c9262c36c8999b5d",
+      "portable_sha256": "11527a95b56b50a37feba1b513943f43d319ef774b03ec507932a9fa252d582d",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "drug",
+        "run_name": "hypergrad_bio_e4_final_drh_drug_biofusion1500_front_seed1234_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 1234,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "DRH",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "DRH/biofusion1500_front/biofusion_official_splits/drug/seed_1234/drug_train.csv",
+        "data.val_csv": "DRH/biofusion1500_front/biofusion_official_splits/drug/seed_1234/drug_val.csv",
+        "data.test_csv": "DRH/biofusion1500_front/biofusion_official_splits/drug/seed_1234/drug_test.csv",
+        "data.graph_root": [
+          "DRH/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "DRH/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "DRH/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "DRH/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "DRH/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/DRH/drug/seed_3407.yaml": {
+      "dataset": "DRH",
+      "setting": "drug",
+      "seed": 3407,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_drh_drug_biofusion1500_front_seed3407_officialsplit/config.yaml",
+      "source_sha256": "dd7af7919673a8c55c9a7d5b9af3c4e33b3f29a1dcb4f03d31694286e35d0c8d",
+      "portable_sha256": "07ddfae03085aaaa9a8dc294c28fb8e0c817c090fae3fdc6a58e008469787a27",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "drug",
+        "run_name": "hypergrad_bio_e4_final_drh_drug_biofusion1500_front_seed3407_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 3407,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "DRH",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "DRH/biofusion1500_front/biofusion_official_splits/drug/seed_3407/drug_train.csv",
+        "data.val_csv": "DRH/biofusion1500_front/biofusion_official_splits/drug/seed_3407/drug_val.csv",
+        "data.test_csv": "DRH/biofusion1500_front/biofusion_official_splits/drug/seed_3407/drug_test.csv",
+        "data.graph_root": [
+          "DRH/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "DRH/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "DRH/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "DRH/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "DRH/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/DRH/drug/seed_42.yaml": {
+      "dataset": "DRH",
+      "setting": "drug",
+      "seed": 42,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_drh_drug_biofusion1500_front_seed42_officialsplit/config.yaml",
+      "source_sha256": "36eb2863df0917cac507663268c5d62fd191624df65dc8d833dd14d55266c59d",
+      "portable_sha256": "c48ea211495603267dc5f678d795b8852f91f7b904402396a8698c64f844050c",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "drug",
+        "run_name": "hypergrad_bio_e4_final_drh_drug_biofusion1500_front_seed42_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 42,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "DRH",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "DRH/biofusion1500_front/biofusion_official_splits/drug/seed_42/drug_train.csv",
+        "data.val_csv": "DRH/biofusion1500_front/biofusion_official_splits/drug/seed_42/drug_val.csv",
+        "data.test_csv": "DRH/biofusion1500_front/biofusion_official_splits/drug/seed_42/drug_test.csv",
+        "data.graph_root": [
+          "DRH/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "DRH/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "DRH/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "DRH/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "DRH/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/DRH/drug/seed_5678.yaml": {
+      "dataset": "DRH",
+      "setting": "drug",
+      "seed": 5678,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_drh_drug_biofusion1500_front_seed5678_officialsplit/config.yaml",
+      "source_sha256": "13f34c9565e3bfe07f6d9084ff9b1606cb888f36916a34363c2a879927cdfe44",
+      "portable_sha256": "78b4e5b4fd746016874a8352ee0d0622ad8435419c7b4d8be06f81f72eb0d16c",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "drug",
+        "run_name": "hypergrad_bio_e4_final_drh_drug_biofusion1500_front_seed5678_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 5678,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "DRH",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "DRH/biofusion1500_front/biofusion_official_splits/drug/seed_5678/drug_train.csv",
+        "data.val_csv": "DRH/biofusion1500_front/biofusion_official_splits/drug/seed_5678/drug_val.csv",
+        "data.test_csv": "DRH/biofusion1500_front/biofusion_official_splits/drug/seed_5678/drug_test.csv",
+        "data.graph_root": [
+          "DRH/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "DRH/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "DRH/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "DRH/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "DRH/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/DRH/drug/seed_8888.yaml": {
+      "dataset": "DRH",
+      "setting": "drug",
+      "seed": 8888,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_drh_drug_biofusion1500_front_seed8888_officialsplit/config.yaml",
+      "source_sha256": "57236d2898e082bffc2f6c5d4d8e2873bf2c7a1a00f1757e7336474f7e24fdd6",
+      "portable_sha256": "e8c45cd00cff898f2380c0c37923d207ca77979fe467f2ce66faadfa926cc94a",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "drug",
+        "run_name": "hypergrad_bio_e4_final_drh_drug_biofusion1500_front_seed8888_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 8888,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "DRH",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "DRH/biofusion1500_front/biofusion_official_splits/drug/seed_8888/drug_train.csv",
+        "data.val_csv": "DRH/biofusion1500_front/biofusion_official_splits/drug/seed_8888/drug_val.csv",
+        "data.test_csv": "DRH/biofusion1500_front/biofusion_official_splits/drug/seed_8888/drug_test.csv",
+        "data.graph_root": [
+          "DRH/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "DRH/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "DRH/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "DRH/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "DRH/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/DRH/prot/seed_1234.yaml": {
+      "dataset": "DRH",
+      "setting": "prot",
+      "seed": 1234,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_drh_prot_biofusion1500_front_seed1234_officialsplit/config.yaml",
+      "source_sha256": "5c2007de2d3201ef6bde371a1bea5dc99a03a174bddb86e01c9c3bc0a5524e96",
+      "portable_sha256": "710bb6eabe737d2f38eafbf56e5420359ab50bb5caa16103d1d8d4900f3e20fb",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "prot",
+        "run_name": "hypergrad_bio_e4_final_drh_prot_biofusion1500_front_seed1234_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 1234,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "DRH",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "DRH/biofusion1500_front/biofusion_official_splits/prot/seed_1234/prot_train.csv",
+        "data.val_csv": "DRH/biofusion1500_front/biofusion_official_splits/prot/seed_1234/prot_val.csv",
+        "data.test_csv": "DRH/biofusion1500_front/biofusion_official_splits/prot/seed_1234/prot_test.csv",
+        "data.graph_root": [
+          "DRH/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "DRH/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "DRH/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "DRH/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "DRH/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/DRH/prot/seed_3407.yaml": {
+      "dataset": "DRH",
+      "setting": "prot",
+      "seed": 3407,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_drh_prot_biofusion1500_front_seed3407_officialsplit/config.yaml",
+      "source_sha256": "559d10cf96bfc298fc7a68447065ad04dc5d92ae8a1cc8473d33bd19d6fd6f98",
+      "portable_sha256": "dd124d323089416fcf648c3f509aadd26c2150f87fa360fffd587c066fa0e51c",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "prot",
+        "run_name": "hypergrad_bio_e4_final_drh_prot_biofusion1500_front_seed3407_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 3407,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "DRH",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "DRH/biofusion1500_front/biofusion_official_splits/prot/seed_3407/prot_train.csv",
+        "data.val_csv": "DRH/biofusion1500_front/biofusion_official_splits/prot/seed_3407/prot_val.csv",
+        "data.test_csv": "DRH/biofusion1500_front/biofusion_official_splits/prot/seed_3407/prot_test.csv",
+        "data.graph_root": [
+          "DRH/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "DRH/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "DRH/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "DRH/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "DRH/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/DRH/prot/seed_42.yaml": {
+      "dataset": "DRH",
+      "setting": "prot",
+      "seed": 42,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_drh_prot_biofusion1500_front_seed42_officialsplit/config.yaml",
+      "source_sha256": "56e5eadf018fe3354b054d09eccaa18131380b4c5d3b848b0919b63ca25a874c",
+      "portable_sha256": "1eb560cd0f75edc9670fabb8c37d4572992092acd480a8af20af0470d134f561",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "prot",
+        "run_name": "hypergrad_bio_e4_final_drh_prot_biofusion1500_front_seed42_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 42,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "DRH",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "DRH/biofusion1500_front/biofusion_official_splits/prot/seed_42/prot_train.csv",
+        "data.val_csv": "DRH/biofusion1500_front/biofusion_official_splits/prot/seed_42/prot_val.csv",
+        "data.test_csv": "DRH/biofusion1500_front/biofusion_official_splits/prot/seed_42/prot_test.csv",
+        "data.graph_root": [
+          "DRH/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "DRH/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "DRH/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "DRH/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "DRH/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/DRH/prot/seed_5678.yaml": {
+      "dataset": "DRH",
+      "setting": "prot",
+      "seed": 5678,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_drh_prot_biofusion1500_front_seed5678_officialsplit/config.yaml",
+      "source_sha256": "5276683c7c59c8522d9d1427aa6dbbed7228e13f308fe85d3e6b1c2dfd885311",
+      "portable_sha256": "aae7b5c009d7fbcd18c7526438fbb44eb7b24dc0de8d51b9e5a81e021b095cd9",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "prot",
+        "run_name": "hypergrad_bio_e4_final_drh_prot_biofusion1500_front_seed5678_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 5678,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "DRH",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "DRH/biofusion1500_front/biofusion_official_splits/prot/seed_5678/prot_train.csv",
+        "data.val_csv": "DRH/biofusion1500_front/biofusion_official_splits/prot/seed_5678/prot_val.csv",
+        "data.test_csv": "DRH/biofusion1500_front/biofusion_official_splits/prot/seed_5678/prot_test.csv",
+        "data.graph_root": [
+          "DRH/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "DRH/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "DRH/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "DRH/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "DRH/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/DRH/prot/seed_8888.yaml": {
+      "dataset": "DRH",
+      "setting": "prot",
+      "seed": 8888,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_drh_prot_biofusion1500_front_seed8888_officialsplit/config.yaml",
+      "source_sha256": "946618eb8bc4e162823fb3156cf2420c730e7849a3fd5b629974dd704a73eb03",
+      "portable_sha256": "32fd54e9ae2277b84e20df83701d1ceebd8e43ebbab69f62baef0038511b9f85",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "prot",
+        "run_name": "hypergrad_bio_e4_final_drh_prot_biofusion1500_front_seed8888_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 8888,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "DRH",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "DRH/biofusion1500_front/biofusion_official_splits/prot/seed_8888/prot_train.csv",
+        "data.val_csv": "DRH/biofusion1500_front/biofusion_official_splits/prot/seed_8888/prot_val.csv",
+        "data.test_csv": "DRH/biofusion1500_front/biofusion_official_splits/prot/seed_8888/prot_test.csv",
+        "data.graph_root": [
+          "DRH/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "DRH/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "DRH/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "DRH/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "DRH/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/DRH/random/seed_1234.yaml": {
+      "dataset": "DRH",
+      "setting": "random",
+      "seed": 1234,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_drh_random_biofusion1500_front_seed1234_officialsplit/config.yaml",
+      "source_sha256": "b1f53c0140a1a22ec902f65827611d37b1ee1fd2ab34ada8125ddabd20643127",
+      "portable_sha256": "2ccc602f62b28787d453af1a399da257ff15ef90db20cfae1d0e876068f787ee",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "random",
+        "run_name": "hypergrad_bio_e4_final_drh_random_biofusion1500_front_seed1234_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 1234,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "DRH",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "DRH/biofusion1500_front/biofusion_official_splits/random/seed_1234/random_train.csv",
+        "data.val_csv": "DRH/biofusion1500_front/biofusion_official_splits/random/seed_1234/random_val.csv",
+        "data.test_csv": "DRH/biofusion1500_front/biofusion_official_splits/random/seed_1234/random_test.csv",
+        "data.graph_root": [
+          "DRH/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "DRH/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "DRH/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "DRH/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "DRH/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/DRH/random/seed_3407.yaml": {
+      "dataset": "DRH",
+      "setting": "random",
+      "seed": 3407,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_drh_random_biofusion1500_front_seed3407_officialsplit/config.yaml",
+      "source_sha256": "2fcfa2cd054955013778a961abfd442c9f7e8ad94106e60890709f428098a037",
+      "portable_sha256": "706197506247a8052471ab8fe77bc5da0bf0682dcb163dea4f09dc8836d16383",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "random",
+        "run_name": "hypergrad_bio_e4_final_drh_random_biofusion1500_front_seed3407_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 3407,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "DRH",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "DRH/biofusion1500_front/biofusion_official_splits/random/seed_3407/random_train.csv",
+        "data.val_csv": "DRH/biofusion1500_front/biofusion_official_splits/random/seed_3407/random_val.csv",
+        "data.test_csv": "DRH/biofusion1500_front/biofusion_official_splits/random/seed_3407/random_test.csv",
+        "data.graph_root": [
+          "DRH/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "DRH/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "DRH/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "DRH/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "DRH/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/DRH/random/seed_42.yaml": {
+      "dataset": "DRH",
+      "setting": "random",
+      "seed": 42,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_drh_random_biofusion1500_front_seed42_officialsplit/config.yaml",
+      "source_sha256": "35deb92bf89490690335cd38c5f59f5e170645115d582347d047df9520f4795d",
+      "portable_sha256": "6191b37ab3c85645860aefff6038d2b467d3137ddfbe9f288758efa21987cc6f",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "random",
+        "run_name": "hypergrad_bio_e4_final_drh_random_biofusion1500_front_seed42_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 42,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "DRH",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "DRH/biofusion1500_front/biofusion_official_splits/random/seed_42/random_train.csv",
+        "data.val_csv": "DRH/biofusion1500_front/biofusion_official_splits/random/seed_42/random_val.csv",
+        "data.test_csv": "DRH/biofusion1500_front/biofusion_official_splits/random/seed_42/random_test.csv",
+        "data.graph_root": [
+          "DRH/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "DRH/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "DRH/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "DRH/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "DRH/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/DRH/random/seed_5678.yaml": {
+      "dataset": "DRH",
+      "setting": "random",
+      "seed": 5678,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_drh_random_biofusion1500_front_seed5678_officialsplit/config.yaml",
+      "source_sha256": "fe161ebd4c18173436e9b609544118eafe3fc04344a54a6dfb788baa42b023e0",
+      "portable_sha256": "8d26e7a1949f0e5ee5b483d47e11b0b32d45e7bd771f15ee228e54f357e66297",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "random",
+        "run_name": "hypergrad_bio_e4_final_drh_random_biofusion1500_front_seed5678_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 5678,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "DRH",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "DRH/biofusion1500_front/biofusion_official_splits/random/seed_5678/random_train.csv",
+        "data.val_csv": "DRH/biofusion1500_front/biofusion_official_splits/random/seed_5678/random_val.csv",
+        "data.test_csv": "DRH/biofusion1500_front/biofusion_official_splits/random/seed_5678/random_test.csv",
+        "data.graph_root": [
+          "DRH/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "DRH/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "DRH/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "DRH/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "DRH/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/DRH/random/seed_8888.yaml": {
+      "dataset": "DRH",
+      "setting": "random",
+      "seed": 8888,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_drh_random_biofusion1500_front_seed8888_officialsplit/config.yaml",
+      "source_sha256": "6f451af88601d85930c3e491c61ab9374ec889f26cb61bed3883b55d56d68405",
+      "portable_sha256": "1faa6e5269b948a47598db6571ecc7de5ce161d96f7adf13b6b404bc5deda715",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "random",
+        "run_name": "hypergrad_bio_e4_final_drh_random_biofusion1500_front_seed8888_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 8888,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "DRH",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "DRH/biofusion1500_front/biofusion_official_splits/random/seed_8888/random_train.csv",
+        "data.val_csv": "DRH/biofusion1500_front/biofusion_official_splits/random/seed_8888/random_val.csv",
+        "data.test_csv": "DRH/biofusion1500_front/biofusion_official_splits/random/seed_8888/random_test.csv",
+        "data.graph_root": [
+          "DRH/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "DRH/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "DRH/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "DRH/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "DRH/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "DRH/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/Kinase/drug/seed_1234.yaml": {
+      "dataset": "Kinase",
+      "setting": "drug",
+      "seed": 1234,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_kinase_drug_biofusion1500_front_seed1234_officialsplit/config.yaml",
+      "source_sha256": "6233cf1d94d83213309b49b127e5dddc319c6c1a6c35f895c7431b3438700ce4",
+      "portable_sha256": "9a40f32b05a422e5f8138dfd21eb7cb1763f5457bbe5252047418b3a659da923",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "drug",
+        "run_name": "hypergrad_bio_e4_final_kinase_drug_biofusion1500_front_seed1234_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 1234,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "Kinase",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "Kinase/biofusion1500_front/biofusion_official_splits/drug/seed_1234/drug_train.csv",
+        "data.val_csv": "Kinase/biofusion1500_front/biofusion_official_splits/drug/seed_1234/drug_val.csv",
+        "data.test_csv": "Kinase/biofusion1500_front/biofusion_official_splits/drug/seed_1234/drug_test.csv",
+        "data.graph_root": [
+          "Kinase/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "Kinase/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "Kinase/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "Kinase/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "Kinase/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/Kinase/drug/seed_3407.yaml": {
+      "dataset": "Kinase",
+      "setting": "drug",
+      "seed": 3407,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_kinase_drug_biofusion1500_front_seed3407_officialsplit/config.yaml",
+      "source_sha256": "44a8d86a11038066cd7c8e18626728fa4187e3841055b8470a4f20da2157c6ef",
+      "portable_sha256": "617de1ea60750b451017588946aab405fb60f6385d0a88f2f9688152445b1f9a",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "drug",
+        "run_name": "hypergrad_bio_e4_final_kinase_drug_biofusion1500_front_seed3407_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 3407,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "Kinase",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "Kinase/biofusion1500_front/biofusion_official_splits/drug/seed_3407/drug_train.csv",
+        "data.val_csv": "Kinase/biofusion1500_front/biofusion_official_splits/drug/seed_3407/drug_val.csv",
+        "data.test_csv": "Kinase/biofusion1500_front/biofusion_official_splits/drug/seed_3407/drug_test.csv",
+        "data.graph_root": [
+          "Kinase/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "Kinase/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "Kinase/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "Kinase/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "Kinase/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/Kinase/drug/seed_42.yaml": {
+      "dataset": "Kinase",
+      "setting": "drug",
+      "seed": 42,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_kinase_drug_biofusion1500_front_seed42_officialsplit/config.yaml",
+      "source_sha256": "3a1f97045c544b0cb2047d1b5cb8c700c152ed555ae2e1fbe771f20fca327e0a",
+      "portable_sha256": "5340be0971b36f7a0a6e8b49eb24c7edda302a26878237c0822a92784fcfc812",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "drug",
+        "run_name": "hypergrad_bio_e4_final_kinase_drug_biofusion1500_front_seed42_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 42,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "Kinase",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "Kinase/biofusion1500_front/biofusion_official_splits/drug/seed_42/drug_train.csv",
+        "data.val_csv": "Kinase/biofusion1500_front/biofusion_official_splits/drug/seed_42/drug_val.csv",
+        "data.test_csv": "Kinase/biofusion1500_front/biofusion_official_splits/drug/seed_42/drug_test.csv",
+        "data.graph_root": [
+          "Kinase/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "Kinase/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "Kinase/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "Kinase/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "Kinase/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/Kinase/drug/seed_5678.yaml": {
+      "dataset": "Kinase",
+      "setting": "drug",
+      "seed": 5678,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_kinase_drug_biofusion1500_front_seed5678_officialsplit/config.yaml",
+      "source_sha256": "c5feac04a2dbb6cdc339c13f9a0b905c1c7649191d5dce3827b885389a204816",
+      "portable_sha256": "22fefcaa8b27885c2b248d24e4f7efef57a3bb9d99d5975e49054ec1028bb918",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "drug",
+        "run_name": "hypergrad_bio_e4_final_kinase_drug_biofusion1500_front_seed5678_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 5678,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "Kinase",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "Kinase/biofusion1500_front/biofusion_official_splits/drug/seed_5678/drug_train.csv",
+        "data.val_csv": "Kinase/biofusion1500_front/biofusion_official_splits/drug/seed_5678/drug_val.csv",
+        "data.test_csv": "Kinase/biofusion1500_front/biofusion_official_splits/drug/seed_5678/drug_test.csv",
+        "data.graph_root": [
+          "Kinase/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "Kinase/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "Kinase/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "Kinase/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "Kinase/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/Kinase/drug/seed_8888.yaml": {
+      "dataset": "Kinase",
+      "setting": "drug",
+      "seed": 8888,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_kinase_drug_biofusion1500_front_seed8888_officialsplit/config.yaml",
+      "source_sha256": "c057808fc65e086acb566460b1246e4a0ab5e74de7e09442bd21bb5972e80c17",
+      "portable_sha256": "d5665189c106d9204869a4ffdadc2e6f078545aa9105435eb0997e13abe440cb",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "drug",
+        "run_name": "hypergrad_bio_e4_final_kinase_drug_biofusion1500_front_seed8888_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 8888,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "Kinase",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "Kinase/biofusion1500_front/biofusion_official_splits/drug/seed_8888/drug_train.csv",
+        "data.val_csv": "Kinase/biofusion1500_front/biofusion_official_splits/drug/seed_8888/drug_val.csv",
+        "data.test_csv": "Kinase/biofusion1500_front/biofusion_official_splits/drug/seed_8888/drug_test.csv",
+        "data.graph_root": [
+          "Kinase/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "Kinase/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "Kinase/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "Kinase/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "Kinase/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/Kinase/prot/seed_1234.yaml": {
+      "dataset": "Kinase",
+      "setting": "prot",
+      "seed": 1234,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_kinase_prot_biofusion1500_front_seed1234_officialsplit/config.yaml",
+      "source_sha256": "7bde1619f5591092f1fc09c7f9cec4b8a8278a336658c4dd781948b989d4f02a",
+      "portable_sha256": "897d45a19b186e53604aec4017e7a5b00d2c4f5b74c0f2a742ef17053ac8d263",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "prot",
+        "run_name": "hypergrad_bio_e4_final_kinase_prot_biofusion1500_front_seed1234_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 1234,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "Kinase",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "Kinase/biofusion1500_front/biofusion_official_splits/prot/seed_1234/prot_train.csv",
+        "data.val_csv": "Kinase/biofusion1500_front/biofusion_official_splits/prot/seed_1234/prot_val.csv",
+        "data.test_csv": "Kinase/biofusion1500_front/biofusion_official_splits/prot/seed_1234/prot_test.csv",
+        "data.graph_root": [
+          "Kinase/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "Kinase/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "Kinase/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "Kinase/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "Kinase/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/Kinase/prot/seed_3407.yaml": {
+      "dataset": "Kinase",
+      "setting": "prot",
+      "seed": 3407,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_kinase_prot_biofusion1500_front_seed3407_officialsplit/config.yaml",
+      "source_sha256": "13bdaa147bf10446660fa8138b9a7448114e44853101aa92c520d9bd4e9008d5",
+      "portable_sha256": "66227d058a3359c7253d0f7498dcd840f9901986b3b8fdf486f69ba6783b5bfb",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "prot",
+        "run_name": "hypergrad_bio_e4_final_kinase_prot_biofusion1500_front_seed3407_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 3407,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "Kinase",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "Kinase/biofusion1500_front/biofusion_official_splits/prot/seed_3407/prot_train.csv",
+        "data.val_csv": "Kinase/biofusion1500_front/biofusion_official_splits/prot/seed_3407/prot_val.csv",
+        "data.test_csv": "Kinase/biofusion1500_front/biofusion_official_splits/prot/seed_3407/prot_test.csv",
+        "data.graph_root": [
+          "Kinase/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "Kinase/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "Kinase/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "Kinase/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "Kinase/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/Kinase/prot/seed_42.yaml": {
+      "dataset": "Kinase",
+      "setting": "prot",
+      "seed": 42,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_kinase_prot_biofusion1500_front_seed42_officialsplit/config.yaml",
+      "source_sha256": "0364632d73726a4e489e9199df6f52676f5a21890f1d1179ec7aed81b78c99be",
+      "portable_sha256": "533757f33d9c8bc62049eae44c5d9ab51fa2f0133ffd3d009bfd33e12deb6ca2",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "prot",
+        "run_name": "hypergrad_bio_e4_final_kinase_prot_biofusion1500_front_seed42_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 42,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "Kinase",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "Kinase/biofusion1500_front/biofusion_official_splits/prot/seed_42/prot_train.csv",
+        "data.val_csv": "Kinase/biofusion1500_front/biofusion_official_splits/prot/seed_42/prot_val.csv",
+        "data.test_csv": "Kinase/biofusion1500_front/biofusion_official_splits/prot/seed_42/prot_test.csv",
+        "data.graph_root": [
+          "Kinase/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "Kinase/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "Kinase/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "Kinase/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "Kinase/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/Kinase/prot/seed_5678.yaml": {
+      "dataset": "Kinase",
+      "setting": "prot",
+      "seed": 5678,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_kinase_prot_biofusion1500_front_seed5678_officialsplit/config.yaml",
+      "source_sha256": "2f769ee5a3881b595d1674c084bdabd6276be64901b50678a3617ffdc6b0ed19",
+      "portable_sha256": "63b07da81db1d9a4c16a04575db877198fbf65c5d3f8d69ccc0b27aa21a7971a",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "prot",
+        "run_name": "hypergrad_bio_e4_final_kinase_prot_biofusion1500_front_seed5678_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 5678,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "Kinase",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "Kinase/biofusion1500_front/biofusion_official_splits/prot/seed_5678/prot_train.csv",
+        "data.val_csv": "Kinase/biofusion1500_front/biofusion_official_splits/prot/seed_5678/prot_val.csv",
+        "data.test_csv": "Kinase/biofusion1500_front/biofusion_official_splits/prot/seed_5678/prot_test.csv",
+        "data.graph_root": [
+          "Kinase/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "Kinase/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "Kinase/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "Kinase/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "Kinase/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/Kinase/prot/seed_8888.yaml": {
+      "dataset": "Kinase",
+      "setting": "prot",
+      "seed": 8888,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_kinase_prot_biofusion1500_front_seed8888_officialsplit/config.yaml",
+      "source_sha256": "c745ff27ea800642928564cf9d2bb28b389641ad4df8d90e18fbb39aee19ea4c",
+      "portable_sha256": "0db1292b4414bdf3c4efec1cafc1f86c816ed8a19aa0072f84f57820ed4721c9",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "prot",
+        "run_name": "hypergrad_bio_e4_final_kinase_prot_biofusion1500_front_seed8888_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 8888,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "Kinase",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "Kinase/biofusion1500_front/biofusion_official_splits/prot/seed_8888/prot_train.csv",
+        "data.val_csv": "Kinase/biofusion1500_front/biofusion_official_splits/prot/seed_8888/prot_val.csv",
+        "data.test_csv": "Kinase/biofusion1500_front/biofusion_official_splits/prot/seed_8888/prot_test.csv",
+        "data.graph_root": [
+          "Kinase/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "Kinase/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "Kinase/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "Kinase/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "Kinase/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/Kinase/random/seed_1234.yaml": {
+      "dataset": "Kinase",
+      "setting": "random",
+      "seed": 1234,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_kinase_random_biofusion1500_front_seed1234_officialsplit/config.yaml",
+      "source_sha256": "4320bba909cb45df38c263003ef46f769d26c3ffb8cb20c08412846509096cb4",
+      "portable_sha256": "35f0c308eb2e5cc0bd9f63fc2a52412135a3c0b04713ea7dc1acbecd235a929a",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "random",
+        "run_name": "hypergrad_bio_e4_final_kinase_random_biofusion1500_front_seed1234_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 1234,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "Kinase",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "Kinase/biofusion1500_front/biofusion_official_splits/random/seed_1234/random_train.csv",
+        "data.val_csv": "Kinase/biofusion1500_front/biofusion_official_splits/random/seed_1234/random_val.csv",
+        "data.test_csv": "Kinase/biofusion1500_front/biofusion_official_splits/random/seed_1234/random_test.csv",
+        "data.graph_root": [
+          "Kinase/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "Kinase/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "Kinase/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "Kinase/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "Kinase/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/Kinase/random/seed_3407.yaml": {
+      "dataset": "Kinase",
+      "setting": "random",
+      "seed": 3407,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_kinase_random_biofusion1500_front_seed3407_officialsplit/config.yaml",
+      "source_sha256": "18189d5d72a53058a1edbdc39e729cfb4567593210ad3ee1a5aa7c7920f1793a",
+      "portable_sha256": "0b8f977161a6ed35e5061a2116a24cae65e1d8066bce14293798e224a7f216dc",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "random",
+        "run_name": "hypergrad_bio_e4_final_kinase_random_biofusion1500_front_seed3407_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 3407,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "Kinase",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "Kinase/biofusion1500_front/biofusion_official_splits/random/seed_3407/random_train.csv",
+        "data.val_csv": "Kinase/biofusion1500_front/biofusion_official_splits/random/seed_3407/random_val.csv",
+        "data.test_csv": "Kinase/biofusion1500_front/biofusion_official_splits/random/seed_3407/random_test.csv",
+        "data.graph_root": [
+          "Kinase/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "Kinase/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "Kinase/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "Kinase/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "Kinase/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/Kinase/random/seed_42.yaml": {
+      "dataset": "Kinase",
+      "setting": "random",
+      "seed": 42,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_kinase_random_biofusion1500_front_seed42_officialsplit/config.yaml",
+      "source_sha256": "c2bcb027e89980c929f8cbd41c9fbe2f24a5905117b983879eebad2afbfec511",
+      "portable_sha256": "99ba8c251b6f728a52579309b83f9b682be5dc7818d4db7119af55d6db927b95",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "random",
+        "run_name": "hypergrad_bio_e4_final_kinase_random_biofusion1500_front_seed42_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 42,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "Kinase",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "Kinase/biofusion1500_front/biofusion_official_splits/random/seed_42/random_train.csv",
+        "data.val_csv": "Kinase/biofusion1500_front/biofusion_official_splits/random/seed_42/random_val.csv",
+        "data.test_csv": "Kinase/biofusion1500_front/biofusion_official_splits/random/seed_42/random_test.csv",
+        "data.graph_root": [
+          "Kinase/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "Kinase/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "Kinase/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "Kinase/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "Kinase/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/Kinase/random/seed_5678.yaml": {
+      "dataset": "Kinase",
+      "setting": "random",
+      "seed": 5678,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_kinase_random_biofusion1500_front_seed5678_officialsplit/config.yaml",
+      "source_sha256": "c7654b165c32fd6b7e5a633318a1923ac21ee3feebf528b3ef7f30ec7e0bfddb",
+      "portable_sha256": "880186c028e5116d4df839da6c4ca3c7e941776ccea481c7234ee536b3f845f9",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "random",
+        "run_name": "hypergrad_bio_e4_final_kinase_random_biofusion1500_front_seed5678_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 5678,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "Kinase",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "Kinase/biofusion1500_front/biofusion_official_splits/random/seed_5678/random_train.csv",
+        "data.val_csv": "Kinase/biofusion1500_front/biofusion_official_splits/random/seed_5678/random_val.csv",
+        "data.test_csv": "Kinase/biofusion1500_front/biofusion_official_splits/random/seed_5678/random_test.csv",
+        "data.graph_root": [
+          "Kinase/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "Kinase/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "Kinase/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "Kinase/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "Kinase/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/Kinase/random/seed_8888.yaml": {
+      "dataset": "Kinase",
+      "setting": "random",
+      "seed": 8888,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_kinase_random_biofusion1500_front_seed8888_officialsplit/config.yaml",
+      "source_sha256": "1db1166bebb4a4f08ef0ebf49425d26b57fbdde190922487eb317379c0ebdbad",
+      "portable_sha256": "1ff7dcf8aac60b7ef700c9323a3d34947e02871e4ed318e3a0bc7cfbf7228f26",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "random",
+        "run_name": "hypergrad_bio_e4_final_kinase_random_biofusion1500_front_seed8888_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 8888,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "Kinase",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "Kinase/biofusion1500_front/biofusion_official_splits/random/seed_8888/random_train.csv",
+        "data.val_csv": "Kinase/biofusion1500_front/biofusion_official_splits/random/seed_8888/random_val.csv",
+        "data.test_csv": "Kinase/biofusion1500_front/biofusion_official_splits/random/seed_8888/random_test.csv",
+        "data.graph_root": [
+          "Kinase/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "Kinase/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "Kinase/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "Kinase/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "Kinase/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "Kinase/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/SNAP/drug/seed_1234.yaml": {
+      "dataset": "SNAP",
+      "setting": "drug",
+      "seed": 1234,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_snap_drug_biofusion1500_front_seed1234_officialsplit/config.yaml",
+      "source_sha256": "0a759fb45e9ae988103708f3fb3634bb610082d18f07f3ebdc5d82c693493276",
+      "portable_sha256": "a3b491071edb1df0f496b85dc521ff392b2a3e1dc1ea839a233b50f1ea674ef2",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "drug",
+        "run_name": "hypergrad_bio_e4_final_snap_drug_biofusion1500_front_seed1234_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 1234,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "SNAP",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "SNAP/biofusion1500_front/biofusion_official_splits/drug/seed_1234/drug_train.csv",
+        "data.val_csv": "SNAP/biofusion1500_front/biofusion_official_splits/drug/seed_1234/drug_val.csv",
+        "data.test_csv": "SNAP/biofusion1500_front/biofusion_official_splits/drug/seed_1234/drug_test.csv",
+        "data.graph_root": [
+          "SNAP/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "SNAP/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "SNAP/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "SNAP/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "SNAP/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/SNAP/drug/seed_3407.yaml": {
+      "dataset": "SNAP",
+      "setting": "drug",
+      "seed": 3407,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_snap_drug_biofusion1500_front_seed3407_officialsplit/config.yaml",
+      "source_sha256": "d17ceabdd1825626f540a9a65c1d69f64b9526251bc5d58dd69dc0db2e757f23",
+      "portable_sha256": "167aef3086aad84ff860bc9b90e398da0ee5c21587996ad71b5a9875f37f4b8b",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "drug",
+        "run_name": "hypergrad_bio_e4_final_snap_drug_biofusion1500_front_seed3407_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 3407,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "SNAP",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "SNAP/biofusion1500_front/biofusion_official_splits/drug/seed_3407/drug_train.csv",
+        "data.val_csv": "SNAP/biofusion1500_front/biofusion_official_splits/drug/seed_3407/drug_val.csv",
+        "data.test_csv": "SNAP/biofusion1500_front/biofusion_official_splits/drug/seed_3407/drug_test.csv",
+        "data.graph_root": [
+          "SNAP/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "SNAP/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "SNAP/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "SNAP/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "SNAP/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/SNAP/drug/seed_42.yaml": {
+      "dataset": "SNAP",
+      "setting": "drug",
+      "seed": 42,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_snap_drug_biofusion1500_front_seed42_officialsplit/config.yaml",
+      "source_sha256": "ffdc6d5b3e387871adccd4b1f52cb382361dd8db899ac92f7f8dd3c191ca1ffa",
+      "portable_sha256": "012e648cb4504d6b237ac70c85772390e217be2b2d74cdeb6a9f2ae46f212025",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "drug",
+        "run_name": "hypergrad_bio_e4_final_snap_drug_biofusion1500_front_seed42_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 42,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "SNAP",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "SNAP/biofusion1500_front/biofusion_official_splits/drug/seed_42/drug_train.csv",
+        "data.val_csv": "SNAP/biofusion1500_front/biofusion_official_splits/drug/seed_42/drug_val.csv",
+        "data.test_csv": "SNAP/biofusion1500_front/biofusion_official_splits/drug/seed_42/drug_test.csv",
+        "data.graph_root": [
+          "SNAP/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "SNAP/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "SNAP/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "SNAP/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "SNAP/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/SNAP/drug/seed_5678.yaml": {
+      "dataset": "SNAP",
+      "setting": "drug",
+      "seed": 5678,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_snap_drug_biofusion1500_front_seed5678_officialsplit/config.yaml",
+      "source_sha256": "822fb7bc5eeab7c8b2d56e9502b2e5173e7d7f48a91343feb3b5abe5d2dddf12",
+      "portable_sha256": "04c35b8a13073cb91251917b6a3d498829033a026f0239b32cb50baca9a59982",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "drug",
+        "run_name": "hypergrad_bio_e4_final_snap_drug_biofusion1500_front_seed5678_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 5678,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "SNAP",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "SNAP/biofusion1500_front/biofusion_official_splits/drug/seed_5678/drug_train.csv",
+        "data.val_csv": "SNAP/biofusion1500_front/biofusion_official_splits/drug/seed_5678/drug_val.csv",
+        "data.test_csv": "SNAP/biofusion1500_front/biofusion_official_splits/drug/seed_5678/drug_test.csv",
+        "data.graph_root": [
+          "SNAP/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "SNAP/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "SNAP/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "SNAP/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "SNAP/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/SNAP/drug/seed_8888.yaml": {
+      "dataset": "SNAP",
+      "setting": "drug",
+      "seed": 8888,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_snap_drug_biofusion1500_front_seed8888_officialsplit/config.yaml",
+      "source_sha256": "6a80bbd2ef0d6592cc86713a8a1721a3b840b85fa9f0288b12e4fa6a05679790",
+      "portable_sha256": "ce3366af7a74160ea0b688cbc62b64bd4ea8e1560c8aa7bc03882df212ff94bc",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "drug",
+        "run_name": "hypergrad_bio_e4_final_snap_drug_biofusion1500_front_seed8888_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 8888,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "SNAP",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "SNAP/biofusion1500_front/biofusion_official_splits/drug/seed_8888/drug_train.csv",
+        "data.val_csv": "SNAP/biofusion1500_front/biofusion_official_splits/drug/seed_8888/drug_val.csv",
+        "data.test_csv": "SNAP/biofusion1500_front/biofusion_official_splits/drug/seed_8888/drug_test.csv",
+        "data.graph_root": [
+          "SNAP/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "SNAP/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "SNAP/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "SNAP/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "SNAP/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/SNAP/prot/seed_1234.yaml": {
+      "dataset": "SNAP",
+      "setting": "prot",
+      "seed": 1234,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_snap_prot_biofusion1500_front_seed1234_officialsplit/config.yaml",
+      "source_sha256": "7a3210c07c65d97ec398a7fbd36b86fa5cbc4a02c98a6ef8b786e4866b464d04",
+      "portable_sha256": "d648a7e23f114cfdb6781f8e372350ccda6021cec97faebe50d476bc432931b2",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "prot",
+        "run_name": "hypergrad_bio_e4_final_snap_prot_biofusion1500_front_seed1234_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 1234,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "SNAP",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "SNAP/biofusion1500_front/biofusion_official_splits/prot/seed_1234/prot_train.csv",
+        "data.val_csv": "SNAP/biofusion1500_front/biofusion_official_splits/prot/seed_1234/prot_val.csv",
+        "data.test_csv": "SNAP/biofusion1500_front/biofusion_official_splits/prot/seed_1234/prot_test.csv",
+        "data.graph_root": [
+          "SNAP/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "SNAP/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "SNAP/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "SNAP/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "SNAP/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/SNAP/prot/seed_3407.yaml": {
+      "dataset": "SNAP",
+      "setting": "prot",
+      "seed": 3407,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_snap_prot_biofusion1500_front_seed3407_officialsplit/config.yaml",
+      "source_sha256": "75f621bbd0593b45fead2650b69e7131f8c209ca6ab5b6c09e2d30ca15d3fca9",
+      "portable_sha256": "a9008808b443bb4da702a7da6c0c0ab6b5ed3b1a1eed41d9c13c1ebcbf1d258b",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "prot",
+        "run_name": "hypergrad_bio_e4_final_snap_prot_biofusion1500_front_seed3407_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 3407,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "SNAP",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "SNAP/biofusion1500_front/biofusion_official_splits/prot/seed_3407/prot_train.csv",
+        "data.val_csv": "SNAP/biofusion1500_front/biofusion_official_splits/prot/seed_3407/prot_val.csv",
+        "data.test_csv": "SNAP/biofusion1500_front/biofusion_official_splits/prot/seed_3407/prot_test.csv",
+        "data.graph_root": [
+          "SNAP/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "SNAP/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "SNAP/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "SNAP/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "SNAP/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/SNAP/prot/seed_42.yaml": {
+      "dataset": "SNAP",
+      "setting": "prot",
+      "seed": 42,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_snap_prot_biofusion1500_front_seed42_officialsplit/config.yaml",
+      "source_sha256": "28e0b9ac9182e03d2f94f6c89e20ce16a3745c4214c4252ecdac86aa2052b37e",
+      "portable_sha256": "a78d49a76a10225b75de8efe492a7a614c32a445b3a3fe21e3b039d7cca5655c",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "prot",
+        "run_name": "hypergrad_bio_e4_final_snap_prot_biofusion1500_front_seed42_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 42,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "SNAP",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "SNAP/biofusion1500_front/biofusion_official_splits/prot/seed_42/prot_train.csv",
+        "data.val_csv": "SNAP/biofusion1500_front/biofusion_official_splits/prot/seed_42/prot_val.csv",
+        "data.test_csv": "SNAP/biofusion1500_front/biofusion_official_splits/prot/seed_42/prot_test.csv",
+        "data.graph_root": [
+          "SNAP/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "SNAP/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "SNAP/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "SNAP/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "SNAP/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/SNAP/prot/seed_5678.yaml": {
+      "dataset": "SNAP",
+      "setting": "prot",
+      "seed": 5678,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_snap_prot_biofusion1500_front_seed5678_officialsplit/config.yaml",
+      "source_sha256": "c24d95befecd55d8957541f07b1ee9b9191fb11edb28d96ee497466aa80931b3",
+      "portable_sha256": "91d84cfcf481a5548a51918fc1305e7aeac592eb6737b7f49490a0f56174caaa",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "prot",
+        "run_name": "hypergrad_bio_e4_final_snap_prot_biofusion1500_front_seed5678_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 5678,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "SNAP",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "SNAP/biofusion1500_front/biofusion_official_splits/prot/seed_5678/prot_train.csv",
+        "data.val_csv": "SNAP/biofusion1500_front/biofusion_official_splits/prot/seed_5678/prot_val.csv",
+        "data.test_csv": "SNAP/biofusion1500_front/biofusion_official_splits/prot/seed_5678/prot_test.csv",
+        "data.graph_root": [
+          "SNAP/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "SNAP/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "SNAP/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "SNAP/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "SNAP/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/SNAP/prot/seed_8888.yaml": {
+      "dataset": "SNAP",
+      "setting": "prot",
+      "seed": 8888,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_snap_prot_biofusion1500_front_seed8888_officialsplit/config.yaml",
+      "source_sha256": "41b7db4ba56101f76f9a25a01fc1b96ee03e03ac2a5154ed45a3ebdcd576058c",
+      "portable_sha256": "5bcf5d7564af8302443ea2e96520b3bc8c2f993319679969e0f1e9f134f08923",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "prot",
+        "run_name": "hypergrad_bio_e4_final_snap_prot_biofusion1500_front_seed8888_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 8888,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "SNAP",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "SNAP/biofusion1500_front/biofusion_official_splits/prot/seed_8888/prot_train.csv",
+        "data.val_csv": "SNAP/biofusion1500_front/biofusion_official_splits/prot/seed_8888/prot_val.csv",
+        "data.test_csv": "SNAP/biofusion1500_front/biofusion_official_splits/prot/seed_8888/prot_test.csv",
+        "data.graph_root": [
+          "SNAP/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "SNAP/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "SNAP/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "SNAP/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "SNAP/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/SNAP/random/seed_1234.yaml": {
+      "dataset": "SNAP",
+      "setting": "random",
+      "seed": 1234,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_snap_random_biofusion1500_front_seed1234_officialsplit/config.yaml",
+      "source_sha256": "5fe313881075a32201a8d9f0ea19828d7113d2ea12393e226b19447ff343aaae",
+      "portable_sha256": "2145536e2c4fc981de8a7a42a650e42b9ce49ea320ec799de9644cf3ec1eb45b",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "random",
+        "run_name": "hypergrad_bio_e4_final_snap_random_biofusion1500_front_seed1234_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 1234,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "SNAP",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "SNAP/biofusion1500_front/biofusion_official_splits/random/seed_1234/random_train.csv",
+        "data.val_csv": "SNAP/biofusion1500_front/biofusion_official_splits/random/seed_1234/random_val.csv",
+        "data.test_csv": "SNAP/biofusion1500_front/biofusion_official_splits/random/seed_1234/random_test.csv",
+        "data.graph_root": [
+          "SNAP/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "SNAP/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "SNAP/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "SNAP/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "SNAP/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/SNAP/random/seed_3407.yaml": {
+      "dataset": "SNAP",
+      "setting": "random",
+      "seed": 3407,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_snap_random_biofusion1500_front_seed3407_officialsplit/config.yaml",
+      "source_sha256": "d708d1ee9b811bb8ef4bc048bee5801ae8d6c02c0d281bc5dc452ab5d6c64aa6",
+      "portable_sha256": "b35177a13bc6fe60e25b78fdda0cba274f1ffc8eb9f22593d98d3d5a7d00c336",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "random",
+        "run_name": "hypergrad_bio_e4_final_snap_random_biofusion1500_front_seed3407_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 3407,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "SNAP",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "SNAP/biofusion1500_front/biofusion_official_splits/random/seed_3407/random_train.csv",
+        "data.val_csv": "SNAP/biofusion1500_front/biofusion_official_splits/random/seed_3407/random_val.csv",
+        "data.test_csv": "SNAP/biofusion1500_front/biofusion_official_splits/random/seed_3407/random_test.csv",
+        "data.graph_root": [
+          "SNAP/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "SNAP/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "SNAP/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "SNAP/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "SNAP/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/SNAP/random/seed_42.yaml": {
+      "dataset": "SNAP",
+      "setting": "random",
+      "seed": 42,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_snap_random_biofusion1500_front_seed42_officialsplit/config.yaml",
+      "source_sha256": "43b2b1deecb6001590b1924dfb2a9796fea7f8f9a33ffc84c97c1684cfceb2a6",
+      "portable_sha256": "ad831d1cfc09bcf564d9ecc666688a00d33974b9ba2fb29d997903e5db272345",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "random",
+        "run_name": "hypergrad_bio_e4_final_snap_random_biofusion1500_front_seed42_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 42,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "SNAP",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "SNAP/biofusion1500_front/biofusion_official_splits/random/seed_42/random_train.csv",
+        "data.val_csv": "SNAP/biofusion1500_front/biofusion_official_splits/random/seed_42/random_val.csv",
+        "data.test_csv": "SNAP/biofusion1500_front/biofusion_official_splits/random/seed_42/random_test.csv",
+        "data.graph_root": [
+          "SNAP/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "SNAP/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "SNAP/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "SNAP/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "SNAP/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/SNAP/random/seed_5678.yaml": {
+      "dataset": "SNAP",
+      "setting": "random",
+      "seed": 5678,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_snap_random_biofusion1500_front_seed5678_officialsplit/config.yaml",
+      "source_sha256": "e3e9a3f2438504d77d9a7a2480d706641d17d9d98d8072ba3feaa602466c0ea5",
+      "portable_sha256": "e801aa0447f2c63ad8fc26166de1d340302184f3d0ed8b77ddf8d8388750c2ae",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "random",
+        "run_name": "hypergrad_bio_e4_final_snap_random_biofusion1500_front_seed5678_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 5678,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "SNAP",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "SNAP/biofusion1500_front/biofusion_official_splits/random/seed_5678/random_train.csv",
+        "data.val_csv": "SNAP/biofusion1500_front/biofusion_official_splits/random/seed_5678/random_val.csv",
+        "data.test_csv": "SNAP/biofusion1500_front/biofusion_official_splits/random/seed_5678/random_test.csv",
+        "data.graph_root": [
+          "SNAP/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "SNAP/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "SNAP/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "SNAP/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "SNAP/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    },
+    "configs/paper/SNAP/random/seed_8888.yaml": {
+      "dataset": "SNAP",
+      "setting": "random",
+      "seed": 8888,
+      "source_member": "my_experiments/runs/biofusion_protocol_officialsplit_cond35_final/hypergrad_bio_e4_final_snap_random_biofusion1500_front_seed8888_officialsplit/config.yaml",
+      "source_sha256": "0c67c397b7984c1c318167d6ded1a4f441bc9278de929e9e7e0a6df566eac611",
+      "portable_sha256": "f7f7f7b0dd29e5a2722fe55c8cca62159c519302d8c43a50e947dbbc22d42407",
+      "non_path_config": {
+        "experiment_id": "E4_GAUSS_NODE_FUSION",
+        "protocol": "biofusiondti_officialsplit",
+        "biofusion_setting": "random",
+        "run_name": "hypergrad_bio_e4_final_snap_random_biofusion1500_front_seed8888_officialsplit",
+        "graph_version": "esmdance_node_cond35_dyn50",
+        "fusion_type": "interaction_mlp",
+        "seed": 8888,
+        "device": "cuda",
+        "batch_size": 32,
+        "eval_batch_size": 64,
+        "epochs": 50,
+        "patience": 8,
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "bce",
+        "save_best_by": "AUROC",
+        "kl_weight": 0.0,
+        "amp": true,
+        "grad_clip": 1.0,
+        "num_workers": 4,
+        "pin_memory": true,
+        "data": {},
+        "dataset": "SNAP",
+        "model": {
+          "drug_dim": 2304,
+          "esm_dim": 1280,
+          "dyn_dim": 50,
+          "hidden_dim": 256,
+          "edge_dim": 36,
+          "output_dim": 2,
+          "dropout": 0.2,
+          "gaussian_min_var": 0.0001,
+          "gaussian_max_var": 50.0,
+          "sample_fused": false,
+          "gaussian_tempered_poe": true,
+          "gaussian_semantic_anchor": true,
+          "gaussian_alpha_init": 0.1,
+          "gaussian_alpha_hidden_dim": 128,
+          "dyn_conditioned_on_esm35": true,
+          "esmdance35_dim": 480,
+          "pooling_type": "drug_conditioned_attention"
+        },
+        "unimodal_aux": {
+          "enabled": true,
+          "lambda_uni": 0.2,
+          "lambda_rel": 0.03,
+          "temperature": 1.0
+        },
+        "hypergradient": {
+          "enabled": true,
+          "mode": "cauchy_lr",
+          "beta": 0.01,
+          "min_lr": 1e-06,
+          "max_lr": 0.0002
+        },
+        "persistent_workers": true,
+        "prefetch_factor": 2,
+        "pooling_type": "drug_conditioned_attention",
+        "dyn_conditioned_on_esm35": true,
+        "esmdance35_dim": 480,
+        "gaussian_tempered_poe": true,
+        "gaussian_semantic_anchor": true,
+        "gaussian_alpha_init": 0.1,
+        "contrastive": {
+          "enabled": true,
+          "drug_weight": 0.02,
+          "target_weight": 0.02,
+          "temperature": 0.07,
+          "drug_sim_threshold": 0.5,
+          "target_sim_threshold": 0.5
+        }
+      },
+      "data_paths": {
+        "data.train_csv": "SNAP/biofusion1500_front/biofusion_official_splits/random/seed_8888/random_train.csv",
+        "data.val_csv": "SNAP/biofusion1500_front/biofusion_official_splits/random/seed_8888/random_val.csv",
+        "data.test_csv": "SNAP/biofusion1500_front/biofusion_official_splits/random/seed_8888/random_test.csv",
+        "data.graph_root": [
+          "SNAP/biofusion1500_front/graphs"
+        ],
+        "data.bindingdb_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "data.davis_drug_npz": [
+          "SNAP/biofusion1500_front/kpgt/kpgt.npz"
+        ],
+        "contrastive.drugs_csv": "SNAP/biofusion1500_front/drugs.csv",
+        "contrastive.targets_csv": "SNAP/biofusion1500_front/targets.csv",
+        "contrastive.drug_sim_npz": "SNAP/biofusion1500_front/contrastive/drug_knn_sim.npz",
+        "contrastive.target_sim_npz": "SNAP/biofusion1500_front/contrastive/target_knn_sim.npz"
+      }
+    }
+  }
+}

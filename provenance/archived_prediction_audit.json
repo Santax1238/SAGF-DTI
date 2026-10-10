@@ -1,0 +1,3551 @@
+{
+  "kind": "archived_prediction_artifact_audit_not_fresh_training",
+  "status": "passed",
+  "audited_runs": 45,
+  "groups": [
+    {
+      "dataset": "DRH",
+      "setting": "drug",
+      "n_runs": 5,
+      "seeds": [
+        42,
+        1234,
+        3407,
+        5678,
+        8888
+      ],
+      "historical_probability_metrics": {
+        "mean": {
+          "AUROC": 0.8741877238729582,
+          "AUPR": 0.8749663327655812,
+          "ACC": 0.802940435496907,
+          "BACC": 0.802081902415031,
+          "F1": 0.7910834414211496,
+          "Precision": 0.8338135481187064,
+          "Recall": 0.7531457138177459,
+          "MCC": 0.6081407183957308
+        },
+        "population_std": {
+          "AUROC": 0.008251237002362265,
+          "AUPR": 0.010465545770181864,
+          "ACC": 0.011440962842781396,
+          "BACC": 0.011233835171589438,
+          "F1": 0.015582175492028581,
+          "Precision": 0.009121105464614159,
+          "Recall": 0.028628552871162654,
+          "MCC": 0.021655060729767136
+        },
+        "sample_std": {
+          "AUROC": 0.009225163417871808,
+          "AUPR": 0.01170083588188102,
+          "ACC": 0.012791385322254219,
+          "BACC": 0.012559809545850998,
+          "F1": 0.01742140181875357,
+          "Precision": 0.010197705924411032,
+          "Recall": 0.032007695158683236,
+          "MCC": 0.02421109392432276
+        }
+      },
+      "raw_saved_positive_class_logit_diagnostic": {
+        "mean": {
+          "AUROC": 0.8744384407147421,
+          "AUPR": 0.8778604180125887
+        },
+        "population_std": {
+          "AUROC": 0.00840353818210608,
+          "AUPR": 0.010940080810093882
+        },
+        "sample_std": {
+          "AUROC": 0.0093954413133521,
+          "AUPR": 0.012231382185355444
+        }
+      }
+    },
+    {
+      "dataset": "DRH",
+      "setting": "prot",
+      "n_runs": 5,
+      "seeds": [
+        42,
+        1234,
+        3407,
+        5678,
+        8888
+      ],
+      "historical_probability_metrics": {
+        "mean": {
+          "AUROC": 0.8700298307734277,
+          "AUPR": 0.8685385920460011,
+          "ACC": 0.7989091096568997,
+          "BACC": 0.7982036886484651,
+          "F1": 0.7859929641359743,
+          "Precision": 0.8195581423507372,
+          "Recall": 0.756152663203926,
+          "MCC": 0.5992390318572605
+        },
+        "population_std": {
+          "AUROC": 0.006871006912881146,
+          "AUPR": 0.010016255306962303,
+          "ACC": 0.004725362866413726,
+          "BACC": 0.005389945288687793,
+          "F1": 0.010224655065788096,
+          "Precision": 0.026091116238640834,
+          "Recall": 0.02145772635442516,
+          "MCC": 0.011470692615958605
+        },
+        "sample_std": {
+          "AUROC": 0.007682019265536609,
+          "AUPR": 0.011198513873180365,
+          "ACC": 0.005283116293827174,
+          "BACC": 0.006026142030255316,
+          "F1": 0.011431511886794884,
+          "Precision": 0.029170754759224767,
+          "Recall": 0.0239904673855417,
+          "MCC": 0.012824624219144164
+        }
+      },
+      "raw_saved_positive_class_logit_diagnostic": {
+        "mean": {
+          "AUROC": 0.8714936293108794,
+          "AUPR": 0.875893737837868
+        },
+        "population_std": {
+          "AUROC": 0.0054452674791461205,
+          "AUPR": 0.009812350804103335
+        },
+        "sample_std": {
+          "AUROC": 0.006087994119519821,
+          "AUPR": 0.01097054170852489
+        }
+      }
+    },
+    {
+      "dataset": "DRH",
+      "setting": "random",
+      "n_runs": 5,
+      "seeds": [
+        42,
+        1234,
+        3407,
+        5678,
+        8888
+      ],
+      "historical_probability_metrics": {
+        "mean": {
+          "AUROC": 0.9170601913256196,
+          "AUPR": 0.9134322045768382,
+          "ACC": 0.8423186055938386,
+          "BACC": 0.842045407121763,
+          "F1": 0.8456850686172515,
+          "Precision": 0.8305834629136396,
+          "Recall": 0.8625004396691264,
+          "MCC": 0.6859940872790733
+        },
+        "population_std": {
+          "AUROC": 0.004604303918849415,
+          "AUPR": 0.00700622738960792,
+          "ACC": 0.00885113518537896,
+          "BACC": 0.009278296408227967,
+          "F1": 0.005631223538511169,
+          "Precision": 0.022897626384440876,
+          "Recall": 0.021701065913483558,
+          "MCC": 0.015870253253118426
+        },
+        "sample_std": {
+          "AUROC": 0.005147768275807984,
+          "AUPR": 0.007833200354492106,
+          "ACC": 0.009895869976273779,
+          "BACC": 0.010373450742094937,
+          "F1": 0.00629589931430394,
+          "Precision": 0.025600324559501265,
+          "Recall": 0.024262529283376404,
+          "MCC": 0.017743482547054986
+        }
+      },
+      "raw_saved_positive_class_logit_diagnostic": {
+        "mean": {
+          "AUROC": 0.9171988237823684,
+          "AUPR": 0.9160246879646243
+        },
+        "population_std": {
+          "AUROC": 0.004493151278095882,
+          "AUPR": 0.005176719390230203
+        },
+        "sample_std": {
+          "AUROC": 0.005023495845506228,
+          "AUPR": 0.005787748228497997
+        }
+      }
+    },
+    {
+      "dataset": "Kinase",
+      "setting": "drug",
+      "n_runs": 5,
+      "seeds": [
+        42,
+        1234,
+        3407,
+        5678,
+        8888
+      ],
+      "historical_probability_metrics": {
+        "mean": {
+          "AUROC": 0.8354653986127545,
+          "AUPR": 0.8372123904809342,
+          "ACC": 0.7646350074254089,
+          "BACC": 0.7639941136501406,
+          "F1": 0.7430672710881829,
+          "Precision": 0.8049863054053085,
+          "Recall": 0.6913779151884089,
+          "MCC": 0.5343326687590082
+        },
+        "population_std": {
+          "AUROC": 0.03133637919455143,
+          "AUPR": 0.020061559480827794,
+          "ACC": 0.021510245502671055,
+          "BACC": 0.01844386639458594,
+          "F1": 0.022050029074437517,
+          "Precision": 0.018302880296943252,
+          "Recall": 0.038918223764754345,
+          "MCC": 0.03702634734643081
+        },
+        "sample_std": {
+          "AUROC": 0.03503513702386355,
+          "AUPR": 0.022429505366893168,
+          "ACC": 0.024049185578340803,
+          "BACC": 0.02062086951310906,
+          "F1": 0.024652681958144528,
+          "Precision": 0.020463242264003322,
+          "Recall": 0.04351189695076925,
+          "MCC": 0.041396714812569124
+        }
+      },
+      "raw_saved_positive_class_logit_diagnostic": {
+        "mean": {
+          "AUROC": 0.8339531644522472,
+          "AUPR": 0.8367541387690328
+        },
+        "population_std": {
+          "AUROC": 0.03465151440892013,
+          "AUPR": 0.02142916400169831
+        },
+        "sample_std": {
+          "AUROC": 0.038741570870829425,
+          "AUPR": 0.02395853370439442
+        }
+      }
+    },
+    {
+      "dataset": "Kinase",
+      "setting": "prot",
+      "n_runs": 5,
+      "seeds": [
+        42,
+        1234,
+        3407,
+        5678,
+        8888
+      ],
+      "historical_probability_metrics": {
+        "mean": {
+          "AUROC": 0.8282406739840599,
+          "AUPR": 0.8425837326914888,
+          "ACC": 0.7471109255591443,
+          "BACC": 0.7503656149532231,
+          "F1": 0.7297780820274793,
+          "Precision": 0.8074267150571639,
+          "Recall": 0.6720963475431962,
+          "MCC": 0.5080389707543252
+        },
+        "population_std": {
+          "AUROC": 0.03810242344265745,
+          "AUPR": 0.022987668350791565,
+          "ACC": 0.03548340803199745,
+          "BACC": 0.03014035321702093,
+          "F1": 0.04618398237170905,
+          "Precision": 0.032376182857793666,
+          "Recall": 0.08022110597285609,
+          "MCC": 0.056769611479573295
+        },
+        "sample_std": {
+          "AUROC": 0.042599804462631806,
+          "AUPR": 0.025700994538295212,
+          "ACC": 0.03967165621645416,
+          "BACC": 0.033697939329556635,
+          "F1": 0.051635262027396704,
+          "Precision": 0.03619767286099502,
+          "Recall": 0.08968992309276032,
+          "MCC": 0.06347035516228915
+        }
+      },
+      "raw_saved_positive_class_logit_diagnostic": {
+        "mean": {
+          "AUROC": 0.8289104795602494,
+          "AUPR": 0.8447019226855542
+        },
+        "population_std": {
+          "AUROC": 0.03806827860517349,
+          "AUPR": 0.023923953761661697
+        },
+        "sample_std": {
+          "AUROC": 0.0425616293737844,
+          "AUPR": 0.026747793450818676
+        }
+      }
+    },
+    {
+      "dataset": "Kinase",
+      "setting": "random",
+      "n_runs": 5,
+      "seeds": [
+        42,
+        1234,
+        3407,
+        5678,
+        8888
+      ],
+      "historical_probability_metrics": {
+        "mean": {
+          "AUROC": 0.9319061488009219,
+          "AUPR": 0.9240021772713991,
+          "ACC": 0.8678217821782178,
+          "BACC": 0.8674593677970717,
+          "F1": 0.8699562076130518,
+          "Precision": 0.858416928471935,
+          "Recall": 0.882612582852778,
+          "MCC": 0.7364192830793412
+        },
+        "population_std": {
+          "AUROC": 0.0037498015815731964,
+          "AUPR": 0.006063404301292447,
+          "ACC": 0.008157892471490614,
+          "BACC": 0.008579968164385693,
+          "F1": 0.006950785476282432,
+          "Precision": 0.018199884685487226,
+          "Recall": 0.02086267015159837,
+          "MCC": 0.01547566297301923
+        },
+        "sample_std": {
+          "AUROC": 0.004192405619266945,
+          "AUPR": 0.006779092096377263,
+          "ACC": 0.009120801059693389,
+          "BACC": 0.009592696030175249,
+          "F1": 0.007771214410992885,
+          "Precision": 0.020348089669703407,
+          "Recall": 0.0233251743255649,
+          "MCC": 0.017302317202273747
+        }
+      },
+      "raw_saved_positive_class_logit_diagnostic": {
+        "mean": {
+          "AUROC": 0.9319182625035047,
+          "AUPR": 0.9269486705911674
+        },
+        "population_std": {
+          "AUROC": 0.003654294824814005,
+          "AUPR": 0.004782995861883895
+        },
+        "sample_std": {
+          "AUROC": 0.0040856258190549,
+          "AUPR": 0.005347551941636292
+        }
+      }
+    },
+    {
+      "dataset": "SNAP",
+      "setting": "drug",
+      "n_runs": 5,
+      "seeds": [
+        42,
+        1234,
+        3407,
+        5678,
+        8888
+      ],
+      "historical_probability_metrics": {
+        "mean": {
+          "AUROC": 0.9097266780106203,
+          "AUPR": 0.9127340366219202,
+          "ACC": 0.8358775794045125,
+          "BACC": 0.8347546048013095,
+          "F1": 0.8255058993312896,
+          "Precision": 0.8578080701499643,
+          "Recall": 0.7971017254014625,
+          "MCC": 0.6733756112278091
+        },
+        "population_std": {
+          "AUROC": 0.004716264604963301,
+          "AUPR": 0.0035187698521111565,
+          "ACC": 0.010580245515044606,
+          "BACC": 0.011069455921330209,
+          "F1": 0.013963805372457432,
+          "Precision": 0.01999586334049759,
+          "Recall": 0.03492633935843417,
+          "MCC": 0.020233182748466597
+        },
+        "sample_std": {
+          "AUROC": 0.0052729441282870675,
+          "AUPR": 0.003934104293248714,
+          "ACC": 0.011829074095138507,
+          "BACC": 0.012376027957015956,
+          "F1": 0.015612009018695795,
+          "Precision": 0.02235605484907432,
+          "Recall": 0.039048834505342606,
+          "MCC": 0.022621386013373667
+        }
+      },
+      "raw_saved_positive_class_logit_diagnostic": {
+        "mean": {
+          "AUROC": 0.9094853072204357,
+          "AUPR": 0.9149393900392715
+        },
+        "population_std": {
+          "AUROC": 0.005363900548216518,
+          "AUPR": 0.005941447300856785
+        },
+        "sample_std": {
+          "AUROC": 0.005997023125180261,
+          "AUPR": 0.006642740024724207
+        }
+      }
+    },
+    {
+      "dataset": "SNAP",
+      "setting": "prot",
+      "n_runs": 5,
+      "seeds": [
+        42,
+        1234,
+        3407,
+        5678,
+        8888
+      ],
+      "historical_probability_metrics": {
+        "mean": {
+          "AUROC": 0.8885686063222816,
+          "AUPR": 0.8992115872396856,
+          "ACC": 0.816171245060801,
+          "BACC": 0.8182014105935578,
+          "F1": 0.8116013024175067,
+          "Precision": 0.8635856044555679,
+          "Recall": 0.7667296796637609,
+          "MCC": 0.6383379674230361
+        },
+        "population_std": {
+          "AUROC": 0.006826395687056326,
+          "AUPR": 0.013143895345867414,
+          "ACC": 0.008410614808205858,
+          "BACC": 0.00932950238859002,
+          "F1": 0.013703006415593461,
+          "Precision": 0.029527373576863584,
+          "Recall": 0.025006790158188814,
+          "MCC": 0.01819305890021784
+        },
+        "sample_std": {
+          "AUROC": 0.007632142398784663,
+          "AUPR": 0.014695321741251323,
+          "ACC": 0.009403353221857327,
+          "BACC": 0.010430700768566972,
+          "F1": 0.015320426920691356,
+          "Precision": 0.03301260725744904,
+          "Recall": 0.027958441346391454,
+          "MCC": 0.020340458209772327
+        }
+      },
+      "raw_saved_positive_class_logit_diagnostic": {
+        "mean": {
+          "AUROC": 0.8895714498008899,
+          "AUPR": 0.9040758813930755
+        },
+        "population_std": {
+          "AUROC": 0.007292046461580948,
+          "AUPR": 0.013802427224165057
+        },
+        "sample_std": {
+          "AUROC": 0.008152755791590903,
+          "AUPR": 0.015431582763863399
+        }
+      }
+    },
+    {
+      "dataset": "SNAP",
+      "setting": "random",
+      "n_runs": 5,
+      "seeds": [
+        42,
+        1234,
+        3407,
+        5678,
+        8888
+      ],
+      "historical_probability_metrics": {
+        "mean": {
+          "AUROC": 0.9437014016386172,
+          "AUPR": 0.9395031921929917,
+          "ACC": 0.8754051134317609,
+          "BACC": 0.8753802047549243,
+          "F1": 0.8780168967337274,
+          "Precision": 0.8649057943137742,
+          "Recall": 0.8922461257569202,
+          "MCC": 0.7518241358314858
+        },
+        "population_std": {
+          "AUROC": 0.0023241971059246194,
+          "AUPR": 0.003191635666435354,
+          "ACC": 0.0051495677515574715,
+          "BACC": 0.005192761370442605,
+          "F1": 0.003744284334383076,
+          "Precision": 0.01928494622643418,
+          "Recall": 0.016178849639428405,
+          "MCC": 0.009506243065550306
+        },
+        "sample_std": {
+          "AUROC": 0.002598531360977864,
+          "AUPR": 0.003568357154781148,
+          "ACC": 0.005757391773611627,
+          "BACC": 0.005805683707622316,
+          "F1": 0.004186237149384055,
+          "Precision": 0.02156122535236744,
+          "Recall": 0.018088503795754936,
+          "MCC": 0.010628302852603237
+        }
+      },
+      "raw_saved_positive_class_logit_diagnostic": {
+        "mean": {
+          "AUROC": 0.9444131719770369,
+          "AUPR": 0.9453065978387594
+        },
+        "population_std": {
+          "AUROC": 0.0027092380823319283,
+          "AUPR": 0.003803545597511436
+        },
+        "sample_std": {
+          "AUROC": 0.0030290202596626814,
+          "AUPR": 0.0042524932557778125
+        }
+      }
+    }
+  ],
+  "standard_deviation_conventions": {
+    "population_std": "ddof=0",
+    "sample_std": "ddof=1",
+    "reported_paper_spread": "sample standard deviation; verified for SNAP prot"
+  },
+  "historical_probability_metric_matching_runs": 45,
+  "max_abs_historical_probability_minus_reported_auroc_aupr": 0.0,
+  "max_abs_historical_probability_minus_reported_classification_metric": 0.0,
+  "raw_saved_positive_class_logit_reranking_changes_runs": 45,
+  "corrected_binary_margin_ranking_recoverable_from_archived_csv": false,
+  "fresh_training_performed_by_this_audit": false,
+  "errors": [],
+  "environment": {
+    "python": "3.11.15",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.5.2"
+  },
+  "score_semantics": {
+    "historical_probability": "August27 trainer computes sigmoid(logit1-logit0) in the produced logits dtype and ranks saved probabilities.",
+    "historical_pred_logit_column": "With the configured two outputs, August27 trainer saves logit1 alone, not logit1-logit0.",
+    "current_release": "August28 correction converts each class logit to float32, computes logit1-logit0, applies sigmoid for probabilities, and ranks the raw float32 binary margin. The current CSV pred_logit stores that margin.",
+    "diagnostic_interpretation": "Raw saved class1-logit reranking is a different decision score; its differences are not archived metric errors and are not corrected-ranking paper metrics.",
+    "recovery_limitation": "The older CSV lacks logit0. Rounded and saturated probabilities also lose margin information; exact corrected binary-margin metrics require both original logits or retained checkpoints, neither supplied by these CSVs.",
+    "precision_evidence": "Repeated probability values, values at 0/1 and float16 representability are recorded per run. They demonstrate finite stored precision, but do not isolate the effect of precision from changing the ranking score."
+  },
+  "source_evidence": {
+    "august27_trainer": {
+      "archive_name": "SAGF_AutoDL_CODE_20260827.tar.gz",
+      "archive_sha256": "664d9236ec493397974d231ae6389b027c38df3d72b3073e80749c7ea5ddf948",
+      "member": "GSDTI/my_experiments/scripts/train/09_train_experiment.py",
+      "member_sha256": "4ef2c65a0107b8f8e37bf9672688cda49b29402f76193fab50baaad36bbabdc4"
+    },
+    "august28_corrected_trainer": {
+      "archive_name": "SAGF_FP32_REEVAL_PATCH_20260828.tar.gz",
+      "archive_sha256": "f66a9fa2a92c3a31966bfa91c23c6283c6884f97ba604d0cbdf9308b332889a5",
+      "member": "GSDTI/my_experiments/scripts/train/09_train_experiment.py",
+      "member_sha256": "d8d66b5d82d0ed074d597ab5e179a52b3c79f9de92490267e17f84137c2d4958"
+    },
+    "august28_corrected_metrics": {
+      "archive_name": "SAGF_FP32_REEVAL_PATCH_20260828.tar.gz",
+      "archive_sha256": "f66a9fa2a92c3a31966bfa91c23c6283c6884f97ba604d0cbdf9308b332889a5",
+      "member": "GSDTI/my_experiments/phase4_utils/metrics.py",
+      "member_sha256": "7032f9f1d3ac2fe0a4611ea1e1c7c801337679fd421ab2fdadf419753ebc8856"
+    },
+    "current_release_trainer": {
+      "relative_path": "my_experiments/scripts/train/09_train_experiment.py",
+      "sha256": "d8d66b5d82d0ed074d597ab5e179a52b3c79f9de92490267e17f84137c2d4958"
+    }
+  },
+  "runs": [
+    {
+      "dataset": "DRH",
+      "setting": "drug",
+      "seed": 42,
+      "n_pairs": 5030,
+      "n_positive": 2580,
+      "n_negative": 2450,
+      "input_hashes": {
+        "test_predictions.csv": "8c33784a532b5b0c7c4723e8a35a26fbddc2e31a01e82c619732b22c0d72819c",
+        "test_metrics.json": "ca6cc6cafa668b81ba7de98c1b305323b8eb9ee97e2602983021200596b5308d",
+        "config.yaml": "36eb2863df0917cac507663268c5d62fd191624df65dc8d833dd14d55266c59d"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8860040341718083,
+        "AUPR": 0.8900215227163574,
+        "ACC": 0.8129224652087476,
+        "BACC": 0.8135121025154248,
+        "F1": 0.8125871340370444,
+        "Precision": 0.8357230643179026,
+        "Recall": 0.7906976744186046,
+        "MCC": 0.6270862619626837
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8860040341718083,
+        "AUPR": 0.8900215227163574,
+        "ACC": 0.8129224652087476,
+        "BACC": 0.8135121025154248,
+        "F1": 0.8125871340370444,
+        "Precision": 0.8357230643179026,
+        "Recall": 0.7906976744186046,
+        "MCC": 0.6270862619626837
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8868812687865845,
+        "AUPR": 0.8947497196674629
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.0008772346147761789,
+        "AUPR": 0.00472819695110549
+      },
+      "score_storage": {
+        "unique_probabilities": 2116,
+        "unique_positive_class_logits": 3683,
+        "rows_in_repeated_probability_groups": 3680,
+        "probability_exactly_zero": 33,
+        "probability_exactly_one": 787,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.247283104188407
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 9,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.8834344178876633
+      }
+    },
+    {
+      "dataset": "DRH",
+      "setting": "drug",
+      "seed": 1234,
+      "n_pairs": 4840,
+      "n_positive": 2474,
+      "n_negative": 2366,
+      "input_hashes": {
+        "test_predictions.csv": "5dea8eebe84e39acba895cffe33cbef3ab2f00f25f09432b4cf1edabc4b4fe36",
+        "test_metrics.json": "0c7db2ce31f24f111151d8c3635aa8ab95edc46071a3e09364259238d8d3d7cb",
+        "config.yaml": "26e729e543d97cc383778e7da82ee17f1766ee5e64293913c9262c36c8999b5d"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8752061165623756,
+        "AUPR": 0.8849369146385297,
+        "ACC": 0.7950413223140496,
+        "BACC": 0.7956311147344044,
+        "F1": 0.7932471863276365,
+        "Precision": 0.8188468158347676,
+        "Recall": 0.769199676637025,
+        "MCC": 0.5915806690143345
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8752061165623756,
+        "AUPR": 0.8849369146385297,
+        "ACC": 0.7950413223140496,
+        "BACC": 0.7956311147344044,
+        "F1": 0.7932471863276365,
+        "Precision": 0.8188468158347676,
+        "Recall": 0.769199676637025,
+        "MCC": 0.5915806690143345
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8763654261291225,
+        "AUPR": 0.8862077338263483
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.0011593095667469244,
+        "AUPR": 0.0012708191878185726
+      },
+      "score_storage": {
+        "unique_probabilities": 2486,
+        "unique_positive_class_logits": 3633,
+        "rows_in_repeated_probability_groups": 3266,
+        "probability_exactly_zero": 0,
+        "probability_exactly_one": 19,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.23820418502586987
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 6,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.8959890288281134
+      }
+    },
+    {
+      "dataset": "DRH",
+      "setting": "drug",
+      "seed": 3407,
+      "n_pairs": 4739,
+      "n_positive": 2294,
+      "n_negative": 2445,
+      "input_hashes": {
+        "test_predictions.csv": "10313a79e0830cb2dbc4535482bb6fdf5ef10ff90c1f5278fc601eb0a45602d3",
+        "test_metrics.json": "b55393fa2a7b308f862564186b423518d4e5282399548758be963e06229fa829",
+        "config.yaml": "dd7af7919673a8c55c9a7d5b9af3c4e33b3f29a1dcb4f03d31694286e35d0c8d"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8696237004865542,
+        "AUPR": 0.8649622661837071,
+        "ACC": 0.7948934374340578,
+        "BACC": 0.7922754834787291,
+        "F1": 0.7702127659574468,
+        "Precision": 0.8414256198347108,
+        "Recall": 0.7101133391455972,
+        "MCC": 0.5942843538134345
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8696237004865542,
+        "AUPR": 0.8649622661837071,
+        "ACC": 0.7948934374340578,
+        "BACC": 0.7922754834787291,
+        "F1": 0.7702127659574468,
+        "Precision": 0.8414256198347108,
+        "Recall": 0.7101133391455972,
+        "MCC": 0.5942843538134345
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.869058252790689,
+        "AUPR": 0.8652555230508936
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": -0.0005654476958651955,
+        "AUPR": 0.0002932568671865088
+      },
+      "score_storage": {
+        "unique_probabilities": 2199,
+        "unique_positive_class_logits": 3529,
+        "rows_in_repeated_probability_groups": 3392,
+        "probability_exactly_zero": 38,
+        "probability_exactly_one": 290,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.2572185084868853
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 10,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.8450861176470588
+      }
+    },
+    {
+      "dataset": "DRH",
+      "setting": "drug",
+      "seed": 5678,
+      "n_pairs": 4862,
+      "n_positive": 2318,
+      "n_negative": 2544,
+      "input_hashes": {
+        "test_predictions.csv": "3758fd5b7452c797234724d1ed990aa132f908f0082900e58e42198df860d80c",
+        "test_metrics.json": "0a94e83f82fee71e493169d27ad71e32cef28cfab18f50a7cbd6e6493c86e1ef",
+        "config.yaml": "13f34c9565e3bfe07f6d9084ff9b1606cb888f36916a34363c2a879927cdfe44"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8785588483077474,
+        "AUPR": 0.8695363251219003,
+        "ACC": 0.8202385849444673,
+        "BACC": 0.8177414858287073,
+        "F1": 0.8020833333333334,
+        "Precision": 0.844137273593899,
+        "Recall": 0.7640207075064711,
+        "MCC": 0.6408367743790622
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8785588483077474,
+        "AUPR": 0.8695363251219003,
+        "ACC": 0.8202385849444673,
+        "BACC": 0.8177414858287073,
+        "F1": 0.8020833333333334,
+        "Precision": 0.844137273593899,
+        "Recall": 0.7640207075064711,
+        "MCC": 0.6408367743790622
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8778558627856371,
+        "AUPR": 0.873099719971042
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": -0.0007029855221103443,
+        "AUPR": 0.003563394849141699
+      },
+      "score_storage": {
+        "unique_probabilities": 1775,
+        "unique_positive_class_logits": 3552,
+        "rows_in_repeated_probability_groups": 3687,
+        "probability_exactly_zero": 280,
+        "probability_exactly_one": 821,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.27303100447948814
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 14,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.8800262800369824
+      }
+    },
+    {
+      "dataset": "DRH",
+      "setting": "drug",
+      "seed": 8888,
+      "n_pairs": 4837,
+      "n_positive": 2404,
+      "n_negative": 2433,
+      "input_hashes": {
+        "test_predictions.csv": "3ea445eed760c8457c9d7b036f17d5e6585aa7f5bde1c1ff9a3fa137598c1019",
+        "test_metrics.json": "dd61a28a52f7e7cfe5a0c6d6f3eb2a1ee853e0281c3e101e32edef6e2436e4ad",
+        "config.yaml": "57236d2898e082bffc2f6c5d4d8e2873bf2c7a1a00f1757e7336474f7e24fdd6"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8615459198363051,
+        "AUPR": 0.8653746351674116,
+        "ACC": 0.7916063675832128,
+        "BACC": 0.7912493255178894,
+        "F1": 0.7772867874502872,
+        "Precision": 0.8289349670122526,
+        "Recall": 0.7316971713810316,
+        "MCC": 0.586915532809139
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8615459198363051,
+        "AUPR": 0.8653746351674116,
+        "ACC": 0.7916063675832128,
+        "BACC": 0.7912493255178894,
+        "F1": 0.7772867874502872,
+        "Precision": 0.8289349670122526,
+        "Recall": 0.7316971713810316,
+        "MCC": 0.586915532809139
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8620313930816771,
+        "AUPR": 0.8699893935471972
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.000485473245371959,
+        "AUPR": 0.004614758379785533
+      },
+      "score_storage": {
+        "unique_probabilities": 1785,
+        "unique_positive_class_logits": 3515,
+        "rows_in_repeated_probability_groups": 3640,
+        "probability_exactly_zero": 336,
+        "probability_exactly_one": 825,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.2687443314802406
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 15,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.8676227241150336
+      }
+    },
+    {
+      "dataset": "DRH",
+      "setting": "prot",
+      "seed": 42,
+      "n_pairs": 4943,
+      "n_positive": 2504,
+      "n_negative": 2439,
+      "input_hashes": {
+        "test_predictions.csv": "c9ef88ee330419b7d57ae7dc1a6bf5e2e0294da27f89327184f8f6dc6b557b2b",
+        "test_metrics.json": "f4ad304254618cfab31fdf9ef1387a2ac6fce2546c0b6bdd71c5d966ecb00421",
+        "config.yaml": "56e5eadf018fe3354b054d09eccaa18131380b4c5d3b848b0919b63ca25a874c"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8582238078770563,
+        "AUPR": 0.8569047374907104,
+        "ACC": 0.7962775642322476,
+        "BACC": 0.7965110681458252,
+        "F1": 0.7947829631139189,
+        "Precision": 0.8114856429463171,
+        "Recall": 0.7787539936102237,
+        "MCC": 0.5931987452106481
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8582238078770563,
+        "AUPR": 0.8569047374907104,
+        "ACC": 0.7962775642322476,
+        "BACC": 0.7965110681458252,
+        "F1": 0.7947829631139189,
+        "Precision": 0.8114856429463171,
+        "Recall": 0.7787539936102237,
+        "MCC": 0.5931987452106481
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8638196106401959,
+        "AUPR": 0.878394661043838
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.005595802763139535,
+        "AUPR": 0.02148992355312762
+      },
+      "score_storage": {
+        "unique_probabilities": 1412,
+        "unique_positive_class_logits": 3558,
+        "rows_in_repeated_probability_groups": 3929,
+        "probability_exactly_zero": 658,
+        "probability_exactly_one": 1482,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.23592079853283293
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 18,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.890139119842883
+      }
+    },
+    {
+      "dataset": "DRH",
+      "setting": "prot",
+      "seed": 1234,
+      "n_pairs": 4757,
+      "n_positive": 2155,
+      "n_negative": 2602,
+      "input_hashes": {
+        "test_predictions.csv": "30517670ce2b1598ecede624e2112a887426c2269171c81b31df8deeb338deb8",
+        "test_metrics.json": "576565483c38d64bdae335c3ed1ed40e53bb4fd7a5104ed8443dae47412c69ae",
+        "config.yaml": "5c2007de2d3201ef6bde371a1bea5dc99a03a174bddb86e01c9c3bc0a5524e96"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8712006291786971,
+        "AUPR": 0.8599044174855941,
+        "ACC": 0.7963001891948707,
+        "BACC": 0.7935090087760441,
+        "F1": 0.7725885942267073,
+        "Precision": 0.7815764482431149,
+        "Recall": 0.7638051044083527,
+        "MCC": 0.5882943365201525
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8712006291786971,
+        "AUPR": 0.8599044174855941,
+        "ACC": 0.7963001891948707,
+        "BACC": 0.7935090087760441,
+        "F1": 0.7725885942267073,
+        "Precision": 0.7815764482431149,
+        "Recall": 0.7638051044083527,
+        "MCC": 0.5882943365201525
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.871973192136693,
+        "AUPR": 0.8614070661107827
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.0007725629579958815,
+        "AUPR": 0.001502648625188563
+      },
+      "score_storage": {
+        "unique_probabilities": 2228,
+        "unique_positive_class_logits": 3535,
+        "rows_in_repeated_probability_groups": 3330,
+        "probability_exactly_zero": 19,
+        "probability_exactly_one": 407,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.28262722253130446
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 10,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.8751003363378898
+      }
+    },
+    {
+      "dataset": "DRH",
+      "setting": "prot",
+      "seed": 3407,
+      "n_pairs": 4880,
+      "n_positive": 2448,
+      "n_negative": 2432,
+      "input_hashes": {
+        "test_predictions.csv": "f28c2cfa6fd4f9a7570626fff1808f52fa6b7968de7dbd76955c0ab7a80903b8",
+        "test_metrics.json": "43c83c37b42d687d32b3cad2a771c87cf06bd22ed5a9ad137d478e79c9d9184b",
+        "config.yaml": "559d10cf96bfc298fc7a68447065ad04dc5d92ae8a1cc8473d33bd19d6fd6f98"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8776118931673547,
+        "AUPR": 0.884967818304152,
+        "ACC": 0.7995901639344263,
+        "BACC": 0.799860788613691,
+        "F1": 0.7821826280623608,
+        "Precision": 0.8599412340842312,
+        "Recall": 0.7173202614379085,
+        "MCC": 0.6078593510526877
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8776118931673547,
+        "AUPR": 0.884967818304152,
+        "ACC": 0.7995901639344263,
+        "BACC": 0.799860788613691,
+        "F1": 0.7821826280623608,
+        "Precision": 0.8599412340842312,
+        "Recall": 0.7173202614379085,
+        "MCC": 0.6078593510526877
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8764747538269695,
+        "AUPR": 0.8861984757590367
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": -0.0011371393403851737,
+        "AUPR": 0.0012306574548845983
+      },
+      "score_storage": {
+        "unique_probabilities": 1910,
+        "unique_positive_class_logits": 3500,
+        "rows_in_repeated_probability_groups": 3677,
+        "probability_exactly_zero": 122,
+        "probability_exactly_one": 626,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.22805831103551316
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 12,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9138588111123165
+      }
+    },
+    {
+      "dataset": "DRH",
+      "setting": "prot",
+      "seed": 5678,
+      "n_pairs": 4906,
+      "n_positive": 2458,
+      "n_negative": 2448,
+      "input_hashes": {
+        "test_predictions.csv": "bff65c1d966ac7c7a3825883342165136c5f63bf9ed70a3eb8d7b05282bf1714",
+        "test_metrics.json": "c1e6e85f473e4b2c9bd7fc1ab6608962ffa4d3460d78b032792b10a8271d778f",
+        "config.yaml": "5276683c7c59c8522d9d1427aa6dbbed7228e13f308fe85d3e6b1c2dfd885311"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8756277853560734,
+        "AUPR": 0.8731453370131915,
+        "ACC": 0.8077863840195679,
+        "BACC": 0.8078632795673192,
+        "F1": 0.8005920913512371,
+        "Precision": 0.8335535006605019,
+        "Recall": 0.7701383238405207,
+        "MCC": 0.6174270555199403
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8756277853560734,
+        "AUPR": 0.8731453370131915,
+        "ACC": 0.8077863840195679,
+        "BACC": 0.8078632795673192,
+        "F1": 0.8005920913512371,
+        "Precision": 0.8335535006605019,
+        "Recall": 0.7701383238405207,
+        "MCC": 0.6174270555199403
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8781623596685759,
+        "AUPR": 0.8856137798645208
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.00253457431250248,
+        "AUPR": 0.012468442851329309
+      },
+      "score_storage": {
+        "unique_probabilities": 1646,
+        "unique_positive_class_logits": 3484,
+        "rows_in_repeated_probability_groups": 3771,
+        "probability_exactly_zero": 368,
+        "probability_exactly_one": 1208,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.27288522000942234
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 13,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.8924700409470291
+      }
+    },
+    {
+      "dataset": "DRH",
+      "setting": "prot",
+      "seed": 8888,
+      "n_pairs": 4844,
+      "n_positive": 2347,
+      "n_negative": 2497,
+      "input_hashes": {
+        "test_predictions.csv": "017632541c469a21268fd714f8e9444a61631f504b45c3b2e52260f8aa88f132",
+        "test_metrics.json": "2fc0bcbd77f263cf1553e8823bde91640d10fed646f1ec24f76b9ba731db491c",
+        "config.yaml": "946618eb8bc4e162823fb3156cf2420c730e7849a3fd5b629974dd704a73eb03"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8674850382879566,
+        "AUPR": 0.8677706499363578,
+        "ACC": 0.7945912469033857,
+        "BACC": 0.793274298139446,
+        "F1": 0.7798185439256473,
+        "Precision": 0.8112338858195212,
+        "Recall": 0.7507456327226246,
+        "MCC": 0.589415670982874
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8674850382879566,
+        "AUPR": 0.8677706499363578,
+        "ACC": 0.7945912469033857,
+        "BACC": 0.793274298139446,
+        "F1": 0.7798185439256473,
+        "Precision": 0.8112338858195212,
+        "Recall": 0.7507456327226246,
+        "MCC": 0.589415670982874
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8670382302819626,
+        "AUPR": 0.8678547064111615
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": -0.00044680800599405934,
+        "AUPR": 8.405647480369538e-05
+      },
+      "score_storage": {
+        "unique_probabilities": 2317,
+        "unique_positive_class_logits": 3474,
+        "rows_in_repeated_probability_groups": 3348,
+        "probability_exactly_zero": 1,
+        "probability_exactly_one": 339,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.2041432835395064
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 8,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.8865786231678945
+      }
+    },
+    {
+      "dataset": "DRH",
+      "setting": "random",
+      "seed": 42,
+      "n_pairs": 4934,
+      "n_positive": 2448,
+      "n_negative": 2486,
+      "input_hashes": {
+        "test_predictions.csv": "2d3ab5aa843ce647dd0c55f1dac107d5d0cdbb88ec164f4829e60e148e3653b7",
+        "test_metrics.json": "13c82af6450d91f84df8912a2d801237749c84e5b4736246b97d032e253c44a9",
+        "config.yaml": "35deb92bf89490690335cd38c5f59f5e170645115d582347d047df9520f4795d"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9238907818423696,
+        "AUPR": 0.9189946231388669,
+        "ACC": 0.8522496959870288,
+        "BACC": 0.8523080558316113,
+        "F1": 0.8523992711075117,
+        "Precision": 0.8450421517462866,
+        "Recall": 0.8598856209150327,
+        "MCC": 0.7046285585289167
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9238907818423696,
+        "AUPR": 0.9189946231388669,
+        "ACC": 0.8522496959870288,
+        "BACC": 0.8523080558316113,
+        "F1": 0.8523992711075117,
+        "Precision": 0.8450421517462866,
+        "Recall": 0.8598856209150327,
+        "MCC": 0.7046285585289167
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.924101931601281,
+        "AUPR": 0.9191375957664638
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.00021114975891134424,
+        "AUPR": 0.00014297262759688234
+      },
+      "score_storage": {
+        "unique_probabilities": 2065,
+        "unique_positive_class_logits": 3574,
+        "rows_in_repeated_probability_groups": 3563,
+        "probability_exactly_zero": 44,
+        "probability_exactly_one": 660,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.3345406444938158
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 9,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9198283103270135
+      }
+    },
+    {
+      "dataset": "DRH",
+      "setting": "random",
+      "seed": 1234,
+      "n_pairs": 4934,
+      "n_positive": 2439,
+      "n_negative": 2495,
+      "input_hashes": {
+        "test_predictions.csv": "da732878a9292c06a5b958f0e92a50ad9605f19b173d58119b07cc48d21c1c2c",
+        "test_metrics.json": "a07d3ac9a14fa19375556c60c19418760d146ef65fe593b18bb5d9cbdbe9f1ba",
+        "config.yaml": "b1f53c0140a1a22ec902f65827611d37b1ee1fd2ab34ada8125ddabd20643127"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9135272595210921,
+        "AUPR": 0.9091113417507439,
+        "ACC": 0.8360356708552898,
+        "BACC": 0.836292922047457,
+        "F1": 0.8381676335267053,
+        "Precision": 0.818359375,
+        "Recall": 0.8589585895858959,
+        "MCC": 0.6730209102839007
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9135272595210921,
+        "AUPR": 0.9091113417507439,
+        "ACC": 0.8360356708552898,
+        "BACC": 0.836292922047457,
+        "F1": 0.8381676335267053,
+        "Precision": 0.818359375,
+        "Recall": 0.8589585895858959,
+        "MCC": 0.6730209102839007
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.9120878904179823,
+        "AUPR": 0.9080344258657509
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": -0.0014393691031098221,
+        "AUPR": -0.001076915884993035
+      },
+      "score_storage": {
+        "unique_probabilities": 2279,
+        "unique_positive_class_logits": 3628,
+        "rows_in_repeated_probability_groups": 3422,
+        "probability_exactly_zero": 0,
+        "probability_exactly_one": 203,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.2504635171120251
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 8,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9176272748305544
+      }
+    },
+    {
+      "dataset": "DRH",
+      "setting": "random",
+      "seed": 3407,
+      "n_pairs": 4934,
+      "n_positive": 2498,
+      "n_negative": 2436,
+      "input_hashes": {
+        "test_predictions.csv": "b40be5b8b80aca97581c1971353ab1acb3f36588f69c72f7529589e49adb77ef",
+        "test_metrics.json": "fd13ba18e094cc9ce33bcf8aed2ba8d2e97c924e89f1e78e9c37fe46be64d5de",
+        "config.yaml": "2fcfa2cd054955013778a961abfd442c9f7e8ad94106e60890709f428098a037"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9187229093619723,
+        "AUPR": 0.9183933894497249,
+        "ACC": 0.8490068909606809,
+        "BACC": 0.8488786102773844,
+        "F1": 0.852094500694858,
+        "Precision": 0.8452146514375738,
+        "Recall": 0.8590872698158527,
+        "MCC": 0.6979994638832199
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9187229093619723,
+        "AUPR": 0.9183933894497249,
+        "ACC": 0.8490068909606809,
+        "BACC": 0.8488786102773844,
+        "F1": 0.852094500694858,
+        "Precision": 0.8452146514375738,
+        "Recall": 0.8590872698158527,
+        "MCC": 0.6979994638832199
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.9183274369906435,
+        "AUPR": 0.9202323997950494
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": -0.00039547237132886437,
+        "AUPR": 0.001839010345324521
+      },
+      "score_storage": {
+        "unique_probabilities": 1957,
+        "unique_positive_class_logits": 3516,
+        "rows_in_repeated_probability_groups": 3660,
+        "probability_exactly_zero": 33,
+        "probability_exactly_one": 811,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.4240728396196263
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 10,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9190795954144161
+      }
+    },
+    {
+      "dataset": "DRH",
+      "setting": "random",
+      "seed": 5678,
+      "n_pairs": 4934,
+      "n_positive": 2516,
+      "n_negative": 2418,
+      "input_hashes": {
+        "test_predictions.csv": "0c1cc5dd3ee5e90dc29c99ac43bd9bf3a1e73261edb418c0fe4d4fdaaa0ba488",
+        "test_metrics.json": "9531e302498c955980d52c8635412779fc3309d48906c462257381b72275e3d1",
+        "config.yaml": "fe161ebd4c18173436e9b609544118eafe3fc04344a54a6dfb788baa42b023e0"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9185669942311309,
+        "AUPR": 0.9190479268060714,
+        "ACC": 0.8283340089177138,
+        "BACC": 0.8268607791852574,
+        "F1": 0.8425943133246608,
+        "Precision": 0.7912739965095986,
+        "Recall": 0.901033386327504,
+        "MCC": 0.662267915409668
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9185669942311309,
+        "AUPR": 0.9190479268060714,
+        "ACC": 0.8283340089177138,
+        "BACC": 0.8268607791852574,
+        "F1": 0.8425943133246608,
+        "Precision": 0.7912739965095986,
+        "Recall": 0.901033386327504,
+        "MCC": 0.662267915409668
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.9190269126227381,
+        "AUPR": 0.9209708314307616
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.0004599183916071947,
+        "AUPR": 0.001922904624690247
+      },
+      "score_storage": {
+        "unique_probabilities": 2013,
+        "unique_positive_class_logits": 3460,
+        "rows_in_repeated_probability_groups": 3563,
+        "probability_exactly_zero": 1,
+        "probability_exactly_one": 816,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.25111624534069965
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 8,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9247415489296735
+      }
+    },
+    {
+      "dataset": "DRH",
+      "setting": "random",
+      "seed": 8888,
+      "n_pairs": 4934,
+      "n_positive": 2451,
+      "n_negative": 2483,
+      "input_hashes": {
+        "test_predictions.csv": "3f944f3e67ff16becfefa8b4b21b315f8e080ba3fd5b298023791e9c946dae96",
+        "test_metrics.json": "11b1621a7253d6341c22a455fe47f1b40bcf7628e7cba6dc0ef9edf8bd7091b5",
+        "config.yaml": "6f451af88601d85930c3e491c61ab9374ec889f26cb61bed3883b55d56d68405"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9105930116715328,
+        "AUPR": 0.9016137417387838,
+        "ACC": 0.8459667612484799,
+        "BACC": 0.8458866682671049,
+        "F1": 0.8431696244325216,
+        "Precision": 0.853027139874739,
+        "Recall": 0.8335373317013464,
+        "MCC": 0.692053588289661
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9105930116715328,
+        "AUPR": 0.9016137417387838,
+        "ACC": 0.8459667612484799,
+        "BACC": 0.8458866682671049,
+        "F1": 0.8431696244325216,
+        "Precision": 0.853027139874739,
+        "Recall": 0.8335373317013464,
+        "MCC": 0.692053588289661
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.9124499472791974,
+        "AUPR": 0.9117481869650959
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.0018569356076645338,
+        "AUPR": 0.010134445226312017
+      },
+      "score_storage": {
+        "unique_probabilities": 1433,
+        "unique_positive_class_logits": 3536,
+        "rows_in_repeated_probability_groups": 3958,
+        "probability_exactly_zero": 530,
+        "probability_exactly_one": 1307,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.23701364337829944
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 14,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9259132247437054
+      }
+    },
+    {
+      "dataset": "Kinase",
+      "setting": "drug",
+      "seed": 42,
+      "n_pairs": 2404,
+      "n_positive": 1160,
+      "n_negative": 1244,
+      "input_hashes": {
+        "test_predictions.csv": "72bb80134cf9f7ef45e4ac9fd66debaecc67363814ae8c08f854d5884945df08",
+        "test_metrics.json": "1ad8f4843c9fc604e64f3ec04a055919b555c575c21f309a51537f892723718f",
+        "config.yaml": "3a1f97045c544b0cb2047d1b5cb8c700c152ed555ae2e1fbe771f20fca327e0a"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8599889815944117,
+        "AUPR": 0.8569688334045085,
+        "ACC": 0.7791181364392679,
+        "BACC": 0.7756611043352921,
+        "F1": 0.7472632079961923,
+        "Precision": 0.8342189160467588,
+        "Recall": 0.6767241379310345,
+        "MCC": 0.5644528852825134
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8599889815944117,
+        "AUPR": 0.8569688334045085,
+        "ACC": 0.7791181364392679,
+        "BACC": 0.7756611043352921,
+        "F1": 0.7472632079961923,
+        "Precision": 0.8342189160467588,
+        "Recall": 0.6767241379310345,
+        "MCC": 0.5644528852825134
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8619480402483646,
+        "AUPR": 0.8605800545139952
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.00195905865395285,
+        "AUPR": 0.003611221109486751
+      },
+      "score_storage": {
+        "unique_probabilities": 1378,
+        "unique_positive_class_logits": 1996,
+        "rows_in_repeated_probability_groups": 1405,
+        "probability_exactly_zero": 10,
+        "probability_exactly_one": 158,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.2172375576981973
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 15,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.799155868162957
+      }
+    },
+    {
+      "dataset": "Kinase",
+      "setting": "drug",
+      "seed": 1234,
+      "n_pairs": 2260,
+      "n_positive": 1071,
+      "n_negative": 1189,
+      "input_hashes": {
+        "test_predictions.csv": "7fe6a7ec578d73712a8bd76665eb75dda873aeb963d5ed813c82c97a4cb478af",
+        "test_metrics.json": "8d7a058c52164a74892220025418961a4fe2bf95b1bc2d7d11a2f246e18123a5",
+        "config.yaml": "6233cf1d94d83213309b49b127e5dddc319c6c1a6c35f895c7431b3438700ce4"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8264059198111541,
+        "AUPR": 0.8322012066752946,
+        "ACC": 0.765929203539823,
+        "BACC": 0.762439935323723,
+        "F1": 0.7379891035165924,
+        "Precision": 0.7858649789029536,
+        "Recall": 0.6956115779645191,
+        "MCC": 0.5310977900209286
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8264059198111541,
+        "AUPR": 0.8322012066752946,
+        "ACC": 0.765929203539823,
+        "BACC": 0.762439935323723,
+        "F1": 0.7379891035165924,
+        "Precision": 0.7858649789029536,
+        "Recall": 0.6956115779645191,
+        "MCC": 0.5310977900209286
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8258000705188159,
+        "AUPR": 0.8324055017487352
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": -0.0006058492923382008,
+        "AUPR": 0.00020429507344055242
+      },
+      "score_storage": {
+        "unique_probabilities": 1413,
+        "unique_positive_class_logits": 1891,
+        "rows_in_repeated_probability_groups": 1191,
+        "probability_exactly_zero": 0,
+        "probability_exactly_one": 29,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.23744124735469585
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 13,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.915807560137457
+      }
+    },
+    {
+      "dataset": "Kinase",
+      "setting": "drug",
+      "seed": 3407,
+      "n_pairs": 2351,
+      "n_positive": 1111,
+      "n_negative": 1240,
+      "input_hashes": {
+        "test_predictions.csv": "2a1935ab9607766307751cda80c9d12ccd2f260526483ed036eb7b449d11b59d",
+        "test_metrics.json": "e7e234907bc450409925dabda0b6f0c3b8a314814ab194b49cfe899381e3eb0f",
+        "config.yaml": "44a8d86a11038066cd7c8e18626728fa4187e3841055b8470a4f20da2157c6ef"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8493670334775414,
+        "AUPR": 0.8082869764247942,
+        "ACC": 0.7686091025095704,
+        "BACC": 0.7651948259342063,
+        "F1": 0.741690408357075,
+        "Precision": 0.7849246231155779,
+        "Recall": 0.7029702970297029,
+        "MCC": 0.5359466110818546
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8493670334775414,
+        "AUPR": 0.8082869764247942,
+        "ACC": 0.7686091025095704,
+        "BACC": 0.7651948259342063,
+        "F1": 0.741690408357075,
+        "Precision": 0.7849246231155779,
+        "Recall": 0.7029702970297029,
+        "MCC": 0.5359466110818546
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8498559130106559,
+        "AUPR": 0.8079765622838113
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.0004888795331144946,
+        "AUPR": -0.0003104141409828731
+      },
+      "score_storage": {
+        "unique_probabilities": 1661,
+        "unique_positive_class_logits": 1994,
+        "rows_in_repeated_probability_groups": 1153,
+        "probability_exactly_zero": 0,
+        "probability_exactly_one": 0,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.1782679864798079
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 4,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.8298628808551904
+      }
+    },
+    {
+      "dataset": "Kinase",
+      "setting": "drug",
+      "seed": 5678,
+      "n_pairs": 2674,
+      "n_positive": 1430,
+      "n_negative": 1244,
+      "input_hashes": {
+        "test_predictions.csv": "ec3ca60fc0eb0d43ae14837a680cc0356d58eeb7755718fc24bcc95f1ee8997e",
+        "test_metrics.json": "a56aa332e1131f378ee4f2015a1e7039ddd7ef4d64868da4c91ebd1cd395736a",
+        "config.yaml": "c5feac04a2dbb6cdc339c13f9a0b905c1c7649191d5dce3827b885389a204816"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.7783447260135361,
+        "AUPR": 0.8261409169626801,
+        "ACC": 0.7240089753178759,
+        "BACC": 0.7309794706900816,
+        "F1": 0.7096774193548387,
+        "Precision": 0.8111510791366906,
+        "Recall": 0.6307692307692307,
+        "MCC": 0.46750760282902487
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.7783447260135361,
+        "AUPR": 0.8261409169626801,
+        "ACC": 0.7240089753178759,
+        "BACC": 0.7309794706900816,
+        "F1": 0.7096774193548387,
+        "Precision": 0.8111510791366906,
+        "Recall": 0.6307692307692307,
+        "MCC": 0.46750760282902487
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.7699196703617927,
+        "AUPR": 0.8209340193748385
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": -0.008425055651743452,
+        "AUPR": -0.005206897587841652
+      },
+      "score_storage": {
+        "unique_probabilities": 1675,
+        "unique_positive_class_logits": 2163,
+        "rows_in_repeated_probability_groups": 1480,
+        "probability_exactly_zero": 0,
+        "probability_exactly_one": 22,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.2664717675517167
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 9,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.843521281455634
+      }
+    },
+    {
+      "dataset": "Kinase",
+      "setting": "drug",
+      "seed": 8888,
+      "n_pairs": 2443,
+      "n_positive": 1228,
+      "n_negative": 1215,
+      "input_hashes": {
+        "test_predictions.csv": "bacec70293c3375316c530d7d5782cb1270f6018e0bdf7ed1b9b8336ae088e15",
+        "test_metrics.json": "4ed7ded201cb3ad26b21c87ff7ed3e71c340b958c8550c82df5b98b74e7e1b06",
+        "config.yaml": "c057808fc65e086acb566460b1246e4a0ab5e74de7e09442bd21bb5972e80c17"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.863220332167129,
+        "AUPR": 0.8624640189373934,
+        "ACC": 0.7855096193205076,
+        "BACC": 0.7856952319673999,
+        "F1": 0.7787162162162162,
+        "Precision": 0.8087719298245614,
+        "Recall": 0.750814332247557,
+        "MCC": 0.5726584545807198
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.863220332167129,
+        "AUPR": 0.8624640189373934,
+        "ACC": 0.7855096193205076,
+        "BACC": 0.7856952319673999,
+        "F1": 0.7787162162162162,
+        "Precision": 0.8087719298245614,
+        "Recall": 0.750814332247557,
+        "MCC": 0.5726584545807198
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8622421281216069,
+        "AUPR": 0.8618745559237841
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": -0.0009782040455220686,
+        "AUPR": -0.0005894630136092927
+      },
+      "score_storage": {
+        "unique_probabilities": 1554,
+        "unique_positive_class_logits": 2084,
+        "rows_in_repeated_probability_groups": 1310,
+        "probability_exactly_zero": 0,
+        "probability_exactly_one": 16,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.21125027190223555
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 9,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.8561826141338338
+      }
+    },
+    {
+      "dataset": "Kinase",
+      "setting": "prot",
+      "seed": 42,
+      "n_pairs": 2396,
+      "n_positive": 1176,
+      "n_negative": 1220,
+      "input_hashes": {
+        "test_predictions.csv": "56bc0a442d4be2111584215069feb6387504d3584fd76dad0e5607c164367be7",
+        "test_metrics.json": "0a49a1c708289351454de60d17a14d64c00575efa8c3501f75d3daabb33df752",
+        "config.yaml": "0364632d73726a4e489e9199df6f52676f5a21890f1d1179ec7aed81b78c99be"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.869242082078733,
+        "AUPR": 0.8605763095425055,
+        "ACC": 0.7800500834724541,
+        "BACC": 0.7781281365005018,
+        "F1": 0.7503552818569399,
+        "Precision": 0.8470588235294118,
+        "Recall": 0.673469387755102,
+        "MCC": 0.5700692093073618
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.869242082078733,
+        "AUPR": 0.8605763095425055,
+        "ACC": 0.7800500834724541,
+        "BACC": 0.7781281365005018,
+        "F1": 0.7503552818569399,
+        "Precision": 0.8470588235294118,
+        "Recall": 0.673469387755102,
+        "MCC": 0.5700692093073618
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8721199955391993,
+        "AUPR": 0.8626534950559738
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.002877913460466286,
+        "AUPR": 0.0020771855134682493
+      },
+      "score_storage": {
+        "unique_probabilities": 1683,
+        "unique_positive_class_logits": 2036,
+        "rows_in_repeated_probability_groups": 1193,
+        "probability_exactly_zero": 0,
+        "probability_exactly_one": 0,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.1861410951478647
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 10,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.829379934182958
+      }
+    },
+    {
+      "dataset": "Kinase",
+      "setting": "prot",
+      "seed": 1234,
+      "n_pairs": 2750,
+      "n_positive": 1504,
+      "n_negative": 1246,
+      "input_hashes": {
+        "test_predictions.csv": "6ae13309b12eb76fa04cbeddea42dc7e51c8a0ddec806394b2bef6905d1303bf",
+        "test_metrics.json": "d822e416ee91cb49cd31d6a015db0e2dfc2fe278c3e510aba0cdb7a16e8ca63b",
+        "config.yaml": "7bde1619f5591092f1fc09c7f9cec4b8a8278a336658c4dd781948b989d4f02a"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.7658830064717737,
+        "AUPR": 0.8191439927108863,
+        "ACC": 0.6883636363636364,
+        "BACC": 0.7045609781086711,
+        "F1": 0.6512006512006512,
+        "Precision": 0.8394543546694648,
+        "Recall": 0.5319148936170213,
+        "MCC": 0.4279718831143235
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.7658830064717737,
+        "AUPR": 0.8191439927108863,
+        "ACC": 0.6883636363636364,
+        "BACC": 0.7045609781086711,
+        "F1": 0.6512006512006512,
+        "Precision": 0.8394543546694648,
+        "Recall": 0.5319148936170213,
+        "MCC": 0.4279718831143235
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.7676559671800827,
+        "AUPR": 0.8204878672973939
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.0017729607083090126,
+        "AUPR": 0.0013438745865075319
+      },
+      "score_storage": {
+        "unique_probabilities": 1753,
+        "unique_positive_class_logits": 2238,
+        "rows_in_repeated_probability_groups": 1526,
+        "probability_exactly_zero": 0,
+        "probability_exactly_one": 33,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.26663599217509165
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 12,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.7802108053132801
+      }
+    },
+    {
+      "dataset": "Kinase",
+      "setting": "prot",
+      "seed": 3407,
+      "n_pairs": 2587,
+      "n_positive": 1297,
+      "n_negative": 1290,
+      "input_hashes": {
+        "test_predictions.csv": "9b2b0dec93863054b0d28a96dab4c33c0c4ae77b23fbeaa78975f3c67e96a790",
+        "test_metrics.json": "cedfbec71e51f3636c38ef440c04a5c3e555cbf0a005d58e3eaa3009be5aea0b",
+        "config.yaml": "13bdaa147bf10446660fa8138b9a7448114e44853101aa92c520d9bd4e9008d5"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8035412669667031,
+        "AUPR": 0.8102105731472994,
+        "ACC": 0.7243911867027445,
+        "BACC": 0.7245743008612601,
+        "F1": 0.7050062060405461,
+        "Precision": 0.7607142857142857,
+        "Recall": 0.6569005397070162,
+        "MCC": 0.45324270930200955
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8035412669667031,
+        "AUPR": 0.8102105731472994,
+        "ACC": 0.7243911867027445,
+        "BACC": 0.7245743008612601,
+        "F1": 0.7050062060405461,
+        "Precision": 0.7607142857142857,
+        "Recall": 0.6569005397070162,
+        "MCC": 0.45324270930200955
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.803472832356123,
+        "AUPR": 0.8109258593704193
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": -6.84346105801481e-05,
+        "AUPR": 0.0007152862231198931
+      },
+      "score_storage": {
+        "unique_probabilities": 1534,
+        "unique_positive_class_logits": 2146,
+        "rows_in_repeated_probability_groups": 1468,
+        "probability_exactly_zero": 0,
+        "probability_exactly_one": 192,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.20721174528350828
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 16,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.8875449023248305
+      }
+    },
+    {
+      "dataset": "Kinase",
+      "setting": "prot",
+      "seed": 5678,
+      "n_pairs": 2731,
+      "n_positive": 1438,
+      "n_negative": 1293,
+      "input_hashes": {
+        "test_predictions.csv": "42529c2b4a2aabd0a6dd26237ac42bfe66d3ec257c42def5cd4019c3c235c075",
+        "test_metrics.json": "9342563059d9e8735f3700cb07f5f3f876192484ead434475d48aae54e23b51f",
+        "config.yaml": "2f769ee5a3881b595d1674c084bdabd6276be64901b50678a3617ffdc6b0ed19"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8482061318730254,
+        "AUPR": 0.8631968894018507,
+        "ACC": 0.7656536067374589,
+        "BACC": 0.7674086527756714,
+        "F1": 0.7674418604651163,
+        "Precision": 0.8036529680365296,
+        "Recall": 0.7343532684283728,
+        "MCC": 0.5344431922539089
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8482061318730254,
+        "AUPR": 0.8631968894018507,
+        "ACC": 0.7656536067374589,
+        "BACC": 0.7674086527756714,
+        "F1": 0.7674418604651163,
+        "Precision": 0.8036529680365296,
+        "Recall": 0.7343532684283728,
+        "MCC": 0.5344431922539089
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.846507674253254,
+        "AUPR": 0.8623938218224904
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": -0.0016984576197713874,
+        "AUPR": -0.0008030675793603281
+      },
+      "score_storage": {
+        "unique_probabilities": 1678,
+        "unique_positive_class_logits": 2234,
+        "rows_in_repeated_probability_groups": 1530,
+        "probability_exactly_zero": 0,
+        "probability_exactly_one": 1,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.22185750302036578
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 8,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.8412784587036229
+      }
+    },
+    {
+      "dataset": "Kinase",
+      "setting": "prot",
+      "seed": 8888,
+      "n_pairs": 2445,
+      "n_positive": 1228,
+      "n_negative": 1217,
+      "input_hashes": {
+        "test_predictions.csv": "2a0bfbf977568310932344d73f0295d29c5690148bab718ce3a72decf6915e8d",
+        "test_metrics.json": "fd26124518eb127cb2ab4dee7a3d82057751b88a5f3837f54e7eb33968bdb356",
+        "config.yaml": "c745ff27ea800642928564cf9d2bb28b389641ad4df8d90e18fbb39aee19ea4c"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8543308825300641,
+        "AUPR": 0.859790898654902,
+        "ACC": 0.7770961145194274,
+        "BACC": 0.777156006520011,
+        "F1": 0.7748864105741429,
+        "Precision": 0.7862531433361274,
+        "Recall": 0.7638436482084691,
+        "MCC": 0.5544678597940227
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8543308825300641,
+        "AUPR": 0.859790898654902,
+        "ACC": 0.7770961145194274,
+        "BACC": 0.777156006520011,
+        "F1": 0.7748864105741429,
+        "Precision": 0.7862531433361274,
+        "Recall": 0.7638436482084691,
+        "MCC": 0.5544678597940227
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8547959284725885,
+        "AUPR": 0.8670485698814939
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.00046504594252438913,
+        "AUPR": 0.007257671226591933
+      },
+      "score_storage": {
+        "unique_probabilities": 1106,
+        "unique_positive_class_logits": 2055,
+        "rows_in_repeated_probability_groups": 1606,
+        "probability_exactly_zero": 89,
+        "probability_exactly_one": 446,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.29767449550332026
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 24,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.8234452718015128
+      }
+    },
+    {
+      "dataset": "Kinase",
+      "setting": "random",
+      "seed": 42,
+      "n_pairs": 2424,
+      "n_positive": 1226,
+      "n_negative": 1198,
+      "input_hashes": {
+        "test_predictions.csv": "f2b819730239a1d2627fe0bae631125d299012266c752e2a1f1c21bf868c135a",
+        "test_metrics.json": "e97af0e523f428891bc6016043593ab7485c251fa527b53b29107f830ee64ebd",
+        "config.yaml": "c2bcb027e89980c929f8cbd41c9fbe2f24a5905117b983879eebad2afbfec511"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9294467124380765,
+        "AUPR": 0.9144636588161305,
+        "ACC": 0.8716996699669967,
+        "BACC": 0.8716491869265524,
+        "F1": 0.87352582350549,
+        "Precision": 0.8710462287104623,
+        "Recall": 0.8760195758564437,
+        "MCC": 0.7433603759418492
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9294467124380765,
+        "AUPR": 0.9144636588161305,
+        "ACC": 0.8716996699669967,
+        "BACC": 0.8716491869265524,
+        "F1": 0.87352582350549,
+        "Precision": 0.8710462287104623,
+        "Recall": 0.8760195758564437,
+        "MCC": 0.7433603759418492
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.9302576071592948,
+        "AUPR": 0.9219874665710401
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.0008108947212183137,
+        "AUPR": 0.007523807754909684
+      },
+      "score_storage": {
+        "unique_probabilities": 977,
+        "unique_positive_class_logits": 2011,
+        "rows_in_repeated_probability_groups": 1671,
+        "probability_exactly_zero": 91,
+        "probability_exactly_one": 506,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.21030232736563081
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 22,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9288379567212758
+      }
+    },
+    {
+      "dataset": "Kinase",
+      "setting": "random",
+      "seed": 1234,
+      "n_pairs": 2424,
+      "n_positive": 1239,
+      "n_negative": 1185,
+      "input_hashes": {
+        "test_predictions.csv": "7442bc5520ca183eddce7d225654d227f3f648573c9d1a10a5dbd4328d72e3e3",
+        "test_metrics.json": "1d428f753f4d8bc6dc3dfe439dd6b0f488d1480875504213436b741b8f0bdbc5",
+        "config.yaml": "4320bba909cb45df38c263003ef46f769d26c3ffb8cb20c08412846509096cb4"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9286558848669983,
+        "AUPR": 0.9280426414371121,
+        "ACC": 0.8527227722772277,
+        "BACC": 0.8515370705244123,
+        "F1": 0.8626394767218161,
+        "Precision": 0.8242647058823529,
+        "Recall": 0.9047619047619048,
+        "MCC": 0.7081996130761874
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9286558848669983,
+        "AUPR": 0.9280426414371121,
+        "ACC": 0.8527227722772277,
+        "BACC": 0.8515370705244123,
+        "F1": 0.8626394767218161,
+        "Precision": 0.8242647058823529,
+        "Recall": 0.9047619047619048,
+        "MCC": 0.7081996130761874
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.9281934185388379,
+        "AUPR": 0.9287146129163395
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": -0.0004624663281604935,
+        "AUPR": 0.0006719714792273734
+      },
+      "score_storage": {
+        "unique_probabilities": 1217,
+        "unique_positive_class_logits": 1967,
+        "rows_in_repeated_probability_groups": 1482,
+        "probability_exactly_zero": 0,
+        "probability_exactly_one": 210,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.20275402295439032
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 14,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9263625000340405
+      }
+    },
+    {
+      "dataset": "Kinase",
+      "setting": "random",
+      "seed": 3407,
+      "n_pairs": 2424,
+      "n_positive": 1187,
+      "n_negative": 1237,
+      "input_hashes": {
+        "test_predictions.csv": "c0f320fc67ce85b1d1a19c5aedc9deb2f25383abf0636c57278f4e1bc74bb3fb",
+        "test_metrics.json": "437f104e0f37e5e43fa0b240cba90ef9de9ea243ae3f250c86ba88fed2506e89",
+        "config.yaml": "18189d5d72a53058a1edbdc39e729cfb4567593210ad3ee1a5aa7c7920f1793a"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9291196259123528,
+        "AUPR": 0.9200761963574091,
+        "ACC": 0.865924092409241,
+        "BACC": 0.865552036035766,
+        "F1": 0.8609328198545143,
+        "Precision": 0.8747826086956522,
+        "Recall": 0.8475147430497051,
+        "MCC": 0.7319067929566639
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9291196259123528,
+        "AUPR": 0.9200761963574091,
+        "ACC": 0.865924092409241,
+        "BACC": 0.865552036035766,
+        "F1": 0.8609328198545143,
+        "Precision": 0.8747826086956522,
+        "Recall": 0.8475147430497051,
+        "MCC": 0.7319067929566639
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.928748793688565,
+        "AUPR": 0.9206113102257119
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": -0.0003708322237877537,
+        "AUPR": 0.000535113868302739
+      },
+      "score_storage": {
+        "unique_probabilities": 1229,
+        "unique_positive_class_logits": 2009,
+        "rows_in_repeated_probability_groups": 1538,
+        "probability_exactly_zero": 23,
+        "probability_exactly_one": 155,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.28800017214662005
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 17,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9302794556158728
+      }
+    },
+    {
+      "dataset": "Kinase",
+      "setting": "random",
+      "seed": 5678,
+      "n_pairs": 2424,
+      "n_positive": 1194,
+      "n_negative": 1230,
+      "input_hashes": {
+        "test_predictions.csv": "6a5abb8d6a02cc4c0dd467660672c1ffe8c973628aebc149fc655fd0caa6703f",
+        "test_metrics.json": "8e24f732eaa86cd8070ececc2038bec6a349161ede6edc4280bce4214dfd8617",
+        "config.yaml": "c7654b165c32fd6b7e5a633318a1923ac21ee3feebf528b3ef7f30ec7e0bfddb"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9383717367324427,
+        "AUPR": 0.9316034964940572,
+        "ACC": 0.8745874587458746,
+        "BACC": 0.8746946112677207,
+        "F1": 0.8738589211618257,
+        "Precision": 0.865953947368421,
+        "Recall": 0.8819095477386935,
+        "MCC": 0.7493106536808826
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9383717367324427,
+        "AUPR": 0.9316034964940572,
+        "ACC": 0.8745874587458746,
+        "BACC": 0.8746946112677207,
+        "F1": 0.8738589211618257,
+        "Precision": 0.865953947368421,
+        "Recall": 0.8819095477386935,
+        "MCC": 0.7493106536808826
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.9375182143781237,
+        "AUPR": 0.9309884930206813
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": -0.000853522354319014,
+        "AUPR": -0.0006150034733758414
+      },
+      "score_storage": {
+        "unique_probabilities": 1365,
+        "unique_positive_class_logits": 2026,
+        "rows_in_repeated_probability_groups": 1389,
+        "probability_exactly_zero": 2,
+        "probability_exactly_one": 106,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.25622104508710825
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 15,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9351702269328588
+      }
+    },
+    {
+      "dataset": "Kinase",
+      "setting": "random",
+      "seed": 8888,
+      "n_pairs": 2424,
+      "n_positive": 1225,
+      "n_negative": 1199,
+      "input_hashes": {
+        "test_predictions.csv": "1b7aff993549ee89abb824bc5dd621b3ff3ff8282a185fd00d8bd887bfe1f401",
+        "test_metrics.json": "a12ea242ea56c358c60be8310641e0ce72c56aa30cb0c69dac6fa6352fc9456a",
+        "config.yaml": "1db1166bebb4a4f08ef0ebf49425d26b57fbdde190922487eb317379c0ebdbad"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9339367840547396,
+        "AUPR": 0.9258248932522866,
+        "ACC": 0.8741749174917491,
+        "BACC": 0.8738639342309067,
+        "F1": 0.878823996821613,
+        "Precision": 0.8560371517027864,
+        "Recall": 0.9028571428571428,
+        "MCC": 0.7493189797411232
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9339367840547396,
+        "AUPR": 0.9258248932522866,
+        "ACC": 0.8741749174917491,
+        "BACC": 0.8738639342309067,
+        "F1": 0.878823996821613,
+        "Precision": 0.8560371517027864,
+        "Recall": 0.9028571428571428,
+        "MCC": 0.7493189797411232
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.9348732787527021,
+        "AUPR": 0.9324414702220643
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.000936494697962531,
+        "AUPR": 0.006616576969777688
+      },
+      "score_storage": {
+        "unique_probabilities": 1070,
+        "unique_positive_class_logits": 2009,
+        "rows_in_repeated_probability_groups": 1617,
+        "probability_exactly_zero": 34,
+        "probability_exactly_one": 390,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.26484003957686675
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 19,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9371418221040704
+      }
+    },
+    {
+      "dataset": "SNAP",
+      "setting": "drug",
+      "seed": 42,
+      "n_pairs": 5590,
+      "n_positive": 2714,
+      "n_negative": 2876,
+      "input_hashes": {
+        "test_predictions.csv": "335ada59f70d921ff1b37f2ca33a1e6aaca6f9c6b986a7f3bd6ef346760e54de",
+        "test_metrics.json": "82f678104bb66d6a675e5c064750661df7bffd105a5c4fef35ffa2d70af9736c",
+        "config.yaml": "ffdc6d5b3e387871adccd4b1f52cb382361dd8db899ac92f7f8dd3c191ca1ffa"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9157403711041394,
+        "AUPR": 0.917475415883534,
+        "ACC": 0.8490161001788908,
+        "BACC": 0.8484844719032718,
+        "F1": 0.8422429906542056,
+        "Precision": 0.8547040971168437,
+        "Recall": 0.8301400147383935,
+        "MCC": 0.6978062274232867
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9157403711041394,
+        "AUPR": 0.917475415883534,
+        "ACC": 0.8490161001788908,
+        "BACC": 0.8484844719032718,
+        "F1": 0.8422429906542056,
+        "Precision": 0.8547040971168437,
+        "Recall": 0.8301400147383935,
+        "MCC": 0.6978062274232867
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.9164578812995615,
+        "AUPR": 0.92336913146558
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.0007175101954220997,
+        "AUPR": 0.0058937155820459886
+      },
+      "score_storage": {
+        "unique_probabilities": 2002,
+        "unique_positive_class_logits": 3891,
+        "rows_in_repeated_probability_groups": 4327,
+        "probability_exactly_zero": 110,
+        "probability_exactly_one": 1324,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.22293843962298826
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 11,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9371114187477566
+      }
+    },
+    {
+      "dataset": "SNAP",
+      "setting": "drug",
+      "seed": 1234,
+      "n_pairs": 5417,
+      "n_positive": 2736,
+      "n_negative": 2681,
+      "input_hashes": {
+        "test_predictions.csv": "bca17f09c5a702ab26898dba41e7143cdbbd3b37c2f3c3f869320a34a2fe9e32",
+        "test_metrics.json": "cd7a4d00a999fe9cc05a43e1a7464c0c86ec37ec3ac6620e4778e1aa87fb466d",
+        "config.yaml": "0a759fb45e9ae988103708f3fb3634bb610082d18f07f3ebdc5d82c693493276"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9031268472530325,
+        "AUPR": 0.9089867539722988,
+        "ACC": 0.8218571164851394,
+        "BACC": 0.8219343506721548,
+        "F1": 0.8219885629957573,
+        "Precision": 0.8297951582867784,
+        "Recall": 0.814327485380117,
+        "MCC": 0.6438597482013195
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9031268472530325,
+        "AUPR": 0.9089867539722988,
+        "ACC": 0.8218571164851394,
+        "BACC": 0.8219343506721548,
+        "F1": 0.8219885629957573,
+        "Precision": 0.8297951582867784,
+        "Recall": 0.814327485380117,
+        "MCC": 0.6438597482013195
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.902514186357975,
+        "AUPR": 0.9111995134724061
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": -0.0006126608950575152,
+        "AUPR": 0.002212759500107353
+      },
+      "score_storage": {
+        "unique_probabilities": 2367,
+        "unique_positive_class_logits": 3961,
+        "rows_in_repeated_probability_groups": 3928,
+        "probability_exactly_zero": 0,
+        "probability_exactly_one": 872,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.2076421417219142
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 7,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9351621601530717
+      }
+    },
+    {
+      "dataset": "SNAP",
+      "setting": "drug",
+      "seed": 3407,
+      "n_pairs": 5587,
+      "n_positive": 2768,
+      "n_negative": 2819,
+      "input_hashes": {
+        "test_predictions.csv": "b8b884053670e2669949d11ffa86c442a593ea3ff1db1ef60d040518f3cad4bd",
+        "test_metrics.json": "f0a4868314da2338c049d18f1bc95af2c0032ba790f7d231d729288826bfeb07",
+        "config.yaml": "d17ceabdd1825626f540a9a65c1d69f64b9526251bc5d58dd69dc0db2e757f23"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9134829306501917,
+        "AUPR": 0.9154014148442646,
+        "ACC": 0.8405226418471452,
+        "BACC": 0.84002405743848,
+        "F1": 0.8299293758350831,
+        "Precision": 0.8798057466612708,
+        "Recall": 0.7854046242774566,
+        "MCC": 0.6845972096987042
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9134829306501917,
+        "AUPR": 0.9154014148442646,
+        "ACC": 0.8405226418471452,
+        "BACC": 0.84002405743848,
+        "F1": 0.8299293758350831,
+        "Precision": 0.8798057466612708,
+        "Recall": 0.7854046242774566,
+        "MCC": 0.6845972096987042
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.9139148162653504,
+        "AUPR": 0.9199724376214016
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.0004318856151587225,
+        "AUPR": 0.004571022777136946
+      },
+      "score_storage": {
+        "unique_probabilities": 1865,
+        "unique_positive_class_logits": 3815,
+        "rows_in_repeated_probability_groups": 4396,
+        "probability_exactly_zero": 297,
+        "probability_exactly_one": 1083,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.21146607188878364
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 12,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.8856283562737257
+      }
+    },
+    {
+      "dataset": "SNAP",
+      "setting": "drug",
+      "seed": 5678,
+      "n_pairs": 5401,
+      "n_positive": 2567,
+      "n_negative": 2834,
+      "input_hashes": {
+        "test_predictions.csv": "5c93826bbdbd8aee6f3a638f8e4cdfd507f831f537ee58d9e21ec42dd5bbe104",
+        "test_metrics.json": "9a47a5e5c4b2a3aa80f17459398a09e6df0a8a8b7a0621f56f875b52b68053b7",
+        "config.yaml": "822fb7bc5eeab7c8b2d56e9502b2e5173e7d7f48a91343feb3b5abe5d2dddf12"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9106275046811783,
+        "AUPR": 0.9133082728262016,
+        "ACC": 0.8429920385113868,
+        "BACC": 0.8419834669392394,
+        "F1": 0.8326095538886695,
+        "Precision": 0.843937575030012,
+        "Recall": 0.8215816127775614,
+        "MCC": 0.6850403164025823
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9106275046811783,
+        "AUPR": 0.9133082728262016,
+        "ACC": 0.8429920385113868,
+        "BACC": 0.8419834669392394,
+        "F1": 0.8326095538886695,
+        "Precision": 0.843937575030012,
+        "Recall": 0.8215816127775614,
+        "MCC": 0.6850403164025823
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.9102029614792166,
+        "AUPR": 0.9131485755883144
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": -0.00042454320196161355,
+        "AUPR": -0.00015969723788722412
+      },
+      "score_storage": {
+        "unique_probabilities": 2303,
+        "unique_positive_class_logits": 3822,
+        "rows_in_repeated_probability_groups": 4045,
+        "probability_exactly_zero": 11,
+        "probability_exactly_one": 667,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.30500167017307533
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 9,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9202689481462979
+      }
+    },
+    {
+      "dataset": "SNAP",
+      "setting": "drug",
+      "seed": 8888,
+      "n_pairs": 5400,
+      "n_positive": 2587,
+      "n_negative": 2813,
+      "input_hashes": {
+        "test_predictions.csv": "d6e1d7ae834a4161667e1240f552c0184be8385ce017b622a0321adb7b587a39",
+        "test_metrics.json": "12f45d46f0be8b6f9abfba026fb0c12d47304985d71499bf6453ce152063d3e2",
+        "config.yaml": "6a80bbd2ef0d6592cc86713a8a1721a3b840b85fa9f0288b12e4fa6a05679790"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9056557363645596,
+        "AUPR": 0.908498325583302,
+        "ACC": 0.825,
+        "BACC": 0.8213466770534013,
+        "F1": 0.8007590132827325,
+        "Precision": 0.8807977736549165,
+        "Recall": 0.7340548898337843,
+        "MCC": 0.6555745544131526
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9056557363645596,
+        "AUPR": 0.908498325583302,
+        "ACC": 0.825,
+        "BACC": 0.8213466770534013,
+        "F1": 0.8007590132827325,
+        "Precision": 0.8807977736549165,
+        "Recall": 0.7340548898337843,
+        "MCC": 0.6555745544131526
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.9043366907000754,
+        "AUPR": 0.9070072920486552
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": -0.001319045664484264,
+        "AUPR": -0.0014910335346468573
+      },
+      "score_storage": {
+        "unique_probabilities": 2740,
+        "unique_positive_class_logits": 3737,
+        "rows_in_repeated_probability_groups": 3869,
+        "probability_exactly_zero": 0,
+        "probability_exactly_one": 16,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.25052317330780294
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 3,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.8913212068311686
+      }
+    },
+    {
+      "dataset": "SNAP",
+      "setting": "prot",
+      "seed": 42,
+      "n_pairs": 5607,
+      "n_positive": 2798,
+      "n_negative": 2809,
+      "input_hashes": {
+        "test_predictions.csv": "a63b342708822673c23cf34ae41164b48f4f70050eb0e9140db216a2875b35b5",
+        "test_metrics.json": "a10abd76a29c1f5cf22eb91e19f2e5258d027665f4c9a88c1578cb3d36a306fd",
+        "config.yaml": "28e0b9ac9182e03d2f94f6c89e20ce16a3745c4214c4252ecdac86aa2052b37e"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.877447299360195,
+        "AUPR": 0.877179434860671,
+        "ACC": 0.8036383092562868,
+        "BACC": 0.8035742231584326,
+        "F1": 0.7966759002770083,
+        "Precision": 0.8242262132212457,
+        "Recall": 0.7709077912794854,
+        "MCC": 0.6084952006570924
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.877447299360195,
+        "AUPR": 0.877179434860671,
+        "ACC": 0.8036383092562868,
+        "BACC": 0.8035742231584326,
+        "F1": 0.7966759002770083,
+        "Precision": 0.8242262132212457,
+        "Recall": 0.7709077912794854,
+        "MCC": 0.6084952006570924
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8780578280117187,
+        "AUPR": 0.8794313817013358
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.0006105286515236674,
+        "AUPR": 0.0022519468406648757
+      },
+      "score_storage": {
+        "unique_probabilities": 1986,
+        "unique_positive_class_logits": 3922,
+        "rows_in_repeated_probability_groups": 4326,
+        "probability_exactly_zero": 225,
+        "probability_exactly_one": 997,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.3365761587060494
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 12,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9205545536561801
+      }
+    },
+    {
+      "dataset": "SNAP",
+      "setting": "prot",
+      "seed": 1234,
+      "n_pairs": 6050,
+      "n_positive": 3241,
+      "n_negative": 2809,
+      "input_hashes": {
+        "test_predictions.csv": "cb8a6bab161cefb0576fe4e5d0964c2648ca7b44969c3049e74b8e20df884c7d",
+        "test_metrics.json": "aed3c212cd206af3e0f096fadb47c39acc74a24e97718c7b6c45752dea6095d2",
+        "config.yaml": "7a3210c07c65d97ec398a7fbd36b86fa5cbc4a02c98a6ef8b786e4866b464d04"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8932920355945853,
+        "AUPR": 0.9123284464065918,
+        "ACC": 0.8140495867768595,
+        "BACC": 0.8209854954470956,
+        "F1": 0.8066013408973698,
+        "Precision": 0.9107142857142857,
+        "Recall": 0.7238506633755014,
+        "MCC": 0.6475047408068088
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8932920355945853,
+        "AUPR": 0.9123284464065918,
+        "ACC": 0.8140495867768595,
+        "BACC": 0.8209854954470956,
+        "F1": 0.8066013408973698,
+        "Precision": 0.9107142857142857,
+        "Recall": 0.7238506633755014,
+        "MCC": 0.6475047408068088
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8934380708018668,
+        "AUPR": 0.9144104241980794
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.0001460352072815141,
+        "AUPR": 0.002081977791487555
+      },
+      "score_storage": {
+        "unique_probabilities": 1653,
+        "unique_positive_class_logits": 3933,
+        "rows_in_repeated_probability_groups": 4978,
+        "probability_exactly_zero": 860,
+        "probability_exactly_one": 1158,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.32058695000705406
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 16,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.8672459542910704
+      }
+    },
+    {
+      "dataset": "SNAP",
+      "setting": "prot",
+      "seed": 3407,
+      "n_pairs": 5770,
+      "n_positive": 2948,
+      "n_negative": 2822,
+      "input_hashes": {
+        "test_predictions.csv": "94b9a6503e17e537148e01ae2eaa8345303befb6146043af5fa59af121caff29",
+        "test_metrics.json": "7b0144383ae44ad8a45ce6d4f79fb1d72278cf6663c192c992c6460551fbf8a2",
+        "config.yaml": "75f621bbd0593b45fead2650b69e7131f8c209ca6ab5b6c09e2d30ca15d3fca9"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.891999957688524,
+        "AUPR": 0.8930234034947155,
+        "ACC": 0.8256499133448874,
+        "BACC": 0.8268313897300432,
+        "F1": 0.8191298094210716,
+        "Precision": 0.8714613618974751,
+        "Recall": 0.7727272727272727,
+        "MCC": 0.6564092791386319
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.891999957688524,
+        "AUPR": 0.8930234034947155,
+        "ACC": 0.8256499133448874,
+        "BACC": 0.8268313897300432,
+        "F1": 0.8191298094210716,
+        "Precision": 0.8714613618974751,
+        "Recall": 0.7727272727272727,
+        "MCC": 0.6564092791386319
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8947809155049442,
+        "AUPR": 0.9050075491108911
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.002780957816420182,
+        "AUPR": 0.011984145616175557
+      },
+      "score_storage": {
+        "unique_probabilities": 1473,
+        "unique_positive_class_logits": 3945,
+        "rows_in_repeated_probability_groups": 4743,
+        "probability_exactly_zero": 1137,
+        "probability_exactly_one": 1489,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.21550351392381806
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 21,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.8934803421335614
+      }
+    },
+    {
+      "dataset": "SNAP",
+      "setting": "prot",
+      "seed": 5678,
+      "n_pairs": 6112,
+      "n_positive": 3355,
+      "n_negative": 2757,
+      "input_hashes": {
+        "test_predictions.csv": "2092bf06e1bdc4684f1ef24bd358e3ebfd3ad09b6e9e6f8fae42c2868822b099",
+        "test_metrics.json": "e5048b90d60509e8ebb25ecd634e032f8855b10937ce9b2bea5f94bac9c1f76c",
+        "config.yaml": "c24d95befecd55d8957541f07b1ee9b9191fb11edb28d96ee497466aa80931b3"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8960029125158722,
+        "AUPR": 0.9119590482522422,
+        "ACC": 0.825425392670157,
+        "BACC": 0.8279888558969528,
+        "F1": 0.8344966651155576,
+        "Precision": 0.869987063389392,
+        "Recall": 0.8017883755588674,
+        "MCC": 0.6528757154620672
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8960029125158722,
+        "AUPR": 0.9119590482522422,
+        "ACC": 0.825425392670157,
+        "BACC": 0.8279888558969528,
+        "F1": 0.8344966651155576,
+        "Precision": 0.869987063389392,
+        "Recall": 0.8017883755588674,
+        "MCC": 0.6528757154620672
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8974327372622027,
+        "AUPR": 0.9193680350751481
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.0014298247463305769,
+        "AUPR": 0.007408986822905916
+      },
+      "score_storage": {
+        "unique_probabilities": 2014,
+        "unique_positive_class_logits": 4178,
+        "rows_in_repeated_probability_groups": 4878,
+        "probability_exactly_zero": 179,
+        "probability_exactly_one": 1487,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.3165427150389758
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 11,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.8886859815921601
+      }
+    },
+    {
+      "dataset": "SNAP",
+      "setting": "prot",
+      "seed": 8888,
+      "n_pairs": 5375,
+      "n_positive": 2661,
+      "n_negative": 2714,
+      "input_hashes": {
+        "test_predictions.csv": "7343f9c6b9291234ef303f9d08ba09181e216e47e0656a53460a889eadf52102",
+        "test_metrics.json": "66c5816055bf4981a064f49c5bc9dba715013f9d011693959883a8f4b9fd4eae",
+        "config.yaml": "41b7db4ba56101f76f9a25a01fc1b96ee03e03ac2a5154ed45a3ebdcd576058c"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.8841008264522316,
+        "AUPR": 0.9015676031842075,
+        "ACC": 0.812093023255814,
+        "BACC": 0.8116270887352648,
+        "F1": 0.8011027963765261,
+        "Precision": 0.8415390980554406,
+        "Recall": 0.7643742953776775,
+        "MCC": 0.6264049010505802
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.8841008264522316,
+        "AUPR": 0.9015676031842075,
+        "ACC": 0.812093023255814,
+        "BACC": 0.8116270887352648,
+        "F1": 0.8011027963765261,
+        "Precision": 0.8415390980554406,
+        "Recall": 0.7643742953776775,
+        "MCC": 0.6264049010505802
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.8841476974237168,
+        "AUPR": 0.9021620168799231
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 4.687097148514674e-05,
+        "AUPR": 0.0005944136957156676
+      },
+      "score_storage": {
+        "unique_probabilities": 2561,
+        "unique_positive_class_logits": 3907,
+        "rows_in_repeated_probability_groups": 3799,
+        "probability_exactly_zero": 2,
+        "probability_exactly_one": 380,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.20090197740534044
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 8,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9030276951545765
+      }
+    },
+    {
+      "dataset": "SNAP",
+      "setting": "random",
+      "seed": 42,
+      "n_pairs": 5554,
+      "n_positive": 2769,
+      "n_negative": 2785,
+      "input_hashes": {
+        "test_predictions.csv": "596c5265b71a7d26a4963c89edbe29b36c3eaadc6d1628e989ff8d01f6599993",
+        "test_metrics.json": "425778d77681744b8f06aca5810a7108f5814747a27f511e7f916d9aa61bc9af",
+        "config.yaml": "43b2b1deecb6001590b1924dfb2a9796fea7f8f9a33ffc84c97c1684cfceb2a6"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9400600907845452,
+        "AUPR": 0.9348120451093183,
+        "ACC": 0.8687432481094707,
+        "BACC": 0.8688235938672129,
+        "F1": 0.8719929762949956,
+        "Precision": 0.8485987696514012,
+        "Recall": 0.8967136150234741,
+        "MCC": 0.7387082125646669
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9400600907845452,
+        "AUPR": 0.9348120451093183,
+        "ACC": 0.8687432481094707,
+        "BACC": 0.8688235938672129,
+        "F1": 0.8719929762949956,
+        "Precision": 0.8485987696514012,
+        "Recall": 0.8967136150234741,
+        "MCC": 0.7387082125646669
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.9402118738301004,
+        "AUPR": 0.9408586812691703
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.00015178304555518718,
+        "AUPR": 0.006046636159852015
+      },
+      "score_storage": {
+        "unique_probabilities": 1821,
+        "unique_positive_class_logits": 3768,
+        "rows_in_repeated_probability_groups": 4365,
+        "probability_exactly_zero": 134,
+        "probability_exactly_one": 1462,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.2957810921636216
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 12,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9458112262986894
+      }
+    },
+    {
+      "dataset": "SNAP",
+      "setting": "random",
+      "seed": 1234,
+      "n_pairs": 5554,
+      "n_positive": 2781,
+      "n_negative": 2773,
+      "input_hashes": {
+        "test_predictions.csv": "f94e49ad9987aecce47cc0efab62df499dbc4b652114cb2817da936e8412e598",
+        "test_metrics.json": "8a1b80a341a621d2888c8e3be5928dc2ae77384d9ee9d6fd84b8f88fb22dd4bf",
+        "config.yaml": "5fe313881075a32201a8d9f0ea19828d7113d2ea12393e226b19447ff343aaae"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.942357035330542,
+        "AUPR": 0.9371291580119165,
+        "ACC": 0.8754051134317609,
+        "BACC": 0.8753830698834357,
+        "F1": 0.87743535246192,
+        "Precision": 0.8645724258289703,
+        "Recall": 0.8906868033081625,
+        "MCC": 0.7511425986031611
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.942357035330542,
+        "AUPR": 0.9371291580119165,
+        "ACC": 0.8754051134317609,
+        "BACC": 0.8753830698834357,
+        "F1": 0.87743535246192,
+        "Precision": 0.8645724258289703,
+        "Recall": 0.8906868033081625,
+        "MCC": 0.7511425986031611
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.9428558868827198,
+        "AUPR": 0.9413637488405994
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.0004988515521777703,
+        "AUPR": 0.004234590828682827
+      },
+      "score_storage": {
+        "unique_probabilities": 1550,
+        "unique_positive_class_logits": 3713,
+        "rows_in_repeated_probability_groups": 4532,
+        "probability_exactly_zero": 405,
+        "probability_exactly_one": 1455,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.3213879425005478
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 12,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9469776995457477
+      }
+    },
+    {
+      "dataset": "SNAP",
+      "setting": "random",
+      "seed": 3407,
+      "n_pairs": 5554,
+      "n_positive": 2792,
+      "n_negative": 2762,
+      "input_hashes": {
+        "test_predictions.csv": "99b1e245573fae09d0fcfc1d081ea8c5be1e52fe50f7d7b7859c01a89221ebbe",
+        "test_metrics.json": "2b20a7c71b88c89db43756a5e3852b0a574f35922ca3c1b759cbc080fe674ad4",
+        "config.yaml": "d708d1ee9b811bb8ef4bc048bee5801ae8d6c02c0d281bc5dc452ab5d6c64aa6"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9443988487848803,
+        "AUPR": 0.9401667252488407,
+        "ACC": 0.871263953907094,
+        "BACC": 0.8709966304886829,
+        "F1": 0.8778821520068317,
+        "Precision": 0.8390466862553052,
+        "Recall": 0.920487106017192,
+        "MCC": 0.7459490115682725
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9443988487848803,
+        "AUPR": 0.9401667252488407,
+        "ACC": 0.871263953907094,
+        "BACC": 0.8709966304886829,
+        "F1": 0.8778821520068317,
+        "Precision": 0.8390466862553052,
+        "Recall": 0.920487106017192,
+        "MCC": 0.7459490115682725
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.9459088006697526,
+        "AUPR": 0.9478731739429664
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.0015099518848722404,
+        "AUPR": 0.007706448694125734
+      },
+      "score_storage": {
+        "unique_probabilities": 1818,
+        "unique_positive_class_logits": 3788,
+        "rows_in_repeated_probability_groups": 4331,
+        "probability_exactly_zero": 95,
+        "probability_exactly_one": 1618,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.21250895096851447
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 11,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9381444422814873
+      }
+    },
+    {
+      "dataset": "SNAP",
+      "setting": "random",
+      "seed": 5678,
+      "n_pairs": 5554,
+      "n_positive": 2807,
+      "n_negative": 2747,
+      "input_hashes": {
+        "test_predictions.csv": "ad3c6a734d5af883bc5f73b88ae5da7f861f67f51a3a1e6e2ac8fe664acce67f",
+        "test_metrics.json": "f4f9fdef414abb317257212b6a716dbad279fbc34f09af5cc2553e2452627d58",
+        "config.yaml": "e3e9a3f2438504d77d9a7a2480d706641d17d9d98d8072ba3feaa602466c0ea5"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9447820072264602,
+        "AUPR": 0.9416179762725616,
+        "ACC": 0.8782859200576162,
+        "BACC": 0.8783184013028948,
+        "F1": 0.8790697674418605,
+        "Precision": 0.8828602227811714,
+        "Recall": 0.8753117206982544,
+        "MCC": 0.7565944155119838
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9447820072264602,
+        "AUPR": 0.9416179762725616,
+        "ACC": 0.8782859200576162,
+        "BACC": 0.8783184013028948,
+        "F1": 0.8790697674418605,
+        "Precision": 0.8828602227811714,
+        "Recall": 0.8753117206982544,
+        "MCC": 0.7565944155119838
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.9449166879462636,
+        "AUPR": 0.9456247697519868
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.0001346807198033817,
+        "AUPR": 0.00400679347942523
+      },
+      "score_storage": {
+        "unique_probabilities": 2107,
+        "unique_positive_class_logits": 3719,
+        "rows_in_repeated_probability_groups": 4254,
+        "probability_exactly_zero": 15,
+        "probability_exactly_one": 1065,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.26717502872170107
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 9,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9472527272774487
+      }
+    },
+    {
+      "dataset": "SNAP",
+      "setting": "random",
+      "seed": 8888,
+      "n_pairs": 5554,
+      "n_positive": 2804,
+      "n_negative": 2750,
+      "input_hashes": {
+        "test_predictions.csv": "987bb2bab65cec409b8d4fbe711ab37644e4ac528b3a5f62bdb182882770f0f7",
+        "test_metrics.json": "1a78913d45057a2fc73ef06ad8fb5b59f48b9076ef9c73112815dd5dd37c7f92",
+        "config.yaml": "0c67c397b7984c1c318167d6ded1a4f441bc9278de929e9e7e0a6df566eac611"
+      },
+      "historical_probability_metrics": {
+        "AUROC": 0.9469090260666579,
+        "AUPR": 0.9437900563223214,
+        "ACC": 0.8833273316528628,
+        "BACC": 0.8833793282323953,
+        "F1": 0.8837042354630295,
+        "Precision": 0.8894508670520231,
+        "Recall": 0.8780313837375179,
+        "MCC": 0.7667264409093445
+      },
+      "archived_reported_metrics": {
+        "AUROC": 0.9469090260666579,
+        "AUPR": 0.9437900563223214,
+        "ACC": 0.8833273316528628,
+        "BACC": 0.8833793282323953,
+        "F1": 0.8837042354630295,
+        "Precision": 0.8894508670520231,
+        "Recall": 0.8780313837375179,
+        "MCC": 0.7667264409093445
+      },
+      "historical_probability_minus_reported": {
+        "AUROC": 0.0,
+        "AUPR": 0.0,
+        "ACC": 0.0,
+        "BACC": 0.0,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "MCC": 0.0
+      },
+      "historical_probability_matches": true,
+      "raw_saved_positive_class_logit_diagnostic": {
+        "AUROC": 0.948172610556348,
+        "AUPR": 0.950812615389074
+      },
+      "raw_class1_minus_probability": {
+        "AUROC": 0.001263584489690106,
+        "AUPR": 0.007022559066752643
+      },
+      "score_storage": {
+        "unique_probabilities": 1556,
+        "unique_positive_class_logits": 3802,
+        "rows_in_repeated_probability_groups": 4493,
+        "probability_exactly_zero": 496,
+        "probability_exactly_one": 1538,
+        "all_probabilities_float16_representable": true,
+        "max_abs_sigmoid_positive_class_logit_minus_saved_probability": 0.4047352295147621
+      },
+      "archived_selection_metadata": {
+        "best_epoch": 13,
+        "best_val_metric": "AUROC",
+        "best_val_score": 0.9492872715946844
+      }
+    }
+  ]
+}

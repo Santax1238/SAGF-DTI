@@ -1,0 +1,81 @@
+experiment_id: E4_GAUSS_NODE_FUSION
+protocol: biofusiondti_officialsplit
+biofusion_setting: drug
+run_name: hypergrad_bio_e4_final_kinase_drug_biofusion1500_front_seed1234_officialsplit
+graph_version: esmdance_node_cond35_dyn50
+fusion_type: interaction_mlp
+seed: 1234
+device: cuda
+run_root: runs
+batch_size: 32
+eval_batch_size: 64
+epochs: 50
+patience: 8
+lr: 0.0001
+weight_decay: 0.0001
+loss: bce
+save_best_by: AUROC
+kl_weight: 0.0
+amp: true
+grad_clip: 1.0
+num_workers: 4
+pin_memory: true
+data:
+  train_csv: Kinase/biofusion1500_front/biofusion_official_splits/drug/seed_1234/drug_train.csv
+  val_csv: Kinase/biofusion1500_front/biofusion_official_splits/drug/seed_1234/drug_val.csv
+  test_csv: Kinase/biofusion1500_front/biofusion_official_splits/drug/seed_1234/drug_test.csv
+  graph_root:
+  - Kinase/biofusion1500_front/graphs
+  bindingdb_drug_npz:
+  - Kinase/biofusion1500_front/kpgt/kpgt.npz
+  davis_drug_npz:
+  - Kinase/biofusion1500_front/kpgt/kpgt.npz
+dataset: Kinase
+model:
+  drug_dim: 2304
+  esm_dim: 1280
+  dyn_dim: 50
+  hidden_dim: 256
+  edge_dim: 36
+  output_dim: 2
+  dropout: 0.2
+  gaussian_min_var: 0.0001
+  gaussian_max_var: 50.0
+  sample_fused: false
+  gaussian_tempered_poe: true
+  gaussian_semantic_anchor: true
+  gaussian_alpha_init: 0.1
+  gaussian_alpha_hidden_dim: 128
+  dyn_conditioned_on_esm35: true
+  esmdance35_dim: 480
+  pooling_type: drug_conditioned_attention
+unimodal_aux:
+  enabled: true
+  lambda_uni: 0.2
+  lambda_rel: 0.03
+  temperature: 1.0
+hypergradient:
+  enabled: true
+  mode: cauchy_lr
+  beta: 0.01
+  min_lr: 1.0e-06
+  max_lr: 0.0002
+persistent_workers: true
+prefetch_factor: 2
+pooling_type: drug_conditioned_attention
+dyn_conditioned_on_esm35: true
+esmdance35_dim: 480
+gaussian_tempered_poe: true
+gaussian_semantic_anchor: true
+gaussian_alpha_init: 0.1
+contrastive:
+  enabled: true
+  drug_weight: 0.02
+  target_weight: 0.02
+  temperature: 0.07
+  drug_sim_threshold: 0.5
+  target_sim_threshold: 0.5
+  drugs_csv: Kinase/biofusion1500_front/drugs.csv
+  targets_csv: Kinase/biofusion1500_front/targets.csv
+  drug_sim_npz: Kinase/biofusion1500_front/contrastive/drug_knn_sim.npz
+  target_sim_npz: Kinase/biofusion1500_front/contrastive/target_knn_sim.npz

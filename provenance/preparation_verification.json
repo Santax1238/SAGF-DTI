@@ -1,0 +1,105 @@
+{
+  "status": "passed",
+  "fixture": "synthetic two-target assembly, one 1500-node graph with 1022 covered residues",
+  "checks": [
+    {
+      "stage": "kpgt-input",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "stage": "kpgt-input",
+      "expected_exit": 1,
+      "actual_exit": 1
+    },
+    {
+      "stage": "kpgt",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "stage": "pad",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "stage": "graphs",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "stage": "pad",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "stage": "graphs",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "stage": "merge",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "stage": "similarity",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "stage": "pad",
+      "expected_exit": 1,
+      "actual_exit": 1
+    },
+    {
+      "stage": "esm2",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "stage": "carrier",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "stage": "dynamic",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "stage": "kpgt",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "stage": "pad",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "stage": "graphs",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "stage": "merge",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "stage": "similarity",
+      "expected_exit": 0,
+      "actual_exit": 0
+    }
+  ],
+  "full_input_validation": true,
+  "graph_summary": {
+    "referenced_targets": 2,
+    "present_graphs": 2,
+    "inspected_graphs": 2,
+    "max_nodes": 1500,
+    "partial_auxiliary_graphs": 1
+  },
+  "raw_pretrained_extraction_rerun": false
+}

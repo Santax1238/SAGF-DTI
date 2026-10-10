@@ -1,0 +1,44 @@
+{
+  "python": "3.11.15 (main, Mar 11 2026, 17:20:07) [GCC 14.3.0]",
+  "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "packages": {
+    "torch": "2.7.1+cu128",
+    "torch-geometric": "2.6.1",
+    "torch-scatter": "2.1.2+pt27cu128",
+    "torch-sparse": "0.6.18+pt27cu128",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.5.2",
+    "PyYAML": "6.0.2",
+    "rdkit": "2023.9.6"
+  },
+  "checks": {
+    "rdkit_imported": false,
+    "torch_forward_backward": true,
+    "scatter": true,
+    "sparse": true
+  },
+  "warnings": [],
+  "errors": [],
+  "cuda_runtime": "12.8",
+  "cuda_available": true,
+  "cuda_architectures": [
+    "sm_75",
+    "sm_80",
+    "sm_86",
+    "sm_90",
+    "sm_100",
+    "sm_120",
+    "compute_120"
+  ],
+  "device": "cuda",
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 5070",
+    "capability": [
+      12,
+      0
+    ],
+    "total_memory_bytes": 12820348928
+  },
+  "status": "passed"
+}

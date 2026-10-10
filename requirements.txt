@@ -1,0 +1,7 @@
+# Cached-feature runtime. Install the matching torch/extension wheels first.
+numpy==1.26.4
+pandas==2.2.3
+scikit-learn==1.5.2
+PyYAML==6.0.2
+torch-geometric==2.6.1
+tqdm==4.67.1
