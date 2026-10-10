@@ -11,5 +11,15 @@
   "packaged_paper_configs": 45,
   "git_ignore_includes_dataset_source": true,
   "formal_training_completed": false,
-  "github_uploaded": false
+  "github_uploaded": false,
+  "clean_git_clone_tests": {
+    "passed": 109,
+    "duration_seconds": 9.79,
+    "outside_original_workspace": true
+  },
+  "independent_final_review": {
+    "targeted_tests_passed": 89,
+    "fresh_train_reload_summary_passed": true,
+    "launch_blockers": []
+  }
 }

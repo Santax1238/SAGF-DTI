@@ -45,6 +45,8 @@ python -m sagf_dti summarize --runs runs --output reports
 
 ## 结果与来源
 
+本次整理、九组历史结果及正在进行的新训练，用更直观的中文记录在 [本地验证说明](docs/local_report.zh-CN.md)。
+
 论文 SNAP 官方 cold-protein 五种子结果为 AUROC **0.8885686 ± 0.0076321**，AUPR **0.8992116 ± 0.0146953**（均值 ± 样本标准差）。[独立历史预测审计](provenance/archived_prediction_audit.json) 使用 `pred_prob` 精确恢复全部 45 个运行的八项分类指标，最大差值为 0。旧 CSV 的 `pred_logit` 仅保存正类 logit，缺失负类 logit，不能据此计算修正后的二分类差值排名。原始主论文 checkpoint 未留存；历史预测审计不代表从头训练复现。
 
 推荐科学依赖版本的 CPU/CUDA 检查已通过，CUDA/PyG 库沿用现有兼容安装。真实最长图压力测试通过实际 batch32 / 验证 batch64（每图 1500 节点），峰值保留显存 6.15625 GiB，并记录上述 pinning 覆盖。新五种子复现结果仍待完成，见 [验证状态](docs/verification.md)。硬件、依赖及排名实现版本变化可能影响得分。
