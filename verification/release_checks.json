@@ -10,7 +10,7 @@
   "regular_wheel_contains_dataset_source": true,
   "packaged_paper_configs": 45,
   "git_ignore_includes_dataset_source": true,
-  "formal_training_completed": false,
+  "formal_training_completed": true,
   "github_uploaded": false,
   "clean_git_clone_tests": {
     "passed": 109,
@@ -21,5 +21,7 @@
     "targeted_tests_passed": 89,
     "fresh_train_reload_summary_passed": true,
     "launch_blockers": []
-  }
+  },
+  "fresh_reproduction_checked_utc": "2026-10-11T00:15:31.573931+00:00",
+  "fresh_reproduction_evidence": "verification/fresh_reproduction.json"
 }

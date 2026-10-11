@@ -4,6 +4,22 @@ The paper's SNAP official cold-protein row uses seeds 42, 1234, 3407, 5678 and 8
 
 There are no retained exact main-paper checkpoints. Recomputing a metric from archived predictions audits a reported artifact; it does not demonstrate fresh training reproduction. A smoke run likewise establishes only that the tested path executes. [Verification status](verification.md) separates these checks.
 
+## Completed local reproduction
+
+All five SNAP official cold-protein seeds completed from scratch on the RTX 5070, using the preserved recipe and explicit `pin_memory: false` WSL override. Validation AUROC selected each checkpoint before test access; all five checkpoints passed independent reload evaluation. The coordinator completed October 11, 2026 at about 05:17 Asia/Shanghai (October 10, 21:17 UTC).
+
+| Seed | Epochs run | Best epoch | Test AUROC | Test AUPR |
+| --- | --- | --- | --- | --- |
+| 42 | 13 | 5 | 0.876872 | 0.884419 |
+| 1234 | 18 | 10 | 0.901375 | 0.921819 |
+| 3407 | 17 | 9 | 0.879244 | 0.893810 |
+| 5678 | 19 | 11 | 0.896374 | 0.921622 |
+| 8888 | 33 | 25 | 0.891163 | 0.906710 |
+
+Mean ± sample SD is **AUROC 0.88900547 ± 0.01065910**, **AUPR 0.90567605 ± 0.01664792**. These aggregates use the original selected-checkpoint test metrics stored at completion. Reload ranking metrics differ by at most `6.76452e-7`, below the documented `5e-5` tolerance; prediction values are not bitwise identical. No run was rejected, failed or recorded OOM. The formal runs reached 8.23242 GiB peak reserved CUDA memory.
+
+[Sanitized fresh evidence](../verification/fresh_reproduction.json) records full per-seed metrics, checkpoint/artifact hashes, source-freeze bindings and reload comparisons. These results are similar to the historical paper-level reference, with a different ranking implementation and documented hardware/transfer settings. They establish completion of this five-seed reproduction, not exact historical score equality or a model improvement. The other eight dataset/setting groups have historical audits and shipped configurations; they were not freshly retrained here.
+
 ## Archived prediction audit
 
 The independent [audit artifact](../provenance/archived_prediction_audit.json) recomputes all eight saved classification metrics from each historical `pred_prob` column. All 45 runs match exactly, with maximum difference 0. The SNAP cold-protein means/sample SD recover the reported row. The audit also records population SD: AUROC `0.0068263957`, AUPR `0.0131438953`; these smaller values use `ddof=0` and are not the paper's displayed spread.

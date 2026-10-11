@@ -45,10 +45,19 @@ python -m sagf_dti summarize --runs runs --output reports
 
 ## 结果与来源
 
-本次整理、九组历史结果及正在进行的新训练，用更直观的中文记录在 [本地验证说明](docs/local_report.zh-CN.md)。
+本次整理、九组历史结果及已完成的新训练，见 [本地验证说明](docs/local_report.zh-CN.md)。
 
-论文 SNAP 官方 cold-protein 五种子结果为 AUROC **0.8885686 ± 0.0076321**，AUPR **0.8992116 ± 0.0146953**（均值 ± 样本标准差）。[独立历史预测审计](provenance/archived_prediction_audit.json) 使用 `pred_prob` 精确恢复全部 45 个运行的八项分类指标，最大差值为 0。旧 CSV 的 `pred_logit` 仅保存正类 logit，缺失负类 logit，不能据此计算修正后的二分类差值排名。原始主论文 checkpoint 未留存；历史预测审计不代表从头训练复现。
+SNAP 官方冷蛋白五种子从头训练已 **5/5 完成**，并通过选中 checkpoint 的测试评估及独立重新加载核对。下表为均值 ± 样本标准差：
 
-推荐科学依赖版本的 CPU/CUDA 检查已通过，CUDA/PyG 库沿用现有兼容安装。真实最长图压力测试通过实际 batch32 / 验证 batch64（每图 1500 节点），峰值保留显存 6.15625 GiB，并记录上述 pinning 覆盖。新五种子复现结果仍待完成，见 [验证状态](docs/verification.md)。硬件、依赖及排名实现版本变化可能影响得分。
+| 结果来源 | AUROC | AUPR |
+| --- | --- | --- |
+| 原论文历史结果，概率排名 | 0.8885686 ± 0.0076321 | 0.8992116 ± 0.0146953 |
+| 本次从头训练，FP32 二分类差值排名 | **0.88900547 ± 0.01065910** | **0.90567605 ± 0.01664792** |
+
+五次训练均无失败或 OOM。重新加载后的 AUROC/AUPR 最大差值为 `6.76e-7`，低于 `5e-5` 容差；预测值存在少量 GPU 舍入差异。[新训练证据](verification/fresh_reproduction.json) 保存逐种子结果、checkpoint 哈希和核对记录。结果达到与论文相近的水平；排名实现、硬件及 pinning 设置存在明确差异，不能据此宣称模型改进或数值完全相等。
+
+[独立历史预测审计](provenance/archived_prediction_audit.json) 另行使用 `pred_prob` 精确恢复全部 45 个历史运行的八项分类指标，最大差值为 0。旧 CSV 的 `pred_logit` 仅保存正类 logit，缺失负类 logit，不能据此计算修正后的二分类差值排名。原始主论文 checkpoint 未留存；历史预测审计与本次从头训练分别记录。
+
+推荐科学依赖版本的 CPU/CUDA 检查已通过，CUDA/PyG 库沿用现有兼容安装。真实最长图压力测试通过实际 batch32 / 验证 batch64（每图 1500 节点），峰值保留显存 6.15625 GiB；正式五种子训练的峰值为 8.23242 GiB，并记录上述 pinning 覆盖。109 项测试通过，源码未改变，见 [验证状态](docs/verification.md)。
 
 源码、配置及预处理文件 SHA256 记录在 `provenance/`。外部 SeqDance、KPGT 与权重须自行按其来源和许可获取；见 [第三方声明](THIRD_PARTY_NOTICES.md)。本项目未擅自授予尚未确认的原始材料许可。

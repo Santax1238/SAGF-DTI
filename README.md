@@ -67,9 +67,18 @@ On the locally checked WSL host, add `--disable-host-pinning` to training/evalua
 
 ## Reported results and verification
 
-The paper reports SNAP official cold-protein five-seed AUROC **0.8885686 ± 0.0076321** and AUPR **0.8992116 ± 0.0146953** (mean ± sample SD). The independent [archived-prediction audit](provenance/archived_prediction_audit.json) exactly recovers all eight saved classification metrics in all 45 historical runs from `pred_prob`. The older `pred_logit` column stores only the positive-class logit, so it cannot reproduce the corrected binary-margin ranking without the missing negative-class logit. No exact main-paper checkpoints were retained. This audits existing artifacts; it is not fresh training.
+The SNAP official cold-protein reproduction is **complete: 5/5 seeds trained from scratch**, with selected-checkpoint test evaluation and independent checkpoint reload checks. Results are mean ± sample SD:
 
-CPU/CUDA checks passed with the recommended scientific dependency pins, reusing the existing compatible CUDA/PyG packages. The longest-input stress test passed actual train batch32 and validation batch64 at 1500 nodes per graph, with peak reserved memory **6.15625 GiB** and explicit host-pinning override. [Verification status](docs/verification.md) links the evidence. Fresh five-seed training results remain pending until independently completed runs and selected-checkpoint evaluations are recorded. Hardware, library and ranking-version changes can affect scores; this release does not promise bitwise replay.
+| Evidence | AUROC | AUPR |
+| --- | --- | --- |
+| Historical paper row, probability ranking | 0.8885686 ± 0.0076321 | 0.8992116 ± 0.0146953 |
+| Fresh release run, FP32 binary-margin ranking | **0.88900547 ± 0.01065910** | **0.90567605 ± 0.01664792** |
+
+The [fresh evidence](verification/fresh_reproduction.json) records per-seed metrics, checkpoint hashes, reload comparisons and source bindings. All five completed without failure or OOM; all reload ranking metrics matched within `5e-5` (maximum difference `6.76e-7`), with small GPU roundoff differences in prediction values. The results are similar to the paper-level reference under the documented ranking-version, hardware and host-pinning differences; they do not establish exact score equality or a model improvement.
+
+Separately, the [archived-prediction audit](provenance/archived_prediction_audit.json) exactly recovers all eight saved classification metrics in all 45 historical runs from `pred_prob`. The older `pred_logit` column stores only the positive-class logit, so it cannot recover the corrected binary-margin ranking without the missing negative-class logit. No exact main-paper checkpoints were retained.
+
+CPU/CUDA checks passed with the recommended scientific dependency pins, reusing the existing compatible CUDA/PyG packages. The longest-input stress test passed actual train batch32 and validation batch64 at 1500 nodes per graph, with peak reserved memory **6.15625 GiB** and explicit host-pinning override. The formal five-seed runs reached **8.23242 GiB** peak reserved memory. [Verification status](docs/verification.md) links the evidence; 109 package tests passed with source files unchanged.
 
 ## Provenance and external components
 
