@@ -32,5 +32,12 @@
     "checked_utc": "2026-10-11T05:07:32.802136+00:00",
     "tracked_files": 171,
     "all_local_remote_blobs_match": true
+  },
+  "current_github_visibility": {
+    "repository": "https://github.com/Santax1238/SAGF-DTI",
+    "visibility": "public",
+    "private": false,
+    "checked_utc": "2026-10-11T06:27:33.441222+00:00",
+    "owner_explicitly_requested_public": true
   }
 }

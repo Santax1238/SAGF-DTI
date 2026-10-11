@@ -17,7 +17,7 @@ Status recorded during release preparation on October 11, 2026. A successful env
 | Fresh SNAP cold-protein reproduction | **5/5 completed from scratch**, October 11 about 05:17 Asia/Shanghai. AUROC **0.88900547 ± 0.01065910**, AUPR **0.90567605 ± 0.01664792** (mean ± sample SD), epochs 13/18/17/19/33. No rejected run, failure or OOM evidence; [sanitized evidence](../verification/fresh_reproduction.json). |
 | Selected-checkpoint reload | All five pass `5e-5` AUROC/AUPR tolerance; maximum difference `6.76452e-7`. Pair membership/order/labels agree; prediction values have small GPU roundoff differences and are not bitwise equal. Checkpoint and evaluation hashes are recorded in the fresh evidence. |
 | Original main-paper checkpoints | Not retained. |
-| GitHub publication | Uploaded to the private [Santax1238/SAGF-DTI repository](https://github.com/Santax1238/SAGF-DTI), branch `main`. All 171 tracked files matched their local Git blob hashes; [publication record](../verification/release_checks.json). |
+| GitHub publication | Published to the public [Santax1238/SAGF-DTI repository](https://github.com/Santax1238/SAGF-DTI), branch `main`; [publication record](../verification/release_checks.json). |
 
 The checked pinned runtime is Python 3.11.15, torch 2.7.1+cu128, PyG 2.6.1, scatter 2.1.2+pt27cu128, sparse 0.6.18+pt27cu128, NumPy 1.26.4, pandas 2.2.3, scikit-learn 1.5.2 and PyYAML 6.0.2. RDKit is not imported by the runtime check. The earlier research environment's different scientific package versions remain recorded separately. See [environment instructions](environment.md) for both version tables and CPU/CUDA install commands.
 

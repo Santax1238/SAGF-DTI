@@ -1,85 +1,140 @@
 # SAGF-DTI
 
-Original SAGF-DTI paper implementation with portable training, evaluation, input validation, and result reporting. The Gaussian model and archived training recipe are preserved from the September 12 pre-revision source snapshot; this release does not include later CLS experiments. [中文说明](README.zh-CN.md)
+SAGF-DTI is a drug–target interaction prediction model that integrates protein semantic representations and predicted dynamic properties through Gaussian fusion. The model uses KPGT molecular features, ESM2 residue features, and ESMDance dynamic features, followed by drug-conditioned attention for interaction prediction.
 
-SAGF-DTI combines cached KPGT molecular representations with ESM2-650M residue semantics and ESMDance predicted dynamic properties. The dynamic branch is conditioned on the ESM2-35M/ESMDance carrier. Residue Gaussian fusion uses a tempered product of experts and a semantic anchor; drug-conditioned query/key/value attention pools the fused residue features. The preserved code also contains separate branch prediction heads, reliability supervision, and drug/target contrastive losses. See [architecture and protocol](docs/protocol.md).
+[中文说明](README.zh-CN.md) · [Data preparation](docs/preparation.md) · [Training protocol](docs/protocol.md)
 
-## Install
+## Method
 
-Use a new Python 3.11 environment. For Linux x86_64 with CUDA 12.8, including the local Blackwell GPU:
+- **Molecular representation:** KPGT provides pretrained drug features.
+- **Protein representation:** ESM2 encodes residue semantics; ESMDance provides a carrier representation and predicted dynamic properties for the conditioned dynamic branch.
+- **Gaussian fusion:** residue-level semantic and dynamic Gaussians are integrated using a tempered product of experts with a semantic anchor.
+- **Interaction prediction:** drug-conditioned attention aggregates the fused residue features. Training combines interaction classification with auxiliary branch prediction, reliability supervision, and drug/target contrastive learning.
+
+```mermaid
+flowchart LR
+    Drug[Drug SMILES] --> KPGT[KPGT features]
+    KPGT --> DE[Drug encoder]
+    Protein[Protein sequence] --> ESM[ESM2 residue features]
+    Protein --> Dance[ESMDance carrier and dynamics]
+    ESM --> SG[Semantic Gaussian]
+    Dance --> DG[Conditioned dynamic Gaussian]
+    SG --> Fusion[Gaussian fusion]
+    DG --> Fusion
+    Fusion --> Pool[Drug-conditioned attention]
+    DE --> Pool
+    Pool --> Prediction[Interaction classifier]
+    DE --> Prediction
+```
+
+The training pipeline uses cached pretrained features. See the [method and training protocol](docs/protocol.md) for architecture details and hyperparameters.
+
+## Installation
+
+Clone the repository and create a Python 3.11 environment. The following example installs the Linux CUDA 12.8 runtime:
 
 ```bash
+git clone https://github.com/Santax1238/SAGF-DTI.git
+cd SAGF-DTI
+
 python3.11 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements-blackwell.txt
 python -m pip install --no-deps -e .
-python scripts/check_environment.py --device cuda --output environment-check.json
+python scripts/check_environment.py --device cuda
 ```
 
-For CPU installation, conda setup, verified wheel sources, and the exact local package versions, see [environment instructions](docs/environment.md). Cached-feature training does not import RDKit, SeqDance, KPGT, or Transformers. Raw feature extraction uses separately installed pretrained models and their dependencies.
+For CPU installation, conda setup, and platform-specific options, see [environment setup](docs/environment.md). Raw feature extraction uses the upstream KPGT and SeqDance environments described in the preparation guide.
 
-## Prepare data
+## Data preparation
 
-Feature caches, pretrained weights, and source datasets are external to this repository. Obtain inputs through their original providers and applicable terms; there is no SAGF-DTI dataset download URL in this release.
+Prepare the drug tables, protein tables, cached features, similarity matrices, and dataset splits using the [data preparation guide](docs/preparation.md). The [data specification](docs/data.md) describes their formats. Datasets and pretrained weights are obtained separately from their original providers.
 
-Set `DATA_ROOT` to a directory containing `SNAP/biofusion1500_front`, `DRH/biofusion1500_front`, and `Kinase/biofusion1500_front`. Each selected dataset needs CSV identifiers/sequences/SMILES, KPGT features, conditioned graphs, similarity matrices, and official split CSVs. [Data formats and layout](docs/data.md) lists every required field; [feature and split preparation](docs/preparation.md) provides commands from raw sequences/SMILES or existing caches.
+For example, a SNAP experiment expects the following layout:
+
+```text
+DATA_ROOT/
+└── SNAP/biofusion1500_front/
+    ├── drugs.csv
+    ├── targets.csv
+    ├── kpgt/kpgt.npz
+    ├── graphs/esmdance_node_cond35_dyn50/
+    ├── contrastive/
+    └── biofusion_official_splits/
+```
+
+Set the feature root and validate the inputs:
 
 ```bash
 export DATA_ROOT=/absolute/path/to/features
+
 python -m sagf_dti validate-data \
-  --config configs/paper/SNAP/prot/seed_42.yaml --data-root "$DATA_ROOT" --inspect-features
+  --config configs/paper/SNAP/prot/seed_42.yaml \
+  --data-root "$DATA_ROOT" --inspect-features
 ```
 
-All 45 original configurations are under `configs/paper/{SNAP,DRH,Kinase}/{random,drug,prot}/seed_{42,1234,3407,5678,8888}.yaml`. Only input and run-root paths are normalized. `prot` means cold protein, `drug` means the historical official cold-drug setting, and `random` means the official random setting. Later cleaned cold-drug splits are a different protocol.
+Only the dataset selected by the configuration needs to be prepared.
 
-## Train, evaluate, and reproduce
+## Training and evaluation
+
+Train one SNAP cold-protein experiment:
 
 ```bash
 python -m sagf_dti train \
   --config configs/paper/SNAP/prot/seed_42.yaml \
-  --data-root "$DATA_ROOT" --output runs --require-paper-config
+  --data-root "$DATA_ROOT" --output runs/single \
+  --require-paper-config
+```
 
+Training selects the checkpoint with the highest validation AUROC and then evaluates it on the test set. Each run saves its configuration, training metrics, predictions, and checkpoints in a subdirectory of the output root.
+
+To evaluate a saved model independently, replace the checkpoint path with the run's `checkpoints/best.pt`:
+
+```bash
 python -m sagf_dti evaluate \
   --config configs/paper/SNAP/prot/seed_42.yaml \
   --data-root "$DATA_ROOT" --checkpoint /absolute/path/to/best.pt \
   --output evaluations/snap_prot_42 --split test
-
-python -m sagf_dti summarize --runs runs --output reports
 ```
 
-The selected checkpoint maximizes validation AUROC. Test evaluation follows checkpoint selection. The wrapper validates complete inputs, checks checkpoint/config identity, and refuses to overwrite a completed run. After installation the package works from other working directories; pass an absolute config path when working outside the release directory.
+## Reproducing experiments
 
-For the original SNAP cold-protein five-seed row:
+Configurations are provided for all dataset, split, and seed combinations:
+
+| Option | Values |
+| --- | --- |
+| Dataset | `SNAP`, `DRH`, `Kinase` |
+| Split | `random` (random), `drug` (cold drug), `prot` (cold protein) |
+| Seed | `42`, `1234`, `3407`, `5678`, `8888` |
+| Configuration path | `configs/paper/<dataset>/<split>/seed_<seed>.yaml` |
+
+Run all five seeds for SNAP cold protein and summarize the results:
 
 ```bash
 for seed in 42 1234 3407 5678 8888; do
   python -m sagf_dti train \
     --config "configs/paper/SNAP/prot/seed_${seed}.yaml" \
-    --data-root "$DATA_ROOT" --output runs/snap_prot --require-paper-config
+    --data-root "$DATA_ROOT" --output runs/snap_prot \
+    --require-paper-config
 done
-python -m sagf_dti summarize --runs runs/snap_prot --output reports/snap_prot
+
+python -m sagf_dti summarize \
+  --runs runs/snap_prot --output reports/snap_prot
 ```
 
-The original recipe uses one actual batch of 32, maximum 50 epochs, patience 8, learning rate and weight decay `1e-4`, AMP, unimodal/reliability supervision, two contrastive weights of `0.02`, and Cauchy gradient-alignment learning-rate updates. Gradient accumulation changes the contrastive negatives and is not an equivalent paper recipe. The retained August 28 correction converts each class logit to float32 before taking `logit1 - logit0`, ranks that binary margin, and uses its sigmoid for probabilities. The model forward still uses AMP. See [reproduction and evidence](docs/reproduction.md) for run artifacts, score-version differences, and the legacy entry point.
+The summary reports mean and sample standard deviation after all five seeds complete. Use a new output root for each experiment. The [reproduction guide](docs/reproduction.md) describes the full protocol, automated runner, and run outputs.
 
-On the locally checked WSL host, add `--disable-host-pinning` to training/evaluation commands. This records `pin_memory: false` as an explicit runtime override; the canonical configurations retain `pin_memory: true`. Batch sizes, workers, model, losses, AMP and optimizer recipe remain unchanged.
+## Repository structure
 
-## Reported results and verification
+```text
+configs/paper/       Dataset, split, and seed configurations
+sagf_dti/            Training, evaluation, and data-validation entry points
+my_experiments/     Original model, dataset, and training implementation
+scripts/            Feature preparation and experiment utilities
+docs/               Environment, data, method, and reproduction guides
+```
 
-The SNAP official cold-protein reproduction is **complete: 5/5 seeds trained from scratch**, with selected-checkpoint test evaluation and independent checkpoint reload checks. Results are mean ± sample SD:
+## Acknowledgements
 
-| Evidence | AUROC | AUPR |
-| --- | --- | --- |
-| Historical paper row, probability ranking | 0.8885686 ± 0.0076321 | 0.8992116 ± 0.0146953 |
-| Fresh release run, FP32 binary-margin ranking | **0.88900547 ± 0.01065910** | **0.90567605 ± 0.01664792** |
-
-The [fresh evidence](verification/fresh_reproduction.json) records per-seed metrics, checkpoint hashes, reload comparisons and source bindings. All five completed without failure or OOM; all reload ranking metrics matched within `5e-5` (maximum difference `6.76e-7`), with small GPU roundoff differences in prediction values. The results are similar to the paper-level reference under the documented ranking-version, hardware and host-pinning differences; they do not establish exact score equality or a model improvement.
-
-Separately, the [archived-prediction audit](provenance/archived_prediction_audit.json) exactly recovers all eight saved classification metrics in all 45 historical runs from `pred_prob`. The older `pred_logit` column stores only the positive-class logit, so it cannot recover the corrected binary-margin ranking without the missing negative-class logit. No exact main-paper checkpoints were retained.
-
-CPU/CUDA checks passed with the recommended scientific dependency pins, reusing the existing compatible CUDA/PyG packages. The longest-input stress test passed actual train batch32 and validation batch64 at 1500 nodes per graph, with peak reserved memory **6.15625 GiB** and explicit host-pinning override. The formal five-seed runs reached **8.23242 GiB** peak reserved memory. [Verification status](docs/verification.md) links the evidence; 109 package tests passed with source files unchanged.
-
-## Provenance and external components
-
-The [source manifest](provenance/source_manifest.json), [configuration manifest](provenance/config_manifest.json), and [preprocessing manifest](provenance/preprocessing_manifest.json) bind release files to preserved archive members. [Provenance](docs/provenance.md) explains the source boundary and historical protocol limitations. [Third-party notices](THIRD_PARTY_NOTICES.md) identifies external components and licensing evidence. A repository-wide license grant for the original SAGF-DTI materials has not been established, so this release does not invent one.
+This project uses pretrained representations from [KPGT](https://github.com/lihan97/KPGT), [ESM2](https://github.com/facebookresearch/esm), and [SeqDance / ESMDance](https://github.com/ShenLab/SeqDance). Please refer to [third-party notices](THIRD_PARTY_NOTICES.md) for attribution and component licensing.
