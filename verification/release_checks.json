@@ -11,7 +11,7 @@
   "packaged_paper_configs": 45,
   "git_ignore_includes_dataset_source": true,
   "formal_training_completed": true,
-  "github_uploaded": false,
+  "github_uploaded": true,
   "clean_git_clone_tests": {
     "passed": 109,
     "duration_seconds": 9.79,
@@ -23,5 +23,14 @@
     "launch_blockers": []
   },
   "fresh_reproduction_checked_utc": "2026-10-11T00:15:31.573931+00:00",
-  "fresh_reproduction_evidence": "verification/fresh_reproduction.json"
+  "fresh_reproduction_evidence": "verification/fresh_reproduction.json",
+  "github_publication": {
+    "repository": "https://github.com/Santax1238/SAGF-DTI",
+    "private": true,
+    "branch": "main",
+    "verified_content_commit": "5290c59698a59abc8e48d7ba6fd8fb39285c3ec9",
+    "checked_utc": "2026-10-11T05:07:32.802136+00:00",
+    "tracked_files": 171,
+    "all_local_remote_blobs_match": true
+  }
 }
