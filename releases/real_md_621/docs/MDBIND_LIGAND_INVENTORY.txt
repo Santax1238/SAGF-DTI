@@ -1,0 +1,269 @@
+================================================================================
+MDBind LIGAND INVENTORY - 50 Protein-Ligand Complexes
+================================================================================
+
+Dataset: <repo>/data/mdbind_50_locals/ (raw)
+        <repo>/data/mdbind_processed/ (processed)
+
+================================================================================
+KEY FINDINGS
+================================================================================
+
+✅ PROTEIN DATA AVAILABLE:
+   • 50 protein structures (50-950 residues each, ~150 average)
+   • Molecular dynamics trajectories: 10 replicates per protein
+   • Dynamic features: RMSF, SASA, protein-protein contacts
+   • Protein-ligand interaction: pocket_flag, ligand_contact_freq per residue
+   • Optional: ESM-2 embeddings (1280-dim)
+   • Temporal snapshots: per-replicate statistics (10 frames/structure)
+
+❌ LIGAND DATA LIMITATION:
+   • PDB residue names (3-letter codes) are stored
+   • NO SMILES strings
+   • NO molecular structures
+   • NO chemical descriptors
+   • NO ligand embeddings
+
+================================================================================
+LIGAND OVERVIEW
+================================================================================
+
+Total Protein-Ligand Complexes: 50
+Total Unique Ligand Types: 47
+
+Ligand Categories:
+├── Nucleotides/Nucleosides (16): GDP, GAN, A2P, UNI, RUN, XMP, etc.
+├── Organic Drug-like Molecules (27): A76, A77, A78, A79, INF, PSI, etc.
+├── Modified Amino Acids (2): ORN, CSO
+├── Cofactors/Lipids (2): PGA, DHT
+└── Other (TPO appears with CMG/4SP): Phosphorylated compounds
+
+Binding Pattern:
+├── Single-ligand complexes: 46 (92%)
+└── Multi-ligand complexes: 4 (8%)
+    ├── A03IS: CSO + XK2
+    ├── A03O0: CMG + TPO
+    ├── A03O1: 4SP + TPO
+    └── A03O9: 1ZK + CSO
+
+================================================================================
+LIGAND-BY-LIGAND BREAKDOWN (47 unique ligands)
+================================================================================
+
+Code  Freq  In Complexes
+----  ----  ---------------------------
+0EM    1    A03NV
+0ZQ    1    A03J5
+137    1    A03J0
+1ZK    1    A03O9
+478    1    A03IL
+4SP    1    A03O1
+9PP    2    A03OS, A03OT
+A2P    1    A03IE
+A76    1    A03OA
+A77    2    A03IP, A03IT
+A78    1    A03IQ
+A79    1    A03IR
+APR    1    A03IW
+BMP    1    A03J4
+BZQ    1    A03NT
+C20    2    A03IF, A03IG
+CMG    1    A03O0
+CSO    2    A03IS, A03O9
+DHT    1    A03IY
+ESM    1    A03J1
+FA1    1    A03I6
+GAN    1    A03IA
+GDP    2    A004B, A03O5
+HQO    1    A03OE
+IMH    1    A03NP
+INF    1    A03IB
+JE2    1    A03OF
+KNI    1    A03IM
+L04    1    A03O6
+LHY    1    A03IC
+MK1    2    A03IN, A03IO
+NOG    1    A03ON
+ORN    1    A03IZ
+PGA    1    A03OW
+PLU    1    A03OK
+PSI    1    A03ID
+RIT    1    A03IV
+ROC    1    A03IU
+RTL    1    A03NZ
+RUN    1    A03IK
+TAD    1    A03OQ
+TPO    2    A03O0, A03O1
+UNA    1    A03NS
+UNI    1    A03IJ
+UP6    1    A03OP
+XK2    1    A03IS
+XMP    1    A03J3
+
+================================================================================
+COMPLEX-BY-COMPLEX BREAKDOWN (50 protein-ligand pairs)
+================================================================================
+
+Complex  Ligand(s)            Complex  Ligand(s)
+--------  ---------            --------  ---------
+A004B     GDP                  A03O0     CMG, TPO
+A03I6     FA1                  A03O1     4SP, TPO
+A03IA     GAN                  A03O5     GDP
+A03IB     INF                  A03O6     L04
+A03IC     LHY                  A03O9     1ZK, CSO
+A03ID     PSI                  A03OA     A76
+A03IE     A2P                  A03OE     HQO
+A03IF     C20                  A03OF     JE2
+A03IG     C20                  A03OK     PLU
+A03IJ     UNI                  A03ON     NOG
+A03IK     RUN                  A03OP     UP6
+A03IL     478                  A03OQ     TAD
+A03IM     KNI                  A03OS     9PP
+A03IN     MK1                  A03OT     9PP
+A03IO     MK1                  A03OW     PGA
+A03IP     A77                  A03NP     IMH
+A03IQ     A78                  A03NS     UNA
+A03IR     A79                  A03NT     BZQ
+A03IS     CSO, XK2             A03NV     0EM
+A03IT     A77                  A03NZ     RTL
+A03IU     ROC                  A03J0     137
+A03IV     RIT                  A03J1     ESM
+A03IW     APR                  A03J3     XMP
+A03IY     DHT                  A03J4     BMP
+A03IZ     ORN                  A03J5     0ZQ
+
+================================================================================
+DATA STORAGE IN .PT FILES
+================================================================================
+
+Each processed .pt file contains:
+
+{
+  'graph': torch_geometric.data.Data
+    ├── x: [num_residues, 5]              # Node features
+    │   ├── [0] RMSF (flexibility)
+    │   ├── [1] SASA mean
+    │   ├── [2] SASA std
+    │   ├── [3] pocket_flag (ligand-contact indicator)
+    │   └── [4] ligand_contact_freq
+    ├── edge_index: [2, num_edges]        # Sparse residue graph edges
+    └── edge_attr: [num_edges, 5]         # Edge features
+        ├── [0] static_contact
+        ├── [1] dynamic_contact_occupancy
+        ├── [2] dccm (cross-correlation)
+        ├── [3] ca_dist_mean
+        └── [4] ca_dist_std
+
+  'residue_names': List[str]              # 3-letter AA codes (e.g., 'ALA', 'GLY')
+  'residue_numbers': List[int]            # PDB residue numbers
+  'chain_ids': List[str]                  # Chain IDs ('A', 'B', etc.)
+
+  'ligand_residue_names': List[str]       # ← LIGAND INFO: PDB codes (e.g., ['GDP'])
+  'ion_residue_names': List[str]          # Metal ions present
+
+  'node_feature_names': List[str]
+  'edge_feature_names': List[str]
+  'temporal_slices': List[Dict]           # Per-replicate snapshots (10 replicates)
+  'dense_pair_features': Dict             # Dense pairwise statistics
+
+  'metadata': Dict
+    ├── local_id
+    ├── num_protein_residues
+    ├── num_ligand_residues              # Count of ligand residues
+    ├── num_frames (total MD frames)
+    ├── contact_cutoff_nm (0.8 for protein-protein)
+    ├── ligand_contact_cutoff_nm (0.45)
+    └── source_replicates: List[Dict]    # PDB/XTC filenames
+}
+
+================================================================================
+ACCESSING LIGAND INFORMATION IN CODE
+================================================================================
+
+import torch
+
+# Load one complex
+data = torch.load('data/mdbind_processed/A004B.pt', map_location='cpu', weights_only=False)
+
+# Get ligand name(s)
+ligands = data['ligand_residue_names']  # e.g., ['GDP']
+print(f"Bound ligands: {ligands}")
+
+# Get binding pocket residues (which residues contact the ligand)
+x = data['graph'].x
+pocket_flag = x[:, 3]  # 4th feature is pocket_flag
+contact_freq = x[:, 4] # 5th feature is ligand_contact_freq
+
+# Identify binding pocket
+pocket_residues = [
+    data['residue_names'][i]
+    for i in range(len(data['residue_names']))
+    if pocket_flag[i] > 0
+]
+print(f"Binding pocket: {len(pocket_residues)} residues")
+
+# Per-residue contact frequency with ligand
+for i, residue_name in enumerate(data['residue_names']):
+    if contact_freq[i] > 0:
+        print(f"  {residue_name}{data['residue_numbers'][i]}: "
+              f"contacts ligand {contact_freq[i]:.1%} of frames")
+
+================================================================================
+IMPORTANT LIMITATIONS
+================================================================================
+
+1. NO SMILES or Molecular Graphs
+   - Cannot generate ligand embeddings directly
+   - Cannot perform ligand-ligand similarity
+   - Ligand info is NAMES ONLY (PDB 3-letter codes)
+
+2. NO Per-Frame Ligand Poses
+   - Only aggregate contact frequencies stored
+   - No frame-by-frame binding information
+
+3. NO Chemical Properties
+   - No molecular weight, logP, etc.
+   - No functional group information
+
+4. NO Binding Affinity Labels
+   - This is MD trajectory data
+   - No experimental Ki/Kd values included
+
+5. For DTI Prediction:
+   - Would need to source ligand structures separately
+   - Can extract from original PDB files using ligand codes
+   - Then generate features with RDKit or similar
+
+================================================================================
+HOW TO EXTRACT ACTUAL LIGAND STRUCTURES
+================================================================================
+
+Since .pt files only have ligand names, you can:
+
+1. Get PDB code from A004B → Ligand name 'GDP'
+2. Extract from raw PDB files:
+   - Open mdbind_50_locals/A004B/A004B.1_structure.pdb
+   - Find all atoms with residue name 'GDP'
+   - Extract HETATM records
+3. Use RDKit to parse/generate SMILES:
+   - pip install rdkit
+   - mol = AllChem.MolFromPDBFile(...)
+   - smiles = Chem.MolToSmiles(mol)
+
+Or use PDB Chemical Component Dictionary:
+   - https://www.rcsb.org/dict/
+   - Query 'GDP' → returns SMILES and 3D structure
+
+================================================================================
+REFERENCE
+================================================================================
+
+Raw preprocessing: preprocess_mdbind_dynamics.py (lines 147-528)
+Key function: process_local()
+  • classify_residues() → identifies ligand residues
+  • compute_rmsf() → flexibility
+  • compute_dccm() → cross-correlations
+  • Ligand contact calc (line 376-385) → pocket detection
+
+Documentation: MDBIND_PREPROCESS.md
+Full data details: MDBIND_DATA_INVENTORY.md

@@ -1,0 +1,207 @@
+================================================================================
+MDBIND QUICK REFERENCE - At a Glance
+================================================================================
+
+DATASET OVERVIEW
+├─ 50 protein-ligand complexes
+├─ 47 unique ligands (PDB 3-letter codes)
+├─ ~7,500 residues total
+├─ ~500,000 MD frames aggregated
+└─ 5.5 GB processed .pt files
+
+================================================================================
+RAW DATA STRUCTURE
+================================================================================
+
+<repo>/data/mdbind_50_locals/
+├─ A004B/
+│  ├─ A004B_topology.prmtop         (AMBER topology)
+│  ├─ A004B.1_structure.pdb         (PDB reference)
+│  ├─ A004B.1_trajectory.xtc        (GROMACS trajectory)
+│  ├─ A004B.2_structure.pdb
+│  ├─ A004B.2_trajectory.xtc
+│  └─ ... (10 replicates total)
+├─ A03I6/
+├─ ... (50 total locals)
+
+================================================================================
+PROCESSED DATA STRUCTURE
+================================================================================
+
+<repo>/data/mdbind_processed/
+├─ A004B.pt                         (154 MB)
+├─ A03I6.pt                         (585 MB)
+├─ ... (50 total .pt files)
+└─ summary.json                     (processing summary)
+
+================================================================================
+PYTHON LOADING
+================================================================================
+
+import torch
+data = torch.load('data/mdbind_processed/A004B.pt', map_location='cpu', weights_only=False)
+
+# Main objects
+graph = data['graph']               # torch_geometric.data.Data
+metadata = data['metadata']         # Dict with processing info
+temporal_slices = data['temporal_slices']  # Per-replicate snapshots
+
+================================================================================
+GRAPH STRUCTURE
+================================================================================
+
+graph.x          → [num_residues, 5]
+  [0] RMSF (flexibility, Ångströms)
+  [1] SASA mean (surface area)
+  [2] SASA std
+  [3] pocket_flag (1=contacts ligand)
+  [4] ligand_contact_freq (0-1)
+
+graph.edge_index → [2, num_edges]
+  Sparse residue-residue contact edges
+
+graph.edge_attr  → [num_edges, 5]
+  [0] static_contact (binary)
+  [1] dynamic_contact_occupancy (0-1)
+  [2] dccm (cross-correlation, -1 to 1)
+  [3] ca_dist_mean (nanometers)
+  [4] ca_dist_std (nanometers)
+
+graph.num_nodes  → int (number of residues)
+
+================================================================================
+PROTEIN METADATA
+================================================================================
+
+data['residue_names']         → List[str] (e.g., ['ALA', 'GLY', 'VAL', ...])
+data['residue_numbers']       → List[int] (PDB resSeq)
+data['chain_ids']             → List[str] (e.g., ['A', 'A', 'A', 'B', 'B', ...])
+
+data['node_feature_names']    → ['rmsf', 'sasa_mean', 'sasa_std', 'pocket_flag', 'ligand_contact_freq']
+data['edge_feature_names']    → ['static_contact', 'dynamic_contact_occupancy', 'dccm', 'ca_dist_mean', 'ca_dist_std']
+
+================================================================================
+LIGAND INFORMATION
+================================================================================
+
+data['ligand_residue_names']  → List[str] (e.g., ['GDP'] or ['CMG', 'TPO'])
+data['ion_residue_names']     → List[str] (metal ions present)
+
+metadata['num_ligand_residues']  → int (count of ligand residues)
+metadata['ligand_contact_cutoff_nm']  → 0.45 (contact threshold)
+
+IMPORTANT: Only 3-letter PDB codes stored, NO SMILES/structures
+
+================================================================================
+TEMPORAL INFORMATION
+================================================================================
+
+# 10 replicates per protein
+for slice_dict in data['temporal_slices']:
+    rep = slice_dict['replicate']           # 1-10
+    frames = slice_dict['num_frames']       # frames in this replicate
+    node_feats = slice_dict['node_features']    # [num_residues, 5]
+
+    # Dense edge features per replicate
+    edge_info = slice_dict['edge_features_dense']
+    edge_info['pair_indices']               # all pairs
+    edge_info['static_contact']             # binary
+    edge_info['dynamic_contact_occupancy']  # 0-1
+    edge_info['ca_dist_mean']               # mean distance
+    edge_info['ca_dist_std']                # std distance
+    edge_info['dccm']                       # correlation matrix
+
+================================================================================
+FINDING BINDING POCKET
+================================================================================
+
+# Method 1: Use pocket_flag (binary)
+pocket_mask = data['graph'].x[:, 3] > 0
+pocket_residues = [
+    f"{data['residue_names'][i]}{data['residue_numbers'][i]}"
+    for i in range(len(data['residue_names'])) if pocket_mask[i]
+]
+
+# Method 2: Use contact frequency (continuous)
+contact_freq = data['graph'].x[:, 4]
+contact_threshold = 0.1  # 10% of frames
+pocket_residues_cont = [
+    f"{data['residue_names'][i]}{data['residue_numbers'][i]}: {contact_freq[i]:.2%}"
+    for i in range(len(data['residue_names'])) if contact_freq[i] > contact_threshold
+]
+
+================================================================================
+METADATA FIELDS
+================================================================================
+
+metadata['local_id']           → Local ID (e.g., 'A004B')
+metadata['num_protein_residues']  → Number of residues
+metadata['num_ligand_residues']   → Number of ligand residues
+metadata['num_frames']         → Total frames aggregated
+metadata['num_ion_residues']   → Number of metal ions
+metadata['contact_cutoff_nm']  → Protein-protein cutoff (0.8)
+metadata['ligand_contact_cutoff_nm']  → Protein-ligand cutoff (0.45)
+metadata['source_replicates']  → List of source PDB/XTC files
+
+================================================================================
+LIGAND INVENTORY (47 UNIQUE TYPES)
+================================================================================
+
+Nucleotides: GDP, GAN, A2P, UNI, RUN, XMP, NOG, UP6, UNA
+Drug-like: A76, A77, A78, A79, INF, PSI, APR, BMP, BZQ, DHT, ESM, JE2, KNI, L04, LHY, MK1, PLU, RIT, ROC, RTL, TAD
+Modified: ORN, CSO
+Cofactors: PGA, CMG
+Other: 9PP, 0EM, 0ZQ, 137, 1ZK, 478, 4SP, FA1, HQO, IMH, RUN, TPO, XK2
+
+Multi-ligand complexes (4):
+  A03IS: CSO + XK2
+  A03O0: CMG + TPO
+  A03O1: 4SP + TPO
+  A03O9: 1ZK + CSO
+
+================================================================================
+OPTIONAL EMBEDDINGS
+================================================================================
+
+if 'esm2_embedding' in data['graph'].__dict__:
+    esm2 = data['graph'].esm2_embedding  # [num_residues, 1280]
+
+if 'esmdance_embedding' in data['graph'].__dict__:
+    esmdance = data['graph'].esmdance_embedding  # [num_residues, d]
+
+metadata['has_esm2_embedding']   → Boolean
+metadata['has_esmdance_embedding']  → Boolean
+
+================================================================================
+DENSE PAIR FEATURES
+================================================================================
+
+data['dense_pair_features']['pair_indices']       → All residue pairs
+data['dense_pair_features']['static_contact']    → Contact in first frame
+data['dense_pair_features']['dynamic_contact_occupancy']  → Aggregate occupancy
+data['dense_pair_features']['ca_dist_mean']      → Mean Cα distance
+data['dense_pair_features']['ca_dist_std']       → Std Cα distance
+data['dense_pair_features']['dccm']              → Global correlation matrix
+
+================================================================================
+WHAT YOU DON'T HAVE
+================================================================================
+
+❌ Ligand SMILES/structures
+❌ Atomic coordinates (only Cα distances)
+❌ Raw trajectory frames (only aggregated stats)
+❌ Binding affinities/activities
+❌ Ligand properties (MW, logP, etc.)
+❌ Per-frame binding poses
+❌ Protein sequences (only residue names)
+
+================================================================================
+DOCUMENTATION REFERENCE
+================================================================================
+
+Detailed inventory:     MDBIND_DATA_INVENTORY.md
+Full ligand list:       MDBIND_LIGAND_INVENTORY.txt
+Preprocessing guide:    MDBIND_PREPROCESS.md
+Source code:            preprocess_mdbind_dynamics.py (lines 147-528)
+
+================================================================================
