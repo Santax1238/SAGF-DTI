@@ -1,0 +1,39 @@
+{
+  "updated_utc": "2026-11-14T19:44:13.293675+00:00",
+  "status": "local_supplement_batch_completed_and_independently_verified",
+  "original_targets_preserved": 437,
+  "previous_actual_additions": 13,
+  "additional_targets_since_previous13": 171,
+  "current_total_new_targets": 184,
+  "current_source_conditioned_targets": 621,
+  "current_conservative_targets": 545,
+  "conservative_new_targets": 108,
+  "new_targets_requiring_separate_source_conditioned_analysis": 76,
+  "new_targets_by_source": {
+    "mdCATH": 15,
+    "MISATO": 151,
+    "DynamicPDB": 16,
+    "MoDEL": 2
+  },
+  "original_model_configs_and_official_splits_unchanged": true,
+  "original_normalization_unchanged": true,
+  "original_retraining_started": true,
+  "extra_model_batch_not_in_current_views": [],
+  "unresolved_CA_distance_excluded_targets": [
+    "P01008",
+    "P07686",
+    "P08246",
+    "P22748",
+    "P41146",
+    "P41594",
+    "P42892"
+  ],
+  "new_target_table": "data/new_md_targets_184.csv",
+  "test_coverage_table": "data/official_test_coverage_621_545.csv",
+  "view_report": "audit/verified_621_independent_review.json",
+  "independent_review": "audit/verified_621_independent_review.json",
+  "independent_review_sha256": "4c4332eb214e678a5a64583d8994ccf1b9ed936253ba945ae1d62acb7de5c7f1",
+  "warning": "621 is total,184 is new.545 preserves historical437+previous15 and adds93 source-screened targets in this batch; neither view establishes ordinary unconditioned DTI validity or historical baseline source independence. Old619/543 views retained unchanged.",
+  "original437_control_runs_complete": 2,
+  "augmented621_original_model_training_started": true
+}
