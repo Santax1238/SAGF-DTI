@@ -1,0 +1,108 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2273
+    },
+    {
+      "path": "audit/root_additional10_completion_verification.json",
+      "bytes": 470
+    },
+    {
+      "path": "audit/root_trajectory_patch_completion_verification.json",
+      "bytes": 360
+    },
+    {
+      "path": "audit/trajectory_patch_manifest.json",
+      "bytes": 621456
+    },
+    {
+      "path": "audit/verified_621_independent_review.json",
+      "bytes": 110769
+    },
+    {
+      "path": "code/aggregate_windows.py",
+      "bytes": 8576
+    },
+    {
+      "path": "code/preprocess_mdbind_dynamics.py",
+      "bytes": 30020
+    },
+    {
+      "path": "code/run_pipeline.py",
+      "bytes": 2746
+    },
+    {
+      "path": "code/test_window_extractor.py",
+      "bytes": 1673
+    },
+    {
+      "path": "code/window_extractor.py",
+      "bytes": 18227
+    },
+    {
+      "path": "data/current_data_state.json",
+      "bytes": 1646
+    },
+    {
+      "path": "data/new_md_targets_184.csv",
+      "bytes": 22841
+    },
+    {
+      "path": "data/official_test_coverage_621_545.csv",
+      "bytes": 1234
+    },
+    {
+      "path": "docs/MDBIND_DATA_INVENTORY.md",
+      "bytes": 12341
+    },
+    {
+      "path": "docs/MDBIND_LIGAND_INVENTORY.txt",
+      "bytes": 9649
+    },
+    {
+      "path": "docs/MDBIND_PREPROCESS.md",
+      "bytes": 5458
+    },
+    {
+      "path": "docs/MDBIND_QUICK_REFERENCE.txt",
+      "bytes": 8680
+    },
+    {
+      "path": "docs/MDBIND_README.txt",
+      "bytes": 9799
+    },
+    {
+      "path": "pipeline/trajectory_window_pipeline_status.json",
+      "bytes": 627
+    },
+    {
+      "path": "pipeline/trajectory_window_progress.json",
+      "bytes": 723
+    },
+    {
+      "path": "results/augmented621_matched_evaluation_receipt.json",
+      "bytes": 43206
+    },
+    {
+      "path": "results/augmented621_matched_paired_seed_mean.csv",
+      "bytes": 5979
+    },
+    {
+      "path": "results/augmented621_native10_evaluation_receipt.json",
+      "bytes": 22984
+    },
+    {
+      "path": "results/augmented621_native10_paired_seed_mean.csv",
+      "bytes": 2263
+    },
+    {
+      "path": "results/augmented621_reproduction_evaluation_receipt.json",
+      "bytes": 21892
+    },
+    {
+      "path": "results/augmented621_reproduction_paired_seed_mean.csv",
+      "bytes": 2027
+    }
+  ]
+}
