@@ -1,0 +1,621 @@
+{
+  "status": "complete",
+  "finished_utc": "2026-11-15T07:19:05.198692+00:00",
+  "implementation_lock_sha256": "6dba3546ee5eb326b05cf8928cef886b7da6145c6c29bd2ad19ee7071f910f8d",
+  "evaluation_script_sha256": "f502d7774ddcdae2bc0d3bab0ca7e94b41c3513d4621a255d0d8434c338d4287",
+  "source_lock_sha256": "d14317fbce97f76ab0c8acec9519173030bb5f2baa878c8248f97ac2435d8b7e",
+  "independent_review_sha256": "2b157fabfe391efdb5e4e275b05f4c4441e8144e4e1396dee41b9bce5aedaafd",
+  "all20_completion_gate_sha256": "6c53c2d1e56241eb2edb0fe1982693df5eae6a65906262ad78522009dc0384aa",
+  "models": 20,
+  "comparisons": [
+    "gaussian_bce_minus_same_backbone_concat_bce",
+    "gaussian_bce_minus_gaussian_alpha1_bce",
+    "gaussian_bce_minus_gaussian_actual_w05_bce"
+  ],
+  "bootstrap_replicates": 2000,
+  "shared_cluster_count": 1061,
+  "original_checks": [
+    {
+      "run": "gaussian_bce_seed42",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "same_backbone_concat_bce_seed42",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "gaussian_bce_seed1234",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "same_backbone_concat_bce_seed1234",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "gaussian_bce_seed3407",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "same_backbone_concat_bce_seed3407",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "gaussian_bce_seed5678",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "same_backbone_concat_bce_seed5678",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "gaussian_bce_seed8888",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "same_backbone_concat_bce_seed8888",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "gaussian_alpha1_bce_seed42",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "gaussian_actual_w05_bce_seed42",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "gaussian_alpha1_bce_seed1234",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "gaussian_actual_w05_bce_seed1234",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "gaussian_alpha1_bce_seed3407",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "gaussian_actual_w05_bce_seed3407",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "gaussian_alpha1_bce_seed5678",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "gaussian_actual_w05_bce_seed5678",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "gaussian_alpha1_bce_seed8888",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    },
+    {
+      "run": "gaussian_actual_w05_bce_seed8888",
+      "original_completion": "verified checkpoint, FP32 receipt, metrics and predictions",
+      "original_selection_passed": true,
+      "all_epoch_auxiliary_contributions_zero": true,
+      "official_pairs_labels_order_and_five_strata_verified": true
+    }
+  ],
+  "inputs": [
+    {
+      "run": "gaussian_bce_seed42",
+      "backup_receipt_sha256": "f7b3e9d9870adb9a717623e023dd7ce7ad57a9f09e22077f7d4581fb585122f2",
+      "files": {
+        "preflight.json": "a9a7ddad13fc70bd2a903886e333680e9a63ab276860eb38a7d9a933d0eda179",
+        "base_config.yaml": "619a063d64f37fc8ad4a07dcaeeef870ef5e83e76471ebebe13f99d644e6baa4",
+        "config.yaml": "619a063d64f37fc8ad4a07dcaeeef870ef5e83e76471ebebe13f99d644e6baa4",
+        "metrics.csv": "70d762609ad31894a5479fb8e64b62577ad6f52edaaf59c5d7e98d4f976009c3",
+        "val_predictions.csv": "0725c067a7523d530ced973545c383a3c8ab8c40a5e8ece3487be30445ac9b73",
+        "train_log.txt": "1379277da3887d3f29ce5e5842be8ca34f1798af385857a188eb69de2966860a",
+        "val_metrics.json": "012d2f92f810b0a3bd68aa7b925c088fdc8f5b66fa6a2c1269255a8d74aff53e",
+        "checkpoint_selection.json": "fce9ccaeb81c19fe3d902553801c4e777692f362f090b2ea050dfea98e16b9f1",
+        "test_predictions.csv": "2598589d223ec6dd0a95c0d5a562ac888a42b1b12eedeef671c4e713e7a671ef",
+        "fp32_evaluation_receipt.json": "be53fbaeb1ea35a9c3733975bb046ef684a4257e512579f4ab0d79aa7c9aacdb",
+        "test_metrics.json": "67a5ebd3a99e94737d903733ea030daaea6a27acd3168e15f75c1ac104c8ce62",
+        "training_receipt.json": "c506cc3b98053a956c30261c33ec65dad1ba16a32b9b28573f3a0bf6400e0bcb",
+        "completion.json": "64e8c8730be399c4c157bb1047a67c32b202e7604e5d4386453d9e1196fd4591",
+        "matched_completion.json": "6390bc2f7ffd861f8709730d719817f2d66475177abf29d55bf672b0a19401c9",
+        "checkpoints/last.pt": "6822000edece19985c03a525f6ed3895b2f5d9229900b8144ade4fb8c48bd361",
+        "checkpoints/best.pt": "d1a7319e0fcae728b4a45b80547b87949f578b15792aff916ce4585e842666ce"
+      }
+    },
+    {
+      "run": "same_backbone_concat_bce_seed42",
+      "backup_receipt_sha256": "b54f30aec695b4bdab7c30aebf5006bb1ba8b3ce34f5ee7167c1eaebf92ff932",
+      "files": {
+        "preflight.json": "ccaf83e2bcce033f8ee0eeffc860aeddaff0a5f994f135dbb15620d479af9e3c",
+        "base_config.yaml": "257ba1be8e060996af162ee13d391c51210298ba639efb0537f285b2aa8eff10",
+        "config.yaml": "257ba1be8e060996af162ee13d391c51210298ba639efb0537f285b2aa8eff10",
+        "metrics.csv": "2b812f97b4cdc29b8dadda17891e97ac4558ddb0755c590ae007177263c8b047",
+        "val_predictions.csv": "067f48816e31c6f3cb76471945825028d1adfed601b9b8af797b503ade0acfb6",
+        "train_log.txt": "aa05f12606cc1708891fa72c3441b2fd52583eee384b0054ace945eeb0a1c60d",
+        "val_metrics.json": "188583964f173a49b8fd22c6173ef2717a55285db514e281834970590c437c27",
+        "checkpoint_selection.json": "7c3cc768e006361f1e939c99085855c60b09a50384969b3eb1945855d179f6e3",
+        "test_predictions.csv": "9452a6d18478fcabeddc329cf645bdd21ddea4a18c30f28dd1490ae238ffbd33",
+        "fp32_evaluation_receipt.json": "1d1d32303a93df78df5cdc8f549dac50e94ee13c863a14131b3aa0ba354c26f1",
+        "test_metrics.json": "44e526e29665091ff5d8a4287cc6b9e0c7b347de9a71b7a5862beea8671b71a3",
+        "training_receipt.json": "957ff166d86bdd6b1bced363c2b3fefdec367f644b5105a41d45429580463af6",
+        "completion.json": "5cbd381bbd9e0fbe1c833d80e37a816da22c2811acd9dc09eda9dc34e007e345",
+        "matched_completion.json": "858a703c8a4850d987bf4e8be97d5363cbb9469b6ea189263df733532e6b247f",
+        "checkpoints/last.pt": "300ab8c108f22010abb6182343f20288525b2a290630c511a51fd76aebe1fde7",
+        "checkpoints/best.pt": "96f2871d55f0ea432244d858be98eb208b78a5b15af81ce2f7622f80e4927974"
+      }
+    },
+    {
+      "run": "gaussian_bce_seed1234",
+      "backup_receipt_sha256": "12cf7121f335a00fb850f72492ce3e7a48f6228b560cf9c7bbbbb0f33074bd9b",
+      "files": {
+        "preflight.json": "c234bd76e48fdf773ce682ce1ba20e93827d26c002d49d3ebfe46e07da26a0fb",
+        "base_config.yaml": "457aa33c7eebe91223f74f22e0b7058ac96d8d35a3d7a80e3ff50498c3fb5ade",
+        "config.yaml": "457aa33c7eebe91223f74f22e0b7058ac96d8d35a3d7a80e3ff50498c3fb5ade",
+        "metrics.csv": "b1e95ae3db9b13bd5de74705fa7357def4ae85068c0048fda3d603dd9f3c48a0",
+        "val_predictions.csv": "a259792e79e864130bbffbae171847af33af6e4a452b8a88c5757a6db9ce2d23",
+        "train_log.txt": "36f00948165ea49718a073e6535e2261b1251e358a2bed84d975550213064591",
+        "val_metrics.json": "62455e2f903fc75456b73e50fc19d4962bddb19cfdb4190cb3663942aceb7a98",
+        "checkpoint_selection.json": "cc15bb881cdd3d2c309b92f61c567468d9bd47065136fcc05770cf5aeafeae1e",
+        "test_predictions.csv": "a4cdf3ce74e976bfdf6b28628ea6148ef6bd30355d37ded7f2ddcefd33982819",
+        "fp32_evaluation_receipt.json": "2b8e23b24b3affa7a0470b66207aaf457c719cba66a7719912e9e65918fee910",
+        "test_metrics.json": "389565e0701c756f1516e07a1c187c5def8203cdba01a5c7c435726f8a4e3b11",
+        "training_receipt.json": "43f1f1092942b3f6270166128318c75c2c0be366ef9c74190e0c4aa36dcb620a",
+        "completion.json": "0977490b81f200a6a1a003e3a7b89d04d7cc36388a7f8df2b2333cacc47c280f",
+        "matched_completion.json": "b0c4d4a67c99816ac0bfd31c3acc9fb4632929b813a4af25d254c3796841d955",
+        "checkpoints/last.pt": "8b5a982ecfb578f76c89f67623e8bcab36ffe228522d93ffc38435fd5b6a307d",
+        "checkpoints/best.pt": "c22f8f52aa03c7d0efed6156539935e13eb3ec4ec7a6e3271aa95ae64f164394"
+      }
+    },
+    {
+      "run": "same_backbone_concat_bce_seed1234",
+      "backup_receipt_sha256": "3b6b194c2707e1ede4e5608c13f05ec460f9ea3ffc797e9390822e13fafa9c23",
+      "files": {
+        "preflight.json": "e1688a086e912c42877afba996ac839e05e064c1ba8a03b395800032afb7c252",
+        "base_config.yaml": "82b587b0fa47ab24b2074d7925291016048590e99025d5365ffd6079aa012f44",
+        "config.yaml": "82b587b0fa47ab24b2074d7925291016048590e99025d5365ffd6079aa012f44",
+        "metrics.csv": "cef82940d361bb40cd76758a11c6bff8f2daa0ee26936692afcc07a61f364d03",
+        "val_predictions.csv": "4c946c55234e909b44e4f113b8b5767e70cb97d30dd6e4e222c1547e3daac272",
+        "train_log.txt": "4d5340f6a62b9553436181a77d306a005f80a36f92dc743c30b25cc28dd2fa46",
+        "val_metrics.json": "1bfc13381015c7411a8317c2ed0e0499d92e3c3aa6d3f0788d7c8875e5acd9d1",
+        "checkpoint_selection.json": "35fc725f3c8d9a4afe0cc6ff4f83e6570e719dcaf41d4a9f6f049c249bb9a28b",
+        "test_predictions.csv": "0762d1c314928aa07ab0f80094a43422968c58ce039d34c541b0a584cb7f3cca",
+        "fp32_evaluation_receipt.json": "47fb168cb108ced58a1d97a19e3048958534bf8fd28559b884c234addc14ffee",
+        "test_metrics.json": "cb597e415b00030b8438a7f4cb6e3415e93d5b6556bd4fc6353a0d5ffa7c8555",
+        "training_receipt.json": "457a8bd1b69bc6aff109900379fa95c4dcab2496689cec9b207eb953a61bdfbb",
+        "completion.json": "7b8e56b713025fe2514da550283ae65f1c4ea726139314b74177e2699688b4dc",
+        "matched_completion.json": "e30a9e179253a3f4d98e0e91f2e298cf79621e6e201fee1c470bcbe012c58a3b",
+        "checkpoints/last.pt": "eb250cd772a29817aba18bad9ecc8cfed96ae6a8ac1551630f435fe374e51b7a",
+        "checkpoints/best.pt": "f5418d81f5e32fee252ef970977ddc0080c479a9ea503be55ef11a9fefa51c46"
+      }
+    },
+    {
+      "run": "gaussian_bce_seed3407",
+      "backup_receipt_sha256": "249fa1df3ce1c6aeebf1fc4db8bfd1c8c44cb13c284670c0f7aa16a936043dde",
+      "files": {
+        "preflight.json": "f182d7fe2e6afb157ab506f8d74eac7bb2f83f6f4deec4d0ab4ef27215817f13",
+        "base_config.yaml": "301a99626c578844c77af3ca124dc129d83aff6e446631eb0ee7fbb6830b7741",
+        "config.yaml": "301a99626c578844c77af3ca124dc129d83aff6e446631eb0ee7fbb6830b7741",
+        "metrics.csv": "c3e32757ae01db79025aaf3150f2aa611957e57baee35a75cb43edb0b25eddda",
+        "val_predictions.csv": "cdf022fd94b454f7279742dad629dd445f676f10a7e345817780e675c0f5594c",
+        "train_log.txt": "3b41215802821b1d4cd4823d331b5bdb526a65e0b4d15c0cef87b5771cb2f67a",
+        "val_metrics.json": "10ebfb377b00fe1901ec2eb1072778b1efc6a6d5188342d28a55e581b3a288aa",
+        "checkpoint_selection.json": "4d22ff20a438792046000e83c9461bc10ae713d807060aba871a8e10963f85c8",
+        "test_predictions.csv": "e5162f7a2ab1a2bb67ca69b7f62ac030ae06af0a8e9a8bdb6c1599ec34a08bc7",
+        "fp32_evaluation_receipt.json": "f414eba252f0cc779e094bdf5c6434ac9805b2cdef08a65075053935b4003041",
+        "test_metrics.json": "bc276d9ac0a76659044e9b5669d6e7038e82c19769cbe35a6dad8d621ed5ef69",
+        "training_receipt.json": "aaac1bbe4db0bc0f6a77fdef47c907068896a7dc060600a9ecaa2c040294c7e7",
+        "completion.json": "8a684adeefc4c437b845c5dadc69e5c180cd1edfb91d26836f40822634caf5c7",
+        "matched_completion.json": "2cfe4e42b97fe067148aabbc5eee1052608a15e539fe94689196912598c588c4",
+        "checkpoints/last.pt": "5cf413fa1d00045c71c323222715ad9711fd6898cbe1e990fa1cec500265a4dd",
+        "checkpoints/best.pt": "ec9f71ebb1fdc744b6a5ecbd0b7e67cd7ef2f716c215441148a6c0d9fa3ce0b5"
+      }
+    },
+    {
+      "run": "same_backbone_concat_bce_seed3407",
+      "backup_receipt_sha256": "dc72a50057f3ca96c46b0b25e14b3a5a3ab6df317f9a16580a229eb242619c15",
+      "files": {
+        "preflight.json": "d89e6cef2d6fa2945e2bd20eaa0a0d5fa625014eac5ad5e15e389a6a0f9dd693",
+        "base_config.yaml": "6e70870c73028b164fe37a0ed73cd9f96ed3dfe611fe98e827b3da833b37112f",
+        "config.yaml": "6e70870c73028b164fe37a0ed73cd9f96ed3dfe611fe98e827b3da833b37112f",
+        "metrics.csv": "0e6937d252eac7b9f5ea364baa51d5f6decdf272c1bf256ffac068aee75c3b43",
+        "val_predictions.csv": "b28b35fb9228e515247b4bf75bb3612e366a43f646b4701339354d11ca7cfbc7",
+        "train_log.txt": "f7d62d9bc8f585eaf8d7f141b69459dfeb7af1653d46958882d0c35859a03d03",
+        "val_metrics.json": "9eaff686b69b8e7865a2c9d2b4898d875ff132d0eb23422eace60c85e7fc2a14",
+        "checkpoint_selection.json": "acf3395de5621f9bccb89293b3037ddd584b1aec405318e335dad6492fc730c8",
+        "test_predictions.csv": "f68406d3eb5c756625dcbcb390e4bb8675251ac33106a99dd50b17c4b67a4892",
+        "fp32_evaluation_receipt.json": "0470624a19d44646b2350a8a378fcf32c1fc01da4fe2eb638e51f002cf2e3a1c",
+        "test_metrics.json": "6b279ee258b06462219c484413ac7292318d162f58303f4343a333ccbfa11fd2",
+        "training_receipt.json": "e2e0b9d62b18226ce1a32c74de5c4ee5cd2dae12b663134bece8640812b5822f",
+        "completion.json": "606fb5a7b3d4b0fd3db929f1f5d5b160e830f19053a67a1f5f4849c6c969495b",
+        "matched_completion.json": "aa40e3be66c8967cb42ba7a1c92cb7072ab00f777fccd51b201b95c05c23d3a6",
+        "checkpoints/last.pt": "063a0931f437c9f6582aeca206766093cf8b65ac447ad2a15736f59467f199b3",
+        "checkpoints/best.pt": "fe7707092fd89b7812a5149dcd77969b712bfdc76157d581ffc33ccf1a68f76f"
+      }
+    },
+    {
+      "run": "gaussian_bce_seed5678",
+      "backup_receipt_sha256": "7b4b98349bf6262408a7919c049e6206f597d47c9f6d2979f09a76994c982253",
+      "files": {
+        "preflight.json": "998c005d0b633630d9e47a8a0bac6657f82261b4af692e6eede8282fdb979095",
+        "base_config.yaml": "b28a7b10c7fa660c9206424511bca8a15737594b2f1f3f96d5cbd9952c75f0d3",
+        "config.yaml": "b28a7b10c7fa660c9206424511bca8a15737594b2f1f3f96d5cbd9952c75f0d3",
+        "metrics.csv": "af0a7a5166ce55839cdc44aa2c01c117dda3b3d16b4b0444cce9694ba3f87f8e",
+        "val_predictions.csv": "871c4ff6faf3a1ab2718c8ac4640780207dee362a17e48911e300e0c45340a81",
+        "train_log.txt": "48fc9ba192c62081a74b35ba05a1669b98b83f26b35c56d6230c912a8dae6c1c",
+        "val_metrics.json": "09d1e11aee75ba29dd78c648e85c094ed8445ceb6096696df6204568e3674111",
+        "checkpoint_selection.json": "f98ac5ee381509907cb73e2acd7db7482946248b797ef919e559365c65815cbb",
+        "test_predictions.csv": "2f216cad7cb1acbcc6bdd4bf16adb911fe241537790b91aa1f6fca74e15488e1",
+        "fp32_evaluation_receipt.json": "c56374a5326fcf278a1296a6d26841cc39913ebdb4df521a948c9b2392174438",
+        "test_metrics.json": "2780f7530552562c88fce16f79df2f426921c813227a8fc86a2d6d9700aebaeb",
+        "training_receipt.json": "f4ba3d3ee66aaf7c92e306f18e678ee61665197105810521ce1ae119fbf07615",
+        "completion.json": "aaf69bdda1573bd19cc3738cf2bbc96bf77b994ad30b370f33a22ed704406074",
+        "matched_completion.json": "1f02445ca2c5235a0638510cc99ffd74572b15f5dd516360a3656784f6381480",
+        "checkpoints/last.pt": "98bfc7a3df22960eb66259946cd4a657de8ac7f9ddace0acd140f3f06ee49b56",
+        "checkpoints/best.pt": "6011e12ab68c0ab85fefe9634f80842bbba8df5d0d478a44f3de92ad5591467a"
+      }
+    },
+    {
+      "run": "same_backbone_concat_bce_seed5678",
+      "backup_receipt_sha256": "abaf9366cf01d1371ec6410ab63cab58c9f0654b8c9da50791150b6da35524d3",
+      "files": {
+        "preflight.json": "e64da173daab5d14d921f8f539c6915e1d695237f652d353aee9252f31cea8b7",
+        "base_config.yaml": "fedfb9ae1981f1f115685d048b8ccf3833e34d12858cdf26bdb24329cd8ad003",
+        "config.yaml": "fedfb9ae1981f1f115685d048b8ccf3833e34d12858cdf26bdb24329cd8ad003",
+        "metrics.csv": "3fefd9c7d725fcec24c310ca93db11a91874442a90dba7d5611c754521d355e7",
+        "val_predictions.csv": "5fefd59306e07d7f246006d3b44a9a530af8ce00c908f2458fe977b04855f6ad",
+        "train_log.txt": "0a46231978da0ecde8cf5d6014368a0d9e77aa08c8c91ec65af76f3f8795fbf5",
+        "val_metrics.json": "9847f9192ccf4c86ba0dd7a1473032b77e5df996c00fdf5e305fa9f54e65a10b",
+        "checkpoint_selection.json": "d1d5b55de78daab1c04420f3469a960b0380528ad957cfde094d57cb9c48df76",
+        "test_predictions.csv": "4fa03ec4a623213bf466b830fd229c18891da0beeced71dc82cbfc50c8b72a07",
+        "fp32_evaluation_receipt.json": "159be8ed903ac9b0d2021f6c85e2c870ffc9e2ea378ce57213ef2174d45e03a7",
+        "test_metrics.json": "3e55d8c18fc733737494c4f26c17cc38658089544be76b4e64844bb950049952",
+        "training_receipt.json": "740fd69228cfa9d5101433728b4dc70548962eb339291d6cd1c814f3698c7570",
+        "completion.json": "273c7a067bac3cbb9abd48263ec8efe606e9d19e39e67479ac3a619d453a7c49",
+        "matched_completion.json": "643216b3b006ce25619a47ca4baad8c9a9d35ee8724b7fe22bc44e1f41fd1d85",
+        "checkpoints/last.pt": "2953356b7ed8005909575bac2466b91a05a840f7e03f56fdf5007e75ecf96978",
+        "checkpoints/best.pt": "f53c13a2b67c04876ef64fb6b126746f95d2bf90050b7d628488767742c232ef"
+      }
+    },
+    {
+      "run": "gaussian_bce_seed8888",
+      "backup_receipt_sha256": "b8c97b5e185753aedb4a573e0cc1282886baad715c04b1712d5b472041d2a6ff",
+      "files": {
+        "preflight.json": "2353baa78761cd99ef5cf8d98f634f7d9b191a0110eda7de93ffc93ac455929a",
+        "base_config.yaml": "d2f7f9fdcf0b87eda68118a910e79243d70e160d748008de2d57e6f18c2fbd6b",
+        "config.yaml": "d2f7f9fdcf0b87eda68118a910e79243d70e160d748008de2d57e6f18c2fbd6b",
+        "metrics.csv": "8f6758773711a051de19ad84c7c13992ced0ba1b031afa1d7b94b2dc0083d59f",
+        "val_predictions.csv": "c98b571dbdb6bb4f7875ec3386484117db730bbf7ec54690782adf731395950b",
+        "train_log.txt": "f329fdea25570eddb53fe11f5ec21db781d326763cc28eec050068192d9609c4",
+        "val_metrics.json": "442c05d9d69cfa7080a50d6727c5d025a305bafd788aa09ed5455e30c4d5701a",
+        "checkpoint_selection.json": "63ed999dfd6e78a8edd622feb9e3e4c5acd6315bc0c15c0215568b466644c251",
+        "test_predictions.csv": "b2c7b101c09500dd57325749bd00ad6b4573a323aaf097b62d18cfc09ef74352",
+        "fp32_evaluation_receipt.json": "7c71dfda8cca8766ede6d17daa4b7dca84191ef4c245e43163e2babb059789ca",
+        "test_metrics.json": "482588d99d1a0645d5d78e69a07a7abced5bee63ca151b02d02fc6e5863fa95a",
+        "training_receipt.json": "360b82223b3aaf2c88ab8802dca60a5fe4d79e5d11a04a1c20844b47f1712341",
+        "completion.json": "97f349943744141c0d2f1a27a818815b192fc12f3e0eb2680afe2c8cf4436245",
+        "matched_completion.json": "62e510631014bd4687bc9c78de56cf060d15a0778717eba20ece3bcaba33d992",
+        "checkpoints/last.pt": "37d28573676aeba4484d2ea0868622a6863809111e26c583c0f2f3f1b2dbbbf4",
+        "checkpoints/best.pt": "4cdc769275a05f803385d0c27ca6837eaba7cdbc886f0299d52291065ce6a108"
+      }
+    },
+    {
+      "run": "same_backbone_concat_bce_seed8888",
+      "backup_receipt_sha256": "d0fa4472d696f0c322b46af99104607a3aba31bff7d34fe4041c7afa49367357",
+      "files": {
+        "preflight.json": "03dc9fe6aaf5aca81f2237bff47602f70e8d261390137eb5c6911314fd1b940d",
+        "base_config.yaml": "1a3f02e1809d72cf6f893c65f7138c9a0f82ef93f28b0fd0a8fa1354a401b190",
+        "config.yaml": "1a3f02e1809d72cf6f893c65f7138c9a0f82ef93f28b0fd0a8fa1354a401b190",
+        "metrics.csv": "7ad49980b518c15f52f70be0b02b76f866212c65428df07a83cfc6d269f69a88",
+        "val_predictions.csv": "1d0de86a2a1cfe3fa0a86cbc7c974030b15f5f41b5e2535aa476f5e1cef0bcff",
+        "train_log.txt": "641bcc0d16fd5271acc6fb36c4c63eb949d3d3e5b877cfeb85b230aefd0557b7",
+        "val_metrics.json": "3a685c7f0e24827aabdab335460ad82c739615bcd32f6835760a5845e4818de5",
+        "checkpoint_selection.json": "821a1cffcc6a030521d978050472791d722189e4f0d72408658ae5e4edce58a2",
+        "test_predictions.csv": "a98959c4b16fcb9350dc7fb490421c47130b2f0230c4c57ca1d3a365fd447d69",
+        "fp32_evaluation_receipt.json": "e8060466248253358f4eb12ae19f071eb596b40c473e88f5733223161e4bf44c",
+        "test_metrics.json": "ade8af4efb9b964d46cc3add7390065364a7a9d9d882a905c31d90968a1a883a",
+        "training_receipt.json": "57d95221a9c96cd2446a226db90aad0f2c812ba27ec117c53980cc31bf653cd6",
+        "completion.json": "e30c9be3a0895b5c1f7f428ffa13f09cde6be6865bfaa8d8319442be64bdfb35",
+        "matched_completion.json": "4d0ad59c3136e4a268e1db73f354779929a3e2fb9cf5858a8d3f4656d7edb882",
+        "checkpoints/last.pt": "31a4824076cd59ca76ecea27dc1ff999c3dd44bf3c3cb19cc464b5d881417ac0",
+        "checkpoints/best.pt": "30dc5bcdf84dba28ad08573f43f24f25b62f5d466655c4584ec96f975ac34df8"
+      }
+    },
+    {
+      "run": "gaussian_alpha1_bce_seed42",
+      "backup_receipt_sha256": "0e507487d7569ec5855c425bd90df744ff92b5a6b1822ff4aa59bc5001b02297",
+      "files": {
+        "preflight.json": "eed262184c925ea2134ad24ec9ccce620b11557e61ff9f83226df705fbe97c58",
+        "base_config.yaml": "6c83a2eed32c4cbe68fa47b56dd9f40a3018709c7938c821f036b64c59402d17",
+        "config.yaml": "6c83a2eed32c4cbe68fa47b56dd9f40a3018709c7938c821f036b64c59402d17",
+        "metrics.csv": "92aef57b44bc3edc87aac11715507d3d2c9779b13256fd9781dfe10720bce21c",
+        "val_predictions.csv": "bff5d105d95eccca72bbb30473565d9eafbe8943a9b089e6c3d95aa1ec506103",
+        "train_log.txt": "f3c5828d9232401a8b318dad940cdbf8b9e9b8f93483f6c3e2c6cdc3dfa2c736",
+        "val_metrics.json": "bd54beab079fb02de6e90285055b19379b1561a3d62748835695e0038d5d5c00",
+        "checkpoint_selection.json": "2f7186c17c33d85d131074d843161fbce2a8bc216d91b0584407574687b2b416",
+        "test_predictions.csv": "06e847d623e970a4a9021a166aa279699df7c804d1c0b83fdbf83c2190f825d0",
+        "fp32_evaluation_receipt.json": "9ae55d1625bb0c5a11c8c25c00558e8c57eeedd340d34fc5cc6eb603b27c4844",
+        "test_metrics.json": "871c36f37f94453434b833497dfac0c4049a32217df12ee32b2c5f817171b223",
+        "training_receipt.json": "64ebe0bccf873a30af1c3ad78ef485f53c5cd8f5da20214a4d8f89cb199dc25b",
+        "completion.json": "42bcd178e0ef7283e653f2682e6913af5c554f20eaf72e2daf1fd65a92e57c12",
+        "matched_completion.json": "b0b75706cb4b933d842cf1f2204d336f05163769d7e70229c4eb05ce2c56a57c",
+        "checkpoints/last.pt": "a8587f3bee5954f7ae6d529f6c455febcb38d55df6c34e5cae7bf36ad3f7a49c",
+        "checkpoints/best.pt": "eb49bbc67845802cd6fa1c3c978eced10f7447e579e01b814e428bfc1b218409"
+      }
+    },
+    {
+      "run": "gaussian_actual_w05_bce_seed42",
+      "backup_receipt_sha256": "db028b9aef11c70d317fcd516dfd3bf44eaa27e4af5096a3dfcbca979e0e8783",
+      "files": {
+        "preflight.json": "61ecb9807b86f7f0a42c12768d3d65b54a35720da863db42fc7221280b627c3b",
+        "base_config.yaml": "c5bf205d8eeb854611ab25cb17411c43a0a78f61ff49d4500184da910e1202fa",
+        "config.yaml": "c5bf205d8eeb854611ab25cb17411c43a0a78f61ff49d4500184da910e1202fa",
+        "metrics.csv": "2c5db6a8e6ea47a773fcf7ac6c02e34cc54c930640588dbc2460c5bbf64ebfd3",
+        "val_predictions.csv": "99b5fb2d810ca72e7aeefc0767efa9998da24b3bff4db434af791fb2daf3eb5d",
+        "train_log.txt": "ae82990f0573fe4faf9015e62e98554bfaa361c3d4b6bda1c1d50206b0c8188f",
+        "val_metrics.json": "7467ed745d9770826d16b3b7ebdd40654cd3d7518d97fd8b5558b227d962e20b",
+        "checkpoint_selection.json": "0c81b9307024f62ac348162fed3d2d78f217bb2b1a2bb56deaec060e3dcf0728",
+        "test_predictions.csv": "6e118b36e65c6f3ffbf15e3ed44544db2325b13dce4efc7e2893aef0390fc8ef",
+        "fp32_evaluation_receipt.json": "416afd6fb510bfc4cd9377463c86139d4ff59ef01b8d725ce9d4f6d6797d90e4",
+        "test_metrics.json": "a6ace1cf8612f370e917210cda3b0d2950116cda82388d352b22dfc532847033",
+        "training_receipt.json": "fe9cd668cc5198be7451e73e3ed93ec6dfee2763ab9c57c3eb20feaf3706f4a7",
+        "completion.json": "09b0bb3099d8c2d1d32838e7747d6965519a42bf6bd6445fe70b039d5c392a6c",
+        "matched_completion.json": "56fa7a9706cc1029976a89fe82f648d36d66bdd9751e0ecf9b57268fb5ae43a2",
+        "checkpoints/last.pt": "d6509d0d2300e40f319ed8a4c09d0569b1433e44c555d1ec2953e5f2601edde2",
+        "checkpoints/best.pt": "ec18872b1b940a6244bbd702b13705ed31d26b522ee2baa5531c42805a4e2e5d"
+      }
+    },
+    {
+      "run": "gaussian_alpha1_bce_seed1234",
+      "backup_receipt_sha256": "1b8134bbe3e178a709b190a5367ab5b8463e474cc4082359c25187e791b7007c",
+      "files": {
+        "preflight.json": "d01667ecf75b5c8739b2a1036ab0781c681c7baa5025df4ffaa3f9be2e54af3c",
+        "base_config.yaml": "ff2abda754295d7f607a8d1bcf7cbaf70ad960f9ff92f618fef4534d3577613f",
+        "config.yaml": "ff2abda754295d7f607a8d1bcf7cbaf70ad960f9ff92f618fef4534d3577613f",
+        "metrics.csv": "75c327f4648c1add3642b8a512764d65539e89a25418f7bc31b21b4b13bc379c",
+        "val_predictions.csv": "b7b19cb767aab46c963b9aeefd097cda8c018a000883dec28ca847e218d63043",
+        "train_log.txt": "94bd2912edfe37218413cd08bb9cd34ee7836a99c2235fd47b06a9b0aca768a1",
+        "val_metrics.json": "58e5091bc49686893322852ca15a95c11ee2b87c1c57af237b0cfdbecf658695",
+        "checkpoint_selection.json": "3a71389fe0c89cee8e59798457d6b49b6dd63067e6614c4badfb5364340ac6c6",
+        "test_predictions.csv": "ba0220f65a8dfd21dd5fe3c0ae127102d33216f0fd45b364e011911195974fa1",
+        "fp32_evaluation_receipt.json": "5a39305687bd8f8ce43d3c063d8e6b18974fd80fa491c54df2cf318f7195a218",
+        "test_metrics.json": "4f73b7fb8a2b20806f1a8b901f243d2a15f231c84b68e1cc57dccf1a4bb032f4",
+        "training_receipt.json": "c424073e9ed43fc41a7b7723bfae1271d38321db3ae80e4cfdc669481774c9be",
+        "completion.json": "e11255ee267ce2801045f2ab8eeaa9d3342acbc54d81c8ad61729fa41832728f",
+        "matched_completion.json": "f2385f4a44299d97b94ace3127e0072577b0e9094d0d75a451ca280b1fc0cbcc",
+        "checkpoints/last.pt": "6484a2d1c8061393f87397bda9b49e40a31d10bd4167bbc7083bd0d69be497cd",
+        "checkpoints/best.pt": "655ef3e9d8811c972d1c939754dfdee390d1c54ada5ee368879b1e2242966bf9"
+      }
+    },
+    {
+      "run": "gaussian_actual_w05_bce_seed1234",
+      "backup_receipt_sha256": "ae5fdd7d21102a009394efbf0e7f88bb1d9d13672adab345c3c9af915e475fee",
+      "files": {
+        "preflight.json": "bc6fcaa0db6c36f04854dd7280ef2d5a5acfb138535caf91f6035b987562ceec",
+        "base_config.yaml": "607ca6c92518a6ff2ac3fb1c2311f1ba13c7eb939285b105d3226ff10ece5373",
+        "config.yaml": "607ca6c92518a6ff2ac3fb1c2311f1ba13c7eb939285b105d3226ff10ece5373",
+        "metrics.csv": "94426694562992d952b48f2ca15d5eb947d79c042dcac2900bbd1986f9f1ae67",
+        "val_predictions.csv": "9132b9a3dd60097c1e0b73ec2a6ab88e4f7ba93bc3e6da08b7cb2d9d4b7d2506",
+        "train_log.txt": "4dbfb495d8b093d620d6d5e4f5b86a8008485e5139ec60cfadd57fca89b861fb",
+        "val_metrics.json": "8cf8ad90eb6e50441a39dfc97618032481e9aa9e7963a6a0b5f05775ad98064a",
+        "checkpoint_selection.json": "5aa864bd457027492ece8d86d2f4cadb09e1c3d01d1da3567fe1e9eeb0cf64d9",
+        "test_predictions.csv": "4cb0bebbb6ea73754eeeb50082bcd05755df0c4cfd6d0f95acb014d8ad55a69b",
+        "fp32_evaluation_receipt.json": "ab83dcac2be22ccaead3c06022a044b00be709a71a46235801679e688af31f0f",
+        "test_metrics.json": "4e20e7cf05562449445c4dff07055b4400a926b2b254450819c016836ae77c50",
+        "training_receipt.json": "3a5762984e958e434b6459d60a938835830b5822ed7fb56c995502f7d80309ee",
+        "completion.json": "226f7b2b8b74ef1c3a1d3a9c87bf357ea7f5e798cd9a999aeff2e23f7ee560d6",
+        "matched_completion.json": "d65629452cf6bf1e0b502e1af54ff9852a245d975c46ec904e24432014bf808a",
+        "checkpoints/last.pt": "77cdda65a8f564e851eee787231144077cc40575f9c1175808c655cea6271c73",
+        "checkpoints/best.pt": "c4df3899960576e7a73d58665999ba73e9dc19fab20ff1bb611cf7b8f9c41feb"
+      }
+    },
+    {
+      "run": "gaussian_alpha1_bce_seed3407",
+      "backup_receipt_sha256": "65107a832962e9bf12da1091f2b9b8532bb9caa933c045c5466ace0f9c51b2dc",
+      "files": {
+        "preflight.json": "0c2d187f5168374a3487673d998e44a9690e8a89e4fe1547b2c61bb42ec33248",
+        "base_config.yaml": "6306fc647c8a5423b643d8783ce84cb05f9b3ffae57144d30c3a5b74ddde9895",
+        "config.yaml": "6306fc647c8a5423b643d8783ce84cb05f9b3ffae57144d30c3a5b74ddde9895",
+        "metrics.csv": "916aefab5808cdbe5a62707b6734cdb981d84f51665d8cd9b8dc5db707b5d437",
+        "val_predictions.csv": "a25f3cef8ba9fb988a6b48f737f8bb26fed6c4c436c8dcc3fa8a9a3fe57dcf2d",
+        "train_log.txt": "a755567ae72d25e6f2698bf0aba3a5c4623dfa18023506f6da18c0bf81e89f9c",
+        "val_metrics.json": "f2521991bbe2220acff0aa762b107934fadb6e142bb9f24b65278107f8b720b4",
+        "checkpoint_selection.json": "78ae413d64306329a3d12c6c4841a1b6a27777d5ce02ed738f76ef060ef44f8f",
+        "test_predictions.csv": "f5a80a007da919e6404e756ca75b70765eaca7adf8fc4e6e3d6cd8e3e8ce01e9",
+        "fp32_evaluation_receipt.json": "81df369d5c9dbfadc1d482fbc588621da156b220c3bdcc2acf784ae04426a26c",
+        "test_metrics.json": "fca1e8ea9c05bc0aa5c4f43fe456f7ecdd36faf44a93f8a28976d6bc0b5c8aa6",
+        "training_receipt.json": "a6a22b62d7dc0b3414c77dce1e4b4751c657073aaaadb72dae76fa5c8ce7be08",
+        "completion.json": "c9fdea8eae23c8eb07f3b61737feb989aee606a07a42ac286ab05d7d10bce0bd",
+        "matched_completion.json": "56f8ea22ce67965af9c373d439ae611670850135777cfd5ccf68545f523acd01",
+        "checkpoints/last.pt": "f861fcdcac044baf01c239c0023960a067cb4e0f3f52c2a229d0b680e169b0ee",
+        "checkpoints/best.pt": "7d2e5cdebbf58e06ff740083af7b75811bdb95bb3bf11f4c09eaa5e60695a34e"
+      }
+    },
+    {
+      "run": "gaussian_actual_w05_bce_seed3407",
+      "backup_receipt_sha256": "e30d18b160cdc289da7a4b1ee34ad1c3753c7c574063ee774df0568ed6713237",
+      "files": {
+        "preflight.json": "64037218c861e6711876c16f14411d17ef85b5cbcd0f4eeb70c9384954d590d8",
+        "base_config.yaml": "f7b7ca2546349a3a414e05b6d4cd9f49101eada5c37608e437a3bd329eaf8319",
+        "config.yaml": "f7b7ca2546349a3a414e05b6d4cd9f49101eada5c37608e437a3bd329eaf8319",
+        "metrics.csv": "0cb67938582ae784743fbb9b8673471cbfee215359480a9b388bdd58e6e180b6",
+        "val_predictions.csv": "3f3a32048a096f66635ae58bb07f82c3674387ed16aecb71c15214f099969f65",
+        "train_log.txt": "113663697d2588629e2ee5fb0376adf4f9e6b150497af6860e21574d79a1a0b0",
+        "val_metrics.json": "b3e064683ff2a426edf463ef15f591142de39070e1aad33cc0235dafe572b3fd",
+        "checkpoint_selection.json": "bdf26eb2ef5b0c5b38a317aec8a4ff27e4f911093f8acaeab6ec4da6ccbf5d7f",
+        "test_predictions.csv": "c9c11a1f13c617fb15f1b24aed50f2da431b9a63fb7583c617d31f9fdf5e253e",
+        "fp32_evaluation_receipt.json": "e5e597539ac628eb9690fd30a5806f65c572d268bce8f95e1d940685374460c3",
+        "test_metrics.json": "c9bf35e438eb28dce811f418b81eadd54a31ac91ca093143f1975babb25db417",
+        "training_receipt.json": "440783aaa84e950fe13e4729e4b3e840440766b5eed7a7ac8a963cdfb0d1d96b",
+        "completion.json": "acf494840efe200b412c2660d2f2047ed8844f8c672c2aa7ee08d9ba4e4f72f4",
+        "matched_completion.json": "408380a6a45b1218f22c42e42be50f353485292f9083895814a337513ccf1f81",
+        "checkpoints/last.pt": "0a0c375dd92c4cea85a29a989ce25d497a12423dd1a466bddaf7a8d866762bce",
+        "checkpoints/best.pt": "91dfcbd3d0637f765e3f2f263fe6680330f1845f83b1cffd94dc67258b08878b"
+      }
+    },
+    {
+      "run": "gaussian_alpha1_bce_seed5678",
+      "backup_receipt_sha256": "4a3ea5824078799a727fbb84af271a9c3ba91ebf1d5f97d16a13f8c177452cb4",
+      "files": {
+        "preflight.json": "c69a0530c59f2ce27f907bd4ee494d0087a3ef9138f0f9a5638808bab6311060",
+        "base_config.yaml": "2bda0c87354b099e30cdcd681b39ee2d35ea2445951f191ff44fcc5b3b12777e",
+        "config.yaml": "2bda0c87354b099e30cdcd681b39ee2d35ea2445951f191ff44fcc5b3b12777e",
+        "metrics.csv": "f29d54679cc675499b6bf2945b01c18c367c8bc3e3cc011105f96f5d7a943d14",
+        "val_predictions.csv": "b5d40f26cead6869a0883adfb516b06c7c6c3ce70cae9fb6ff7152b84608f7cd",
+        "train_log.txt": "a22d701aa2cf6721e3a76c03a61e4a48ddf629eb5d71ae35a1d37020f5886398",
+        "val_metrics.json": "122102e94dd8ba3d1922dc6061e14c160967a0c4b7e9213c91e53811a5cf66ab",
+        "checkpoint_selection.json": "18b832ae88f6fa3441653dd649506c860e20601161a15244502ee5addc265a85",
+        "test_predictions.csv": "28cf30f83efab4dcde8e34531947417728626ee64512ee23c2df5d7ad3aa3d0b",
+        "fp32_evaluation_receipt.json": "2df6fc1a23953181562743a32ef315e086d40d47b9ea5a3bd9537a5010ae24cc",
+        "test_metrics.json": "e491f58097e158e0c0ce1215b86dd6063a0f0faacab93ce8bd5a1df56675942f",
+        "training_receipt.json": "55dbfa73075fed9871fd76fd39f3ea8b220e33de77a7e5079a47dd567d02ac66",
+        "completion.json": "fac027006d7d514bd7cfe6b7375c62e17688d502f71b6e9f959407ba1ddaaaba",
+        "matched_completion.json": "99eb16c7441e535fbe0d647ea5caac0f264964ab6c8f55426067feb276c961a2",
+        "checkpoints/last.pt": "da98fd5a2985da3eaa3a67d90cdaee871e387013e94a9f0a19199f12f2d8c87c",
+        "checkpoints/best.pt": "61901e503478ab64b4fd3526b49aa9856cad66e1fbe1350b7f753790bcb30c84"
+      }
+    },
+    {
+      "run": "gaussian_actual_w05_bce_seed5678",
+      "backup_receipt_sha256": "94d11db9ed020b66517344278335a78f025aecfd7d8d69918a928c932647ba6c",
+      "files": {
+        "preflight.json": "965d0f812061e135e28ca0712abd2d84a6d48093cb926ebe9773bc8e5ec32328",
+        "base_config.yaml": "2bbbac3d9b9436b24f59e8ddca4ebb15196f29c466132189c9e26bd15c5237c9",
+        "config.yaml": "2bbbac3d9b9436b24f59e8ddca4ebb15196f29c466132189c9e26bd15c5237c9",
+        "metrics.csv": "26f4025c270860b3058e8e59a73a77b2ea91db182fbe6463c5532bfcae6597ed",
+        "val_predictions.csv": "bc3eb30dc6375ec08ee99af29c5eaabc4f7ee5073eeeb6f082ef8158487f72cb",
+        "train_log.txt": "32901a6c0aae962b83beb40686b646ef48e6ad47bfdbc5743fd39ade0f6a0866",
+        "val_metrics.json": "c85c0611d646c07e92477e83dcbf9809d23c25b38f3fe6b66aa01860f61d75c4",
+        "checkpoint_selection.json": "358c966d5ea905deeae5b9b5634b8fb5a64567db365b8a6ac13d8ee705d02c00",
+        "test_predictions.csv": "8a4fbcfd0e277f9a4ff2c7f4c1adb1372631b93e2985ed402496cfd95107cb6f",
+        "fp32_evaluation_receipt.json": "adb34e563e3f8f7454488f04f9eebee28244631053ab6b156e6c21950b8c7edb",
+        "test_metrics.json": "3179b7b7f6f276a61a19b2b0c97eb138c00102d85fc65fba534b240411747b48",
+        "training_receipt.json": "b2f3d65086fefb191041f4e1c79ef8b29afe4e083b13256f1d6d31e61b2f27c2",
+        "completion.json": "c99e7e163bab32e38100c8ba6f0608faa43a87e2abbe3552ec0d0ef06e30c4a0",
+        "matched_completion.json": "e32e735a6bb1c22043d38f4f854ac94b750e374112d68a45805e51150b94b3d2",
+        "checkpoints/last.pt": "ff68168213b7f14577d9ef05830680ac0198976d25967fc3f15d7cacc6f7f459",
+        "checkpoints/best.pt": "67a02a69a96ef0bfd92b63e80e9a10590cac20013e1591cb0fbc5bafc91a7e6e"
+      }
+    },
+    {
+      "run": "gaussian_alpha1_bce_seed8888",
+      "backup_receipt_sha256": "a1c1c91ff3fc551dbdbd52984d7a576c57560b43f21777eb80bf87f63ffcf2c0",
+      "files": {
+        "preflight.json": "a588611f377b6eb85a7dc8bd53d539bd3f39437cdb26d9640d17c8eddb94b694",
+        "base_config.yaml": "a899b1ff6f610812418752deb020f3a59d3ef197bffb7f8c73a8b623e46551d5",
+        "config.yaml": "a899b1ff6f610812418752deb020f3a59d3ef197bffb7f8c73a8b623e46551d5",
+        "metrics.csv": "6fbf72de0e5509a6c726bf1d38fe5429a8dce026cc566ecfde8a2c48898540b8",
+        "val_predictions.csv": "a382417f2d9a920f3c7e7f7dbcb56a5768473d458bc564dbd7e8488b858a5995",
+        "train_log.txt": "99bae0b265aff90e35f9e724eb4373d0cbc143cc65cbde1e3f2433c09d253a49",
+        "val_metrics.json": "2b75e39a8548be218271f4fb219f41c36b4aa2886d2f2063eb7ccbb460630ebe",
+        "checkpoint_selection.json": "19bb5e606d57e3b6d3dc4d91d5d3264ba7f79d53df5bc2c237a171e6295c1658",
+        "test_predictions.csv": "f1d2f8217585e0f36e6e6a693f923de3a00995b7830eceb7ae447f8c583a60d0",
+        "fp32_evaluation_receipt.json": "80ad15446c260214be93b647c3afe0470675cafafe9963a805b16551431bd090",
+        "test_metrics.json": "833b6f5f4fe6ed3ee1bb04bc7879f704ebe6263b8dc1ece4a472cd83e91985d8",
+        "training_receipt.json": "2e6942cfbfea856efc89a08c9d7b8bd05445384275bc0bc8abf63142e14eb41a",
+        "completion.json": "29ede63afec44588f6d4fea938bbdcb428aa9b160feec56e8b017330e44057a7",
+        "matched_completion.json": "67cc30634e605217cc657b46a4368c29d594be3059f4ea7a70f7fd5cea802d83",
+        "checkpoints/last.pt": "9b5333618c74eb4f69f82eaa59fba9c7223d24cce8941709ae5b54eced392a93",
+        "checkpoints/best.pt": "5ac2389f89c821a5764e2f9a4767497d00795eaa17b1836b65bd591b9f337dcd"
+      }
+    },
+    {
+      "run": "gaussian_actual_w05_bce_seed8888",
+      "backup_receipt_sha256": "b0c86559d1081207328ae923c9dc3b7dabb745b3ccd5f753110d66f76e686d70",
+      "files": {
+        "preflight.json": "793627af413918aa971c4e8b4594450ea0d95970bbc3f0dd67d3c10de160ccb1",
+        "base_config.yaml": "2f9dba04216f71c36c4a175e0d215884a08ee6e9c9a68e5227e4d92691781707",
+        "config.yaml": "2f9dba04216f71c36c4a175e0d215884a08ee6e9c9a68e5227e4d92691781707",
+        "metrics.csv": "d513bf4e52c89a6c1d34fbbfa4609d78eea49df6a8ddf09bcfaa3df295a5f4bc",
+        "val_predictions.csv": "7723f220371ef9c205b118c942a0044a61866abcdc7e95199f69be3e3c7ec7b8",
+        "train_log.txt": "9913ed3f2160ce8f8a9b7e4b1b1501c276f5ddd8ae584800887afc7d6ddc934e",
+        "val_metrics.json": "f49c5f9339abe5d4be029c3b6bbd8c94390c7e0ff6a5cdd134e63bc4c414e524",
+        "checkpoint_selection.json": "ffb867ad5710a6468efd7760371f4b0f45d5c69b4fa3defe1857afaccd7de827",
+        "test_predictions.csv": "a0633ea9ae3cc44c0ce53ef12f813b65153fe27660195d259dfcfa015442c85f",
+        "fp32_evaluation_receipt.json": "64bb355f8edb7e5dd634118149d927716a90a7588e67ae648f64e59837da1364",
+        "test_metrics.json": "decb55d29457e7e8917fbaa9f82e7dfa38d1ac6029c24d624895ed2c59306d53",
+        "training_receipt.json": "16a0bae23594399f2cd47d053daeed43661f0d00104967adbebc182c310fcfc5",
+        "completion.json": "74f76b5b5e7ce06636b99f7c571d52719c743a678ae53c7ebdf73e5537b0147e",
+        "matched_completion.json": "80003343c44667d343a928a4c06e8552da71abd77e93e05161274ca93dc0eb99",
+        "checkpoints/last.pt": "4f48e9a3886289136bdd84b13f5c021b22af856e7608a2dcc15729c69b626b1d",
+        "checkpoints/best.pt": "6677ec345a99080cfc2cfa3bade4f983321ed5a2edd4c33efdf9a64fe734cce3"
+      }
+    }
+  ],
+  "output_rows": {
+    "source_composition_per_seed.csv": 69,
+    "metrics_per_seed.csv": 100,
+    "metrics_seed_summary.csv": 20,
+    "paired_per_seed.csv": 75,
+    "paired_seed_mean.csv": 15
+  },
+  "output_sha256": {
+    "paired_cluster_draws.npz": "276180a87a8c87643d333f3c2178ee18bb2dfedb0a96a82f8121f0950a8ea502",
+    "metrics_per_seed.csv": "a6cfe36cd3fcfd98af712bd287e7fe7a48be5089daf6623f2583d211573b326f",
+    "paired_per_seed.csv": "286d2d74c6bbaa48ff3748bf1cecfdc68cde9c9997d1164315f30ed7ef1be1ab",
+    "metrics_seed_summary.csv": "d65327e52f33edc846303ba13963c9443cfb09e8a1f0356c350a2282eb92a33e",
+    "paired_cluster_intervals.json": "ecf4c39808b785d8f0379cdf155b288253cae4de42459a0adf75103b66c913af",
+    "source_composition_per_seed.csv": "4972ebf390d6acaff65c90aba154791f63bdb8b97785459fd1d760d0305acafd",
+    "INTERPRETATION.txt": "573b194b7ded00ceb7db4bc95f395f25c1a0581f7725ccd72bc3e4a74dd0ad69",
+    "paired_seed_mean.csv": "0ac767057ee2f6c9fa196ca30a9b43b4262ad5a02c9500a53a3ae1fbbadcffbd"
+  },
+  "all20_hash_gate_before_prediction_parsing": true,
+  "model_forward_or_training": false,
+  "threshold_or_success_criteria_tuned": false
+}
