@@ -1,0 +1,17 @@
+{
+  "status": "trajectory_window_patches_complete",
+  "started_utc": "2026-11-15T02:24:57.540935+00:00",
+  "pid": 1011388,
+  "workers": 8,
+  "total_jobs": 1550,
+  "completed": 1550,
+  "failed": [],
+  "wrapper_sha256": "8346ae5be04e273d5714fe7fd0e2b1a5b19b85a4103e033338257abb6a07401b",
+  "protocol_sha256": "5cf7c98c94a3d93d821ce22dbc12fd0362d3d3e1e146ad31baa9875cf4d1a49f",
+  "utc": "2026-11-15T06:04:38.105567+00:00",
+  "finished_utc": "2026-11-15T06:04:38.149870+00:00",
+  "finished_aggregation_utc": "2026-11-15T06:04:46.996392+00:00",
+  "eligible_targets": 621,
+  "patch_manifest": "audit/trajectory_patch_manifest.json",
+  "patch_manifest_sha256": "9077b4f26bcc9a6300a4686f07dcffd743b67608d735965c650a06fe420ed332"
+}
