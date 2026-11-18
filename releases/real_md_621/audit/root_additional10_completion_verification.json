@@ -1,0 +1,10 @@
+{
+  "status": "additional10_complete_backup_hashes_and_all20_statistics_freshly_verified",
+  "utc": "2026-11-15T07:22:04.656686+00:00",
+  "additional_runs": 10,
+  "backup_files_verified": 160,
+  "all20_gate_sha256": "6c53c2d1e56241eb2edb0fe1982693df5eae6a65906262ad78522009dc0384aa",
+  "all20_evaluation_receipt_sha256": "84786ea15c874c2ff8acbbdf98808b3bfffc10e32b0670e080d1588e064ec46d",
+  "statistics_outputs_verified": 8,
+  "window_model_inference_complete": false
+}
